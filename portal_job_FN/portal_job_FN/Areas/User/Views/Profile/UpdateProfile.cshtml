@@ -1,0 +1,131 @@
+﻿@model portal_job_FN.Models.ApplicationUser
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Cập nhật thông tin Profile </h1>
+<form asp-area="User" asp-controller="Profile" asp-action="UpdateProfile" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="Id" />
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Full Name</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input asp-for="fullname" class="form-control" />
+                    <span asp-validation-for="fullname" class="text-danger"></span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Vị trí</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input asp-for="poisition_user" class="form-control" />
+                    <span asp-validation-for="poisition_user" class="text-danger"></span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Email</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Mobile No</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input asp-for="mobile_no" class="form-control" />
+                    <span asp-validation-for="mobile_no" class="text-danger"></span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Address</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input asp-for="address" class="form-control" />
+                    <span asp-validation-for="address" class="text-danger"></span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-3">
+                    <h6 class="mb-0">Giới thiệu</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                    <input asp-for="introduce_yourself" class="form-control" />
+                    <span asp-validation-for="introduce_yourself" class="text-danger"></span>
+                </div>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label asp-for="@Model.image_url">Avatar</label>
+                <input type="file" asp-for="@Model.image_url" class="form-control" id="imageInput" accept="image/*" />
+                <img src="@Model.image_url" alt="Avartar" style="max-width:200px;" id="previewImage" />
+                <span asp-validation-for="@Model.image_url" class="text-danger"></span>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<script>
+    document.querySelectorAll('input[type="file"]').forEach(input => {
+        input.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById("previewImage")
+                    img.src = e.target.result
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+<div>
+    <a asp-area="User" asp-controller="Profile" asp-action="Index">Back to Profile</a>
+</div>
+
+
+<script>
+    document.querySelectorAll('input[type="file"]').forEach(input => {
+        input.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById("previewImage")
+                    img.src = e.target.result
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+</script>

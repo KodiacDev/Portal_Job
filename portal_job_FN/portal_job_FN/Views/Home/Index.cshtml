@@ -1,0 +1,368 @@
+﻿@model IEnumerable<portal_job_FN.Models.PostJob>
+<div class="container-xxl bg-white p-0">
+@*     <!-- Spinner Start Nguy hiểm vkl -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End --> *@
+    <!-- Navbar Start -->
+
+    <!-- Navbar End -->
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(43, 57, 64, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Tìm việc làm nhanh 24h, việc làm mới nhất trên toàn quốc.</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Tiếp cận hơn <strong> 40000+ </strong> tin tuyển dụng việc làm mỗi ngày từ hàng nghìn doanh nghiệp uy tín tại việt nam.</p>
+@*                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Tìm việc ngay</a>
+                                <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Find A Talent</a> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(43, 57, 64, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Tìm việc làm nhanh 24h, việc làm mới nhất trên toàn quốc.</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Tiếp cận hơn <strong> 40000+ </strong> tin tuyển dụng việc làm mỗi ngày từ hàng nghìn doanh nghiệp uy tín tại việt nam.</p>
+@*                                 <a href="" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Search A Job</a>
+                                <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Find A Talent</a> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Search Start -->
+    <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
+        <div class="container">
+            <div class="row g-2">
+                <div class="col-md-10">
+                    <div class="row g-2">
+                        <div class="col-md-4">
+                            <input type="text" class="form-control border-0" placeholder="Tên công việc" />
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select border-0">
+                                <option selected>Ngành</option>
+                                <option value="1">Category 1</option>
+                                <option value="2">Category 2</option>
+                                <option value="3">Category 3</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-select border-0">
+                                <option selected>Địa điểm</option>
+                                <option value="1">Location 1</option>
+                                <option value="2">Location 2</option>
+                                <option value="3">Location 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-dark border-0 w-100">Tìm kiếm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search End -->
+   
+    <!-- Jobs Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Danh sách công việc</h1>
+            <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
+                <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                            <h6 class="mt-n1 mb-0">Tất cả</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                            <h6 class="mt-n1 mb-0">Full-Time</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                            <h6 class="mt-n1 mb-0">Part-Time</h6>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        <div class="row">
+                            @foreach (var job in Model)
+                            {
+                                <div class="col-12 col-md-6">
+                                    <div class="job-item p-4 mb-4">
+                                        <div class="row g-4">
+                                            <div class="col-8 d-flex align-items-center">
+                                                <a asp-action="Details" asp-route-id="@job.Id">
+                                                    <!-- Thêm thẻ <a> với href tới trang chi tiết -->
+                                                    <div class="image-container" style=" width: 80px;height: 80px;overflow: hidden;">
+                                                        <img class="flex-shrink-0 img-fluid border rounded" src="@job.applicationUser?.image_url" alt="">
+                                                    </div>
+                                                </a>
+                                                <div class="text-start ps-4">
+                                                    <a asp-action="Details" asp-route-id="@job.Id">
+                                                        <!-- Thêm thẻ <a> với href tới trang chi tiết -->
+                                                        <h5 class="mb-3">@job.job_name</h5>
+                                                    </a>
+                                                    <span class="text-truncate me-3">
+                                                        <i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                        @(job.job_Location != null ? job.job_Location.province_name : "Không")
+                                                    </span>
+                                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>@job.employmentType</span>
+                                                    <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>@string.Format("{0} Triệu - {1} Triệu", job.salary_min, job.salary_max)</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                                <div class="d-flex mb-3">
+                                                    <style>
+                                                        .heart-icon {
+                                                            color: #198754; /* Màu mặc định cho trái tim */
+                                                        }
+
+                                                            .heart-icon.active {
+                                                                color: red; /* Màu đỏ khi trái tim được kích hoạt */
+                                                            }
+                                                    </style>
+
+                                                    <form id="cartForm" asp-area="User" asp-controller="JobCart" asp-action="AddToCart" method="post">
+                                                        <input type="hidden" name="Id" value="@job.Id" />
+                                                        <button type="submit" class="btn btn-light btn-square me-3" onclick="addToCart('@job.Id')">
+                                                            <i id="heartIcon_@job.Id" class="heart-icon fas fa-heart "></i>
+                                                        </button>
+                                                    </form>
+
+                                   
+                                               
+                                                 @*    <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a> *@
+                                                    <a class="btn btn-primary" href="/User/Home/Apply_job/@job.Id">Apply Now</a>
+                                                </div>
+                                                <small class="text-truncate">
+                                                    <i class="far fa-calendar-alt text-primary me-2"></i>
+                                                    Date Line: @string.Format("{0:dd/MM/yyyy}", job.apply_date)
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- Jobs End -->
+    <!-- Category Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Tìm kiếm theo ngành</h1>
+            <div class="row g-4">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s"> 
+                    <a class="cat-item rounded p-4" href=""> 
+                        <i class="fas fa-3x fa-laptop-code text-primary mb-4"></i> 
+                        <h6 class="mb-3">Công nghệ thông tin</h6> 
+                        <p class="mb-0">123 Vacancy</p> 
+                    </a> 
+                 </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
+                        <h6 class="mb-3">Marketing, Truyền thông, Quảng cáo</h6>
+                        <p class="mb-0">123 Vacancy</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                        <h6 class="mb-3">Quản trị kinh doanh</h6>
+                        <p class="mb-0">123 Vacancy</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-chart-line text-primary mb-4"></i>
+                        <h6 class="mb-3">Giáo dục / Đào tạo</h6>
+                        <p class="mb-0">123 Vacancy</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-hands-helping text-primary mb-4"></i>
+                        <h6 class="mb-3">Hành chính, Văn phòng</h6>
+                        <p class="mb-0">123 Vacancy</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fas fa-3x fa-calculator text-primary mb-4"></i>
+                        <h6 class="mb-3">Kế toán, Kiểm toán</h6>
+                        <p class="mb-0">123 Vacancy</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-drafting-compass text-primary mb-4"></i>
+                        <h6 class="mb-3">Thiết kế & Đồ họa</h6>
+                        <p class="mb-0">123 Vacancy</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <a class="cat-item rounded p-4" href="">
+                        <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+                        <h6 class="mb-3">Thú y</h6>
+                        <p class="mb-0">123 Vacancy</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Category End -->
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="row g-0 about-bg rounded overflow-hidden">
+                        <div class="col-6 text-start">
+                            <img class="img-fluid w-100" src="img/about-1.jpg">
+                        </div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid" src="img/about-2.jpg" style="width: 85%; margin-top: 15%;">
+                        </div>
+                        <div class="col-6 text-end">
+                            <img class="img-fluid" src="img/about-3.jpg" style="width: 85%;">
+                        </div>
+                        <div class="col-6 text-end">
+                            <img class="img-fluid w-100" src="img/about-4.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="mb-4">Tìm kiếm công việc dễ dàng tại MasterJob</h1>
+                    <p>Sử dụng MasterJob hoàn toàn miễn phí cho người tìm việc. Bạn không cần trả phí để truy cập vào các công việc và thông tin liên quan. Điều này giúp bạn tiết kiệm tiền bạc trong quá trình tìm kiếm việc làm.</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Miễn phí</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Nhanh chóng</p>
+                    <p><i class="fa fa-check text-primary me-3"></i>Hiệu quả</p>
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="">Đọc thêm</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+        <!-- Testimonial Start -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <h1 class="text-center mb-5">Phản hồi từ người dùng</h1>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item bg-light rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p>Website tìm việc này rất tiện lợi và dễ sử dụng. Tôi đã tìm thấy nhiều cơ hội việc làm phù hợp với kỹ năng của mình.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Mr.Hiếu</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p>Giao diện trực quan và thông tin việc làm chi tiết giúp tôi tiết kiệm thời gian trong việc tìm kiếm công việc phù hợp.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Ms.Nhanh</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p>Tôi đã giới thiệu trang web này cho nhiều người khác vì tôi thực sự tin tưởng vào chất lượng và hiệu quả của nó trong việc tìm kiếm việc làm.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Mr.Trung</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-light rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                    <p>Tôi đã nhận được nhiều phản hồi tích cực từ nhà tuyển dụng sau khi nộp đơn qua trang web này. Đó là một công cụ hữu ích để tìm kiếm việc làm.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-4.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Ms.Trang</h5>
+                                <small>Profession</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Gọi endpoint để kiểm tra công việc trong giỏ hàng
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/User/JobCart/CheckCartItem", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        var cartItemIds = response.map(String); // Chuyển đổi các phần tử trong mảng thành chuỗi
+                        cartItemIds.forEach(function (jobId) {
+                            var heartIcon = document.getElementById("heartIcon_" + jobId);
+                            heartIcon.classList.add("active");
+                        });
+                    }
+                }
+            };
+            xhr.send();
+        });
+
+        function addToCart(jobId) {
+            var heartIcon = document.getElementById("heartIcon_" + jobId);
+            heartIcon.classList.toggle("active");
+
+            // Gọi endpoint để kiểm tra công việc trong giỏ hàng
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/User/JobCart/CheckCartItem", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        var cartItemIds = response.map(String); // Chuyển đổi các phần tử trong mảng thành chuỗi
+                        if (cartItemIds.includes(jobId.toString())) {
+                            heartIcon.classList.add("active");
+                        }
+                    }
+                }
+            };
+            xhr.send();
+        }
+    </script>

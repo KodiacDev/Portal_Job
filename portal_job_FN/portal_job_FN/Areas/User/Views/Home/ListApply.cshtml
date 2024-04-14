@@ -1,0 +1,90 @@
+﻿@model IEnumerable<portal_job_FN.Models.ApplyJob>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Công ty đã ứng tuyển</h1>
+<table class="table">
+    <thead>
+        <tr>
+            @*             <th>
+            @Html.DisplayNameFor(model => model.url_cv)
+            </th> *@
+            @*             <th>
+            @Html.DisplayNameFor(model => model.cover_letter)
+            </th>
+            <th>
+            @Html.DisplayNameFor(model => model.Feedback)
+            </th> *@
+            <th>
+                <h4 style="font-weight:unset">Tên công ty</h4>
+            </th>
+            <th>
+                <h4 style="font-weight:unset">Vị trí</h4>
+            </th>
+            <th>
+                <h4 style="font-weight:unset">Logo công ty</h4>
+            </th>
+            <th>
+                <h4 style="font-weight:unset">Ngày ứng tuyển</h4>
+            </th>
+            @*             <th>
+            @Html.DisplayNameFor(model => model.update_at)
+            </th> *@
+            @*             <th>
+            @Html.DisplayNameFor(model => model.application_userId)
+            </th> *@
+
+
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*  <td>
+            @Html.DisplayFor(modelItem => item.url_cv)
+            </td> *@
+                @*                 <td>
+            @Html.DisplayFor(modelItem => item.cover_letter)
+            </td> *@
+                @*                 <td>
+            @Html.DisplayFor(modelItem => item.Feedback)
+            </td> *@
+                <td>
+                    @Html.DisplayFor(modelItem => item.post_Job.applicationUser.company_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.post_Job.job_name)
+                </td>
+                <td>
+                    <img src="@item.applicationUser.image_url" alt="Product Image" style="max-width: 100px;" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.create_at)
+
+                </td>
+                @*                 <td>
+            @Html.DisplayFor(modelItem => item.update_at)
+            </td> *@
+                @*                 <td>
+            @Html.DisplayFor(modelItem => item.application_userId)
+            </td> *@
+
+                @*                 <td>
+            @Html.DisplayFor(modelItem => item.applicationUser.Id)
+            </td> *@
+
+                <td>
+                    <a asp-action="DetailsApply" asp-route-id="@item?.Id">Chi tiết</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-area="" asp-controller="Home" asp-action="Index"> Trở về Home</a>

@@ -1,0 +1,90 @@
+﻿@model JobCart
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <h1>Công việc đã lưu</h1>
+    <div class="tab-content">
+        <div id="tab-1" class="tab-pane fade show p-0 active">
+            <div class="row">
+                @foreach (var job in Model.Items)
+                {
+                    <div class="col-12 col-md-6">
+                        <div class="job-item p-4 mb-4">
+                            <div class="row g-4">
+                                <div class="col-8 d-flex align-items-center">
+                                    <a asp-action="Details" asp-route-id="@job.PostJobId">
+                                        <!-- Thêm thẻ <a> với href tới trang chi tiết -->
+                                        <div class="image-container" style=" width: 80px;height: 80px;overflow: hidden;">
+                                            <img class="flex-shrink-0 img-fluid border rounded" src="@job.imageUrl" alt="">
+                                        </div>
+                                    </a>
+                                    <div class="text-start ps-4">
+                                        <a asp-action="Details" asp-route-id="@job.PostJobId">
+                                            <!-- Thêm thẻ <a> với href tới trang chi tiết -->
+                                            <h5 class="mb-3">@job.JobName</h5>
+                                        </a>
+                                        <span class="text-truncate me-3">
+                                            <i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                            @(job.ProvinceName != null ? job.ProvinceName : "Không")
+                                        </span>
+                                        <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>@job.EmployerType</span>
+                                        <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>@string.Format("{0} Triệu - {1} Triệu", job.SalaryMin, job.SalaryMax)</span>
+                                    </div>
+                                </div>
+                                <div class="col-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                    <div class="d-flex mb-3">
+                                        <form asp-action="AddToCart" asp-controller="JobCart" method="post">
+                                            <input type="hidden" name="jobId" value="@job.PostJobId" />
+                                            <button type="submit" class="btn btn-light btn-square me-3" href="#">
+                                                 <i id="heartIcon_@job.PostJobId" class="far fa-heart"></i>
+                                            </button>
+                                        </form>
+
+                                        <script>
+                                            // Kiểm tra xem công việc đã có trong giỏ hàng hay chưa
+                                            var jobId = "@job.PostJobId";
+                                            var heartIcon = document.getElementById("heartIcon_" + jobId);
+                                            var isInCart = checkIfJobInCart(jobId); // Hàm kiểm tra công việc đã có trong giỏ hàng
+
+                                            if (isInCart) {
+                                                heartIcon.classList.add("text-primary");
+                                            } else {
+                                                heartIcon.classList.remove("text-primary");
+                                            }
+
+                                            function checkIfJobInCart(jobId) {
+                                                var cart = getSessionCart();
+                                                if (cart) {
+                                                    var cartItems = cart.items;
+                                                    for (var i = 0; i < cartItems.length; i++) {
+                                                        if (cartItems[i].postJobId === jobId) {
+                                                            return true;
+                                                        }
+                                                    }
+                                                }
+                                                return false;
+                                            }
+
+                                            function getSessionCart() {
+                                                var cartJson = sessionStorage.getItem("Cart");
+                                                return JSON.parse(cartJson);
+                                            }
+                                        </script>
+                                        @*    <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a> *@
+@*                                         <a class="btn btn-primary" asp-area="User" asp-action="Apply_job" asp-route-id="@job.PostJobId">Apply Now</a> <!-- Đường dẫn tới trang chi tiết --> *@
+                                        <a class="btn btn-primary" href="/User/Home/Apply_job/@job.PostJobId">Apply Now</a>
+                                    </div>
+                                    <small class="text-truncate">
+                                        <i class="far fa-calendar-alt text-primary me-2"></i>
+                                        Date Line: @string.Format("{0:dd/MM/yyyy}", job.ApplyDate)
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>

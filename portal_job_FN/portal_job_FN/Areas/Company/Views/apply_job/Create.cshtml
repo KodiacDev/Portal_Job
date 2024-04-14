@@ -1,0 +1,67 @@
+﻿@model portal_job_FN.Models.ApplyJob
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>apply_job</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="url_cv" class="control-label"></label>
+                <input asp-for="url_cv" class="form-control" />
+                <span asp-validation-for="url_cv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cover_letter" class="control-label"></label>
+                <input asp-for="cover_letter" class="form-control" />
+                <span asp-validation-for="cover_letter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Feedback" class="control-label"></label>
+                <input asp-for="Feedback" class="form-control" />
+                <span asp-validation-for="Feedback" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="create_at" class="control-label"></label>
+                <input asp-for="create_at" class="form-control" />
+                <span asp-validation-for="create_at" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="update_at" class="control-label"></label>
+                <input asp-for="update_at" class="form-control" />
+                <span asp-validation-for="update_at" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="post_JobId" class="control-label"></label>
+                <select asp-for="post_JobId" class ="form-control" asp-items="ViewBag.post_JobId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="application_userId" class="control-label"></label>
+                <input asp-for="application_userId" class="form-control" />
+                <span asp-validation-for="application_userId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="applicationUserId" class="control-label"></label>
+                <select asp-for="applicationUserId" class ="form-control" asp-items="ViewBag.applicationUserId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

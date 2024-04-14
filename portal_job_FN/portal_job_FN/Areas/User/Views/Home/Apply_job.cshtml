@@ -1,0 +1,37 @@
+﻿@model portal_job_FN.Models.ApplyJob
+@{
+    ViewData["Title"] = "applyJob";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@* sử dụng viewBag *@
+@{
+    var post_jobs = ViewBag.post_jobs as portal_job_FN.Models.PostJob;
+}
+
+<div class="">
+    <h4 class="mb-4">Ứng tuyển cho vị trí @post_jobs?.job_name</h4>
+    <form asp-action="Apply_job" method="post" enctype="multipart/form-data">
+    @*     <input type="hidden" name="post_job" value="@post_jobs.Id" ko cần vì id đã truyền bên index /> *@
+        <div class="row g-3">
+            <div class="col-12 col-sm-6">
+                <input type="text" asp-for="FullName" class="form-control" placeholder="Tên của bạn">
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="col-12 col-sm-6">
+                <input type="email" asp-for="Email" class="form-control" placeholder="Email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="col-12 col-sm-6">
+                <input type="file" asp-for="url_cv" class="form-control bg-white">
+                <span asp-validation-for="url_cv" class="text-danger"></span>
+            </div>
+            <div class="col-12">
+                <textarea class="form-control" asp-for="cover_letter" rows="5" placeholder="Thư giới thiệu"></textarea>
+                <span asp-validation-for="cover_letter" class="text-danger"></span>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary w-100" type="submit" value="Apply_job">Ứng tuyển ngay</button>
+            </div>
+        </div>
+    </form>
+</div>

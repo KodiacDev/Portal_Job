@@ -1,0 +1,65 @@
+﻿@model portal_job_FN.Models.ApplyJob
+
+@{
+    ViewData["Title"] = "Details_apply";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Chi tiết công việc đã ứng tuyển</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.url_cv)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.url_cv)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.cover_letter)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.cover_letter)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Feedback)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Feedback)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.create_at)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.create_at)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.update_at)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.update_at)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.application_userId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.application_userId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.post_Job.job_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.post_Job.job_name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.applicationUser.company_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.applicationUser.company_name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-area="User" asp-controller="Home" asp-action="List_Apply">Trở về danh sách</a>
+</div>

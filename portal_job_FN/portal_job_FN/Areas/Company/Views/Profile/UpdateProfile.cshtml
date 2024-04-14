@@ -1,0 +1,85 @@
+﻿@model portal_job_FN.Models.ApplicationUser
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout_Company.cshtml";
+}
+<h1>Cập nhật thông tin Profile </h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="UpdateProfile" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="company_name" class="control-label">Tên công ty</label>
+                <input asp-for="company_name" class="form-control" />
+                <span asp-validation-for="company_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="contact_no" class="control-label">Số điện thoại công ty</label>
+                <input asp-for="contact_no" class="form-control" />
+                <span asp-validation-for="contact_no" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="introduce_company" class="control-label">Giới thiệu về công ty</label>
+                <textarea asp-for="introduce_company" style="height: 200px; class="form-control"></textarea>
+                <span asp-validation-for="introduce_company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="website" class="control-label">Website</label>
+                <input asp-for="website" class="form-control" />
+                <span asp-validation-for="website" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fullname" class="control-label">Tên cá nhân</label>
+                <input asp-for="fullname" class="form-control" />
+                <span asp-validation-for="fullname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mobile_no" class="control-label">Số điện thoại cá nhân</label>
+                <input asp-for="mobile_no" class="form-control" />
+                <span asp-validation-for="mobile_no" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="position_title" class="control-label">Vị trí công tác</label>
+                <input asp-for="position_title" class="form-control" />
+                <span asp-validation-for="position_title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="address" class="control-label">Địa điểm công ty</label>
+                <input asp-for="address" class="form-control" />
+                <span asp-validation-for="address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.image_url">Logo công ty</label>
+                <input type="file" asp-for="@Model.image_url" class="form-control" id="imageInput" accept="image/*" />
+                <img src="@Model.image_url" alt="Logo công ty" style="max-width:200px;" id="previewImage" />
+                <span asp-validation-for="@Model.image_url" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+<script>
+    document.querySelectorAll('input[type="file"]').forEach(input => {
+        input.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById("previewImage")
+                    img.src = e.target.result
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+</script>

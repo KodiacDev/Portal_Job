@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\portal_job_FN",
+    "\\portal_job_FN\\portal_job_FN",
+    "\\portal_job_FN\\portal_job_FN\\Areas",
+    "\\portal_job_FN\\portal_job_FN\\Areas\\User",
+    "\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views",
+    "\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile",
+    "\\portal_job_FN\\portal_job_FN\\Views",
+    "\\portal_job_FN\\portal_job_FN\\Views\\Home",
+    "\\portal_job_FN\\portal_job_FN\\Views\\Shared"
+  ],
+  "SelectedNode": "\\portal_job_FN\\portal_job_FN\\Views\\Home\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}

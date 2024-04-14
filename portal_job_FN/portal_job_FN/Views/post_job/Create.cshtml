@@ -1,0 +1,109 @@
+﻿@model portal_job_FN.Models.PostJob
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>post_job</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="job_name" class="control-label"></label>
+                <input asp-for="job_name" class="form-control" />
+                <span asp-validation-for="job_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="job_description" class="control-label"></label>
+                <input asp-for="job_description" class="form-control" />
+                <span asp-validation-for="job_description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="required_skill" class="control-label"></label>
+                <input asp-for="required_skill" class="form-control" />
+                <span asp-validation-for="required_skill" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="benefit" class="control-label"></label>
+                <input asp-for="benefit" class="form-control" />
+                <span asp-validation-for="benefit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employmentType" class="control-label"></label>
+                <input asp-for="employmentType" class="form-control" />
+                <span asp-validation-for="employmentType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="salary_min" class="control-label"></label>
+                <input asp-for="salary_min" class="form-control" />
+                <span asp-validation-for="salary_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="salary_max" class="control-label"></label>
+                <input asp-for="salary_max" class="form-control" />
+                <span asp-validation-for="salary_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="detail_location" class="control-label"></label>
+                <input asp-for="detail_location" class="form-control" />
+                <span asp-validation-for="detail_location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="create_at" class="control-label"></label>
+                <input asp-for="create_at" class="form-control" />
+                <span asp-validation-for="create_at" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="update_at" class="control-label"></label>
+                <input asp-for="update_at" class="form-control" />
+                <span asp-validation-for="update_at" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="apply_date" class="control-label"></label>
+                <input asp-for="apply_date" class="form-control" />
+                <span asp-validation-for="apply_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="is_active" class="control-label"></label>
+                <input asp-for="is_active" class="form-control" />
+                <span asp-validation-for="is_active" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="job_LocationId" class="control-label"></label>
+                <input asp-for="job_LocationId" class="form-control" />
+                <span asp-validation-for="job_LocationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="experienceId" class="control-label"></label>
+                <input asp-for="experienceId" class="form-control" />
+                <span asp-validation-for="experienceId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="applicationUserId" class="control-label"></label>
+                <input asp-for="applicationUserId" class="form-control" />
+                <span asp-validation-for="applicationUserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="majorId" class="control-label"></label>
+                <input asp-for="majorId" class="form-control" />
+                <span asp-validation-for="majorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

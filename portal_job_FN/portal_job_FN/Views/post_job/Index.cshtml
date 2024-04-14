@@ -1,0 +1,126 @@
+﻿@model IEnumerable<portal_job_FN.Models.PostJob>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.job_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.job_description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.required_skill)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.benefit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.employmentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.salary_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.salary_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.detail_location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.create_at)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.update_at)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.apply_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.is_active)
+            </th>
+        @*     <th>
+                @Html.DisplayNameFor(model => model.location_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.experience_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.application_user)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.major_id)
+            </th>
+            <th></th> *@
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.job_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.job_description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.required_skill)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.benefit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.employmentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.salary_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.salary_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.detail_location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.create_at)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.update_at)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apply_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.is_active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.job_LocationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.experienceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.applicationUserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.majorId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

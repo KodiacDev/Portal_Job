@@ -1,0 +1,83 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+        <li class="nav-item">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                var user = await UserManager.GetUserAsync(User);
+                var avatarUrl = user.image_url; // Thay "ImageUrl" bằng tên trường ảnh trong cơ sở dữ liệu
+                if(avatarUrl == null)
+                {
+                    avatarUrl = "/img/hih.png";
+                }
+                <div class="dropdown">
+                    <a class="nav-link text-dark" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div style="display: flex; align-items: center;">
+                            <span>Xin chào @User.Identity?.Name!</span>
+                            <div class="avatar" style="width: 50px; height: 50px; border-radius: 50%; overflow: hidden; margin-right: 10px;">
+                                <img src="@avatarUrl" alt="Avatar" style="width: 100%;">
+                            </div>
+                        </div>
+                    </a>
+                    @if (User.Identity.IsAuthenticated && User.IsInRole("User"))
+                    {
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" asp-area="User" asp-controller="Profile" asp-action="Index" title="Profile"><i class="fas fa-user"></i> Profile</a></li>
+                            <li><a class="dropdown-item" asp-area="User" asp-controller="JobCart" asp-action="Index"><i class="fas fa-bookmark"></i> Công việc đã lưu</a></li>
+                            <li><a class="dropdown-item" asp-area="User" asp-controller="Home" asp-action="ListApply"><i class="fas fa-check-circle"></i> Công việc đã ứng tuyển</a></li>
+                            <li class="dropdown-item">
+                                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                    <button type="submit" class="btn btn-warning">Đăng xuất</button>
+                                </form>
+                            </li>
+                       
+                        </ul>
+                    }
+                    else if (User.Identity.IsAuthenticated && User.IsInRole("Company"))
+                    {
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Trang quản lý</a></li>
+                            <li><a class="dropdown-item" asp-area="Admin" asp-controller="Profile" asp-action="" title="Profile">Profile</a></li>
+                            <li class="dropdown-item">
+                                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                    <button type="submit" class="btn btn-warning">Đăng xuất</button>
+                                </form>
+                            </li>
+
+                        </ul>
+                    }
+                    else
+                    {
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Trang quản lý</a></li>
+                            <li><a class="dropdown-item" asp-area="Company" asp-controller="Profile" asp-action="" title="Profile">Profile</a></li>
+                            <li class="dropdown-item">
+                                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                    <button type="submit" class="btn btn-warning">Đăng xuất</button>
+                                </form>
+                            </li>
+
+                        </ul>
+                    }
+                </div>
+            }
+            else
+            {
+                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Đăng nhập</a>
+            }
+        </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Đăng ký</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Đăng nhập</a>
+    </li>
+}
+</ul>
