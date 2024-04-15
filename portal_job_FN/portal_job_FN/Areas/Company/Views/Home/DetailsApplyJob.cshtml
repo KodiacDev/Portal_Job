@@ -13,15 +13,12 @@
     <dl class="row">
         <div class="row">
             <div class="col-sm-12">
-                <dl>
-                    <dt>
                         @Html.DisplayNameFor(model => model.url_cv)
                     </dt>
                     <dd>
                         @Html.DisplayFor(model => model.url_cv)
                     </dd>
                     <button class="btn btn-primary" id="openPdfButton">Mở PDF</button>
-                </dl>
             </div>
             <div id="pdfContainer" class="col-sm-12" style="display: none;">
                 <button id="closePdfButton" class="close-button">X</button>
