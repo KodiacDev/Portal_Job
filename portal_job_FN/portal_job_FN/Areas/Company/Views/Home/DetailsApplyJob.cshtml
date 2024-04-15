@@ -1,0 +1,139 @@
+﻿@model portal_job_FN.Models.ApplyJob
+
+@{
+    ViewData["Title"] = "DetailsApplyJob";
+    Layout = "~/Views/Shared/_Layout_Company.cshtml";
+}
+
+<h1>DetailsApplyJob</h1>
+
+<div>
+    <h4>ApplyJob</h4>
+    <hr />
+    <dl class="row">
+        <div class="row">
+            <div class="col-sm-12">
+                <dl>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.url_cv)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.url_cv)
+                    </dd>
+                    <button class="btn btn-primary" id="openPdfButton">Mở PDF</button>
+                </dl>
+            </div>
+            <div id="pdfContainer" class="col-sm-12" style="display: none;">
+                <button id="closePdfButton" class="close-button">X</button>
+                <iframe id="pdfFrame" style="width: 100%; height: calc(100vh - 60px);"></iframe>
+            </div>
+        </div>
+
+
+        <style>
+            .close-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: transparent;
+                border: none;
+                color: red;
+                font-size: 50px;
+                cursor: pointer;
+            }
+
+                .close-button:hover {
+                    color: darkred;
+                }
+
+            #pdfContainer {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: white; /* Đảm bảo nền của iframe không che phủ các phần tử khác */
+                z-index: 9999; /* Đảm bảo iframe hiển thị trên các phần tử khác */
+            }
+
+            #pdfFrame {
+                width: 100%;
+                height: calc(100vh - 60px); /* Chiều cao của iframe sẽ chiếm toàn bộ không gian trừ đi kích thước của nút "Đóng" */
+            }
+
+        </style>
+
+
+            <script>
+
+            document.getElementById('openPdfButton').addEventListener('click', function () {
+                document.getElementById('pdfContainer').style.display = 'block';
+                document.getElementById('pdfFrame').src = '@Model.url_cv';
+            });
+
+            document.getElementById('closePdfButton').addEventListener('click', function () {
+                document.getElementById('pdfContainer').style.display = 'none';
+                document.getElementById('pdfFrame').src = '';
+            });
+            </script>
+
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cover_letter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cover_letter)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Feedback)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Feedback)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.create_at)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.create_at)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.update_at)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.update_at)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.application_userId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.application_userId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.post_Job)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.post_Job.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.applicationUser)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.applicationUser.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

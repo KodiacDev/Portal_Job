@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\cv\\8fdb5b21-38a6-4dfb-b8aa-518739888bc2.pdf",
+      "PackagePath": "staticwebassets\\cv\\8fdb5b21-38a6-4dfb-b8aa-518739888bc2.pdf"
+    },
+    {
       "Id": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

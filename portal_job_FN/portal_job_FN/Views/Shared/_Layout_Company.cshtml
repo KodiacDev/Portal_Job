@@ -12,7 +12,7 @@
     <title>Tuyển dụng</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet">
 
@@ -42,9 +42,29 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" asp-area="Company" asp-controller="Home" asp-action="Index">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Thống kê</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Company" asp-controller="Profile" asp-action="Index">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Profile Công ty</span>
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Company" asp-controller="Home" asp-action="view_post">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Tin Tuyển dụng</span>
+                </a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="Company" asp-controller="Home" asp-action="ViewListApplyJob">
+                    <i class="fas fa-address-book"></i>
+                    <span>Quản lý CV</span>
                 </a>
             </li>
 
@@ -111,8 +131,9 @@
                     <div class="bg-white py-2 collapse-inner rounded">
 
                         <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" asp-area="Company" asp-controller="Home" asp-action="view_post">Xem bài đăng</a>
-                        <a class="collapse-item" asp-area="Company" asp-controller="Profile" asp-action="Index">Xem hồ sơ công ty</a>
+                        <a class="collapse-item" asp-area="Company" asp-controller="Profile" asp-action="Index">Profile Công ty</a>
+                        <a class="collapse-item" asp-area="Company" asp-controller="Home" asp-action="view_post">Tin Tuyển dụng</a>
+                        <a class="collapse-item" asp-area="Company" asp-controller="Home" asp-action="ViewListApplyJob">Quản lý CV</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>

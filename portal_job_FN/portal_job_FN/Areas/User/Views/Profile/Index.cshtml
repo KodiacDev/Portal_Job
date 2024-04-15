@@ -143,7 +143,7 @@
                                             <p class="start-date d-inline-block mr-2">@string.Format("{0:MM/yyyy}", @education.start_date)</p>
                                             <p class="end-date d-inline-block">@string.Format("{0:MM/yyyy}", @education.end_date)</p>
                                         </div>
-                                        <div class="ml-auto mr-0">
+                                        <div class="ml-auto align-self-end">
                                             <a class="btn btn-info" asp-area="User" asp-controller="Profile" asp-action="UpdateEducation" asp-route-id="@education.Id">Edit</a>
                                             <form method="get" action="/User/Profile/DeleteEducation/@education.Id" onsubmit="return confirmDelete();" style="display: inline;">
                                                 <button type="submit" class="btn btn-warning ml-2">Delete</button>
@@ -151,6 +151,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                             }
                             <a class="btn btn-info" asp-area="User" asp-controller="Profile" asp-action="AddEducation">Thêm học vấn</a>
                         }

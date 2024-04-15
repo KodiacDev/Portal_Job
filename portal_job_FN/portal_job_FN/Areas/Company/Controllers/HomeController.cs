@@ -22,13 +22,15 @@ namespace portal_job_FN.Areas.Company.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationDbContext _context;
         private readonly IPostJobRepository _post_job;
+        private readonly IApplyJobRepository _apply_job;
  
         public HomeController(ApplicationDbContext context,
             ILocationRepository locationRepository,
             IExperienceRepository experience,
             IMajorRepository major,
             IPostJobRepository post_job,
-            UserManager<ApplicationUser> userManager)
+            UserManager<ApplicationUser> userManager,
+            IApplyJobRepository apply_job)
         {
             _context = context;
             _locationRepository = locationRepository;
@@ -36,6 +38,7 @@ namespace portal_job_FN.Areas.Company.Controllers
             _major = major;
             _post_job = post_job;
             _userManager = userManager;
+            _apply_job = apply_job;
         }
 
         // GET: Company/Home
@@ -51,6 +54,17 @@ namespace portal_job_FN.Areas.Company.Controllers
             return View(await post_jobs);
         }
 
+        public async Task<IActionResult> ViewListApplyJob()
+        {
+            var applyJobs = _apply_job.GetAllAsync();
+            return View(await applyJobs);
+        }
+
+        public async Task<IActionResult> DetailsApplyJob(int id)
+        {
+            var applyJob = await _apply_job.GetByIdAsync(id);
+            return View(applyJob);
+        }
 
         // GET: Company/Home/Details/5
         public async Task<IActionResult> Details(int id)
@@ -91,9 +105,11 @@ namespace portal_job_FN.Areas.Company.Controllers
             if (ModelState.IsValid)
             {
                 //Lấy ra id công ty đăng baì
-                string publisherId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                //Gán vào post_job
-                post_job.applicationUserId = publisherId;
+                var find_company = await _userManager.GetUserAsync(User);
+                if (find_company != null)
+                {
+                    post_job.applicationUserId = find_company.Id;
+                }
                 post_job.create_at = DateTime.Now;
                 post_job.update_at = DateTime.Now;
                 post_job.is_active = 1;

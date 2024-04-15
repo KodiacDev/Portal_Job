@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/GOjyHpWldfLgOC5Yy68uyY+C4JdesoVa/AtkuY3qCg=",
+  "Hash": "yLTUuU1wcReF5gafGvszKtoXsRVZGpQET84mkc22wU0=",
   "Source": "portal_job_FN",
   "BasePath": "_content/portal_job_FN",
   "Mode": "Default",
@@ -1288,6 +1288,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\cv\\8fdb5b21-38a6-4dfb-b8aa-518739888bc2.pdf",
+      "SourceId": "portal_job_FN",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\",
+      "BasePath": "_content/portal_job_FN",
+      "RelativePath": "cv/8fdb5b21-38a6-4dfb-b8aa-518739888bc2.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cv\\8fdb5b21-38a6-4dfb-b8aa-518739888bc2.pdf"
     },
     {
       "Identity": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\favicon.ico",
