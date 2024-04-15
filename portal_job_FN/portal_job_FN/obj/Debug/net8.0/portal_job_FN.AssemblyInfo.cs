@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("portal_job_FN")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd128f73bf54e9292c110ef10c4f3ec82c1929d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4db0564d4b282d7374ceaae02d678b3c86e6a249")]
 [assembly: System.Reflection.AssemblyProductAttribute("portal_job_FN")]
 [assembly: System.Reflection.AssemblyTitleAttribute("portal_job_FN")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

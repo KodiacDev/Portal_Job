@@ -7,20 +7,92 @@
       "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\home\\listapply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\home\\listapply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\profile\\addeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\profile\\addeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\home\\detailsapply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\home\\detailsapply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\jobcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\jobcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\profile\\updateeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\profile\\updateeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\home\\listapply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\home\\listapply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\controllers\\jobcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\controllers\\jobcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\home\\create_post_job.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\home\\create_post_job.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\models\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\models\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\profile\\updateprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\profile\\updateprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\repositories\\efeducationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\repositories\\efeducationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\home\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\home\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\controllers\\apply_jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\controllers\\apply_jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\home\\apply_job.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\home\\apply_job.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\home\\detailsapply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\home\\detailsapply.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\models\\major.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,38 +107,6 @@
       "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\models\\university.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\models\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\models\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\profile\\addeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\profile\\addeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\home\\create_post_job.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\home\\create_post_job.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\jobcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\jobcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\home\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\home\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\controllers\\jobcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\controllers\\jobcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\profile\\updateprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\profile\\updateprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -75,32 +115,12 @@
       "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\home\\apply_job.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\home\\apply_job.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\profile\\updateeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\profile\\updateeducation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\user\\views\\profile\\updateprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\user\\views\\profile\\updateprofile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -189,14 +209,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\repositories\\imajorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\repositories\\imajorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\repositories\\efeducationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\repositories\\efeducationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\controllers\\apply_jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\controllers\\apply_jobcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\repositories\\efapplyjobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -293,18 +305,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\apply_job\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\apply_job\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\home\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\areas\\company\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|solutionrelative:portal_job_fn\\areas\\company\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2FE21FBE-C986-4E83-945D-9734E3D9F908}|portal_job_FN\\portal_job_FN.csproj|c:\\users\\a\\desktop\\pt_fn - fn\\portal_job_fn\\portal_job_fn\\views\\post_job\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -450,7 +450,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -466,27 +466,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Major.cs",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\Major.cs",
-              "RelativeDocumentMoniker": "portal_job_FN\\Models\\Major.cs",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\Major.cs",
-              "RelativeToolTip": "portal_job_FN\\Models\\Major.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T10:16:57.794Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAwwDUAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T02:39:06.574Z"
+              "Title": "UpdateEducation.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateEducation.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateEducation.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateEducation.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateEducation.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-13T03:01:17.577Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -496,27 +485,53 @@
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Controllers\\ProfileController.cs",
               "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Controllers\\ProfileController.cs",
               "RelativeToolTip": "portal_job_FN\\Areas\\User\\Controllers\\ProfileController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAcwCoAAAANAAAA",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAuwKkAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-12T12:00:20.588Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DetailsApply.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Home\\DetailsApply.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Home\\DetailsApply.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Home\\DetailsApply.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Home\\DetailsApply.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAA0AAAA3AAAA",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\Index.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Profile\\Index.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\Index.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Profile\\Index.cshtml",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAuwJMAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-13T03:06:50.652Z",
+              "WhenOpened": "2024-04-12T14:55:25.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\JobCart\\Index.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\JobCart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\JobCart\\Index.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\JobCart\\Index.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAUwD4AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-13T04:12:57.964Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AddEducation.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\AddEducation.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Profile\\AddEducation.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\AddEducation.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Profile\\AddEducation.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAUwA4AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-13T15:22:33.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ListApply.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Home\\ListApply.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Home\\ListApply.cshtml",
@@ -529,20 +544,239 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\Index.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Profile\\Index.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\Index.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Profile\\Index.cshtml",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAuwJAAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-12T14:55:25.062Z",
+              "DocumentIndex": 6,
+              "Title": "JobCartController.cs",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Controllers\\JobCartController.cs",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Controllers\\JobCartController.cs",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Controllers\\JobCartController.cs",
+              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Controllers\\JobCartController.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAEwBEAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T03:34:59.347Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
+              "Title": "Create_post_job.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Create_post_job.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Home\\Create_post_job.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Create_post_job.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Views\\Home\\Create_post_job.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-01T03:05:06.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Program.cs",
+              "RelativeDocumentMoniker": "portal_job_FN\\Program.cs",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Program.cs",
+              "RelativeToolTip": "portal_job_FN\\Program.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAmwGMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T05:45:30.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Education.cs",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\Education.cs",
+              "RelativeDocumentMoniker": "portal_job_FN\\Models\\Education.cs",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\Education.cs",
+              "RelativeToolTip": "portal_job_FN\\Models\\Education.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T10:17:40.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAUwJAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T02:03:16.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Controllers\\ProfileController.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAgwFkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T14:11:15.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UpdateProfile.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateProfile.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateProfile.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateProfile.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateProfile.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T16:22:58.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EFEducationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\EFEducationRepository.cs",
+              "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\EFEducationRepository.cs",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\EFEducationRepository.cs",
+              "RelativeToolTip": "portal_job_FN\\Repositories\\EFEducationRepository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwDQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T12:26:33.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Delete.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Home\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Delete.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Views\\Home\\Delete.cshtml",
+              "ViewState": "AQIAAFUAAAAAAAAAAADwvxEAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-03T14:45:22.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Details.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Home\\Details.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Details.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Views\\Home\\Details.cshtml",
+              "ViewState": "AQIAAD8AAAAAAAAAAADwv24AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-03T14:09:45.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-01T02:29:30.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Edit.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Home\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Edit.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Views\\Home\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-03T14:09:01.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "apply_jobController.cs",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\apply_jobController.cs",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Controllers\\apply_jobController.cs",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\apply_jobController.cs",
+              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Controllers\\apply_jobController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAK4AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T09:37:29.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAUwDUAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-13T02:39:06.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Apply_job.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Home\\Apply_job.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Home\\Apply_job.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Home\\Apply_job.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Home\\Apply_job.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-07T09:21:16.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAUwKMAAABuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-31T12:50:03.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DetailsApply.cshtml",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Home\\DetailsApply.cshtml",
+              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Home\\DetailsApply.cshtml",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Home\\DetailsApply.cshtml",
+              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Home\\DetailsApply.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAA0AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-13T03:06:50.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Major.cs",
+              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\Major.cs",
+              "RelativeDocumentMoniker": "portal_job_FN\\Models\\Major.cs",
+              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\Major.cs",
+              "RelativeToolTip": "portal_job_FN\\Models\\Major.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T10:16:57.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "PostJob.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\PostJob.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\PostJob.cs",
@@ -554,7 +788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 25,
               "Title": "University.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\University.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\University.cs",
@@ -566,103 +800,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Education.cs",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\Education.cs",
-              "RelativeDocumentMoniker": "portal_job_FN\\Models\\Education.cs",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\Education.cs",
-              "RelativeToolTip": "portal_job_FN\\Models\\Education.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T10:17:40.226Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AddEducation.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\AddEducation.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Profile\\AddEducation.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\AddEducation.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Profile\\AddEducation.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-13T15:22:33.621Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProfileController.cs",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\ProfileController.cs",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Controllers\\ProfileController.cs",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\ProfileController.cs",
-              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Controllers\\ProfileController.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAgwFkAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T14:11:15.886Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAowDkAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T02:03:16.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\JobCart\\Index.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\JobCart\\Index.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\JobCart\\Index.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\JobCart\\Index.cshtml",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAUwD4AAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-13T04:12:57.964Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Create_post_job.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Create_post_job.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Home\\Create_post_job.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Create_post_job.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Views\\Home\\Create_post_job.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAEcAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-01T03:05:06.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Delete.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Home\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Delete.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Views\\Home\\Delete.cshtml",
-              "ViewState": "AQIAAFIAAAAAAAAAAADwv2YAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T14:45:22.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "JobCartController.cs",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Controllers\\JobCartController.cs",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Controllers\\JobCartController.cs",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Controllers\\JobCartController.cs",
-              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Controllers\\JobCartController.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAArwBEAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-13T03:34:59.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 26,
               "Title": "UpdateProfile.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Profile\\UpdateProfile.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Profile\\UpdateProfile.cshtml",
@@ -674,7 +812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 27,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Profile\\Index.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Profile\\Index.cshtml",
@@ -686,55 +824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Apply_job.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Home\\Apply_job.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Home\\Apply_job.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Home\\Apply_job.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Home\\Apply_job.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-07T09:21:16.819Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "UpdateEducation.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateEducation.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateEducation.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateEducation.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateEducation.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-13T03:01:17.577Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UpdateProfile.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateProfile.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateProfile.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateProfile.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\User\\Views\\Profile\\UpdateProfile.cshtml",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAuwIIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-12T16:22:58.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAEgBAAAAAAAAAAAUwF0BAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-31T12:50:03.314Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Views\\Home\\Privacy.cshtml",
@@ -746,7 +836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 29,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Controllers\\HomeController.cs",
@@ -758,19 +848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Program.cs",
-              "RelativeDocumentMoniker": "portal_job_FN\\Program.cs",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Program.cs",
-              "RelativeToolTip": "portal_job_FN\\Program.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAuwFYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-31T05:45:30.62Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Views\\Shared\\_LoginPartial.cshtml",
@@ -782,7 +860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Views\\Shared\\_Layout.cshtml",
@@ -794,7 +872,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "CartItem.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\CartItem.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\CartItem.cs",
@@ -806,7 +884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "post_jobController.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Controllers\\post_jobController.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Controllers\\post_jobController.cs",
@@ -818,7 +896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 38,
               "Title": "portal_job_FN.csproj",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\portal_job_FN.csproj",
               "RelativeDocumentMoniker": "portal_job_FN\\portal_job_FN.csproj",
@@ -830,7 +908,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "SeesionExtension.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Session\\SeesionExtension.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Session\\SeesionExtension.cs",
@@ -842,7 +920,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "JobCart.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\JobCart.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\JobCart.cs",
@@ -854,7 +932,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 36,
               "Title": "EFPostJobRepository.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\EFPostJobRepository.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\EFPostJobRepository.cs",
@@ -866,7 +944,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 37,
               "Title": "ApplyJob.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\ApplyJob.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\ApplyJob.cs",
@@ -878,7 +956,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 39,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\Home\\Details.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Views\\Home\\Details.cshtml",
@@ -890,7 +968,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 41,
               "Title": "Register.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
@@ -902,7 +980,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 42,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
@@ -914,7 +992,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 40,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\_ViewImports.cshtml",
@@ -926,7 +1004,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 43,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\ApplicationUser.cs",
@@ -950,7 +1028,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 45,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\post_job\\Edit.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Views\\post_job\\Edit.cshtml",
@@ -962,7 +1040,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 44,
               "Title": "profile-user.css",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\css\\profile-user.css",
               "RelativeDocumentMoniker": "portal_job_FN\\wwwroot\\css\\profile-user.css",
@@ -974,7 +1052,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 47,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\appsettings.json",
               "RelativeDocumentMoniker": "portal_job_FN\\appsettings.json",
@@ -986,7 +1064,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 46,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Data\\ApplicationDbContext.cs",
@@ -1010,7 +1088,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 48,
               "Title": "EFUniversityRepository.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\EFUniversityRepository.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\EFUniversityRepository.cs",
@@ -1022,7 +1100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 49,
               "Title": "EFMajorRepository.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\EFMajorRepository.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\EFMajorRepository.cs",
@@ -1034,7 +1112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 50,
               "Title": "IUniversity.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\IUniversity.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\IUniversity.cs",
@@ -1046,7 +1124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 51,
               "Title": "IMajorRepository.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\IMajorRepository.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\IMajorRepository.cs",
@@ -1058,31 +1136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "EFEducationRepository.cs",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\EFEducationRepository.cs",
-              "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\EFEducationRepository.cs",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\EFEducationRepository.cs",
-              "RelativeToolTip": "portal_job_FN\\Repositories\\EFEducationRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-12T12:26:33.297Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "apply_jobController.cs",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\apply_jobController.cs",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Controllers\\apply_jobController.cs",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Controllers\\apply_jobController.cs",
-              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Controllers\\apply_jobController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAK4AAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T09:37:29.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "EFApplyJobRepository.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\EFApplyJobRepository.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\EFApplyJobRepository.cs",
@@ -1094,7 +1148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 53,
               "Title": "IPostJobRepository.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\IPostJobRepository.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\IPostJobRepository.cs",
@@ -1106,7 +1160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 54,
               "Title": "ILocationRepository.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\ILocationRepository.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\ILocationRepository.cs",
@@ -1118,7 +1172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 55,
               "Title": "UserImage.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\UserImage.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\UserImage.cs",
@@ -1130,7 +1184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 56,
               "Title": "SD.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\SD.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\SD.cs",
@@ -1142,7 +1196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 57,
               "Title": "PostJobImage.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\PostJobImage.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\PostJobImage.cs",
@@ -1154,7 +1208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 58,
               "Title": "JobLocation.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\JobLocation.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\JobLocation.cs",
@@ -1166,7 +1220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 59,
               "Title": "Experience.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\Experience.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\Experience.cs",
@@ -1178,7 +1232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 60,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\ErrorViewModel.cs",
@@ -1190,7 +1244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 61,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Models\\Admin.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Models\\Admin.cs",
@@ -1214,7 +1268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 62,
               "Title": "IApplyJobRepository.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\IApplyJobRepository.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\IApplyJobRepository.cs",
@@ -1226,7 +1280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 63,
               "Title": "EFExperienceRepository.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\EFExperienceRepository.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\EFExperienceRepository.cs",
@@ -1238,7 +1292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 64,
               "Title": "IEducationRepository.cs",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Repositories\\IEducationRepository.cs",
               "RelativeDocumentMoniker": "portal_job_FN\\Repositories\\IEducationRepository.cs",
@@ -1250,7 +1304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 66,
               "Title": "Logout.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
@@ -1262,7 +1316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 67,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
@@ -1274,7 +1328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 65,
               "Title": "_Layout_Company.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\Shared\\_Layout_Company.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Views\\Shared\\_Layout_Company.cshtml",
@@ -1286,7 +1340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 68,
               "Title": "style.css",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\css\\style.css",
               "RelativeDocumentMoniker": "portal_job_FN\\wwwroot\\css\\style.css",
@@ -1298,7 +1352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 69,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\apply_job\\Details.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\apply_job\\Details.cshtml",
@@ -1310,7 +1364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 70,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\post_job\\Details.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Views\\post_job\\Details.cshtml",
@@ -1322,7 +1376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 71,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Views\\post_job\\Index.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Views\\post_job\\Index.cshtml",
@@ -1334,7 +1388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 75,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\apply_job\\Create.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\apply_job\\Create.cshtml",
@@ -1346,7 +1400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 72,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\apply_job\\Delete.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\apply_job\\Delete.cshtml",
@@ -1370,7 +1424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 74,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\apply_job\\Edit.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\apply_job\\Edit.cshtml",
@@ -1382,7 +1436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 73,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\apply_job\\Index.cshtml",
               "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\apply_job\\Index.cshtml",
@@ -1391,30 +1445,6 @@
               "ViewState": "AQIAADIAAAAAAAAAAAAAwCcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-07T10:11:24.87Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGgAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-01T02:29:30.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Edit.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Home\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Edit.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Views\\Home\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T14:09:01.639Z"
             },
             {
               "$type": "Document",
@@ -1427,18 +1457,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-07T10:03:45.378Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Details.cshtml",
-              "RelativeDocumentMoniker": "portal_job_FN\\Areas\\Company\\Views\\Home\\Details.cshtml",
-              "ToolTip": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\Details.cshtml",
-              "RelativeToolTip": "portal_job_FN\\Areas\\Company\\Views\\Home\\Details.cshtml",
-              "ViewState": "AQIAAFQAAAAAAAAAAADwv2UAAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T14:09:45.768Z"
             },
             {
               "$type": "Document",

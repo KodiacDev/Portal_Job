@@ -859,3 +859,4 @@ C:\Users\a\Desktop\PT_FN - FN\portal_job_FN\portal_job_FN\obj\Debug\net8.0\refin
 C:\Users\a\Desktop\PT_FN - FN\portal_job_FN\portal_job_FN\obj\Debug\net8.0\portal_job_FN.pdb
 C:\Users\a\Desktop\PT_FN - FN\portal_job_FN\portal_job_FN\obj\Debug\net8.0\portal_job_FN.genruntimeconfig.cache
 C:\Users\a\Desktop\PT_FN - FN\portal_job_FN\portal_job_FN\obj\Debug\net8.0\ref\portal_job_FN.dll
+C:\Users\a\Desktop\PT_FN - FN\portal_job_FN\portal_job_FN\obj\Debug\net8.0\portal_job_FN.sourcelink.json

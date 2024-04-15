@@ -67,15 +67,15 @@ namespace portal_job_FN.Areas.User.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> UpdateEducation()
+        public async Task<IActionResult> UpdateEducation(int id)
         {
-            var find_user = await _userManager.GetUserAsync(User);
+            var education = await _educationRepository.GetByIdAsync(id);
             var major = await _majorRepository.GetAllAsync();
             var university = await _universityRepository.GetAllAsync();
-            ViewBag.Major = new SelectList(major, "Id", "major_name");
-            ViewBag.University = new SelectList(university, "Id", "university_name");
+            ViewBag.Majors = new SelectList(major, "Id", "major_name");
+            ViewBag.Universities = new SelectList(university, "Id", "university_name");
 
-            return View(find_user);
+            return View(education);
         }
 
 
@@ -135,6 +135,51 @@ namespace portal_job_FN.Areas.User.Controllers
             return View(find_user);
         }
 
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> UpdateEducation(int id, [Bind("gpa, start_date, end_date, universityId, MajorId")] Education educationUser)
+        {
+            var find_user = await _userManager.GetUserAsync(User);
+            if (find_user == null)
+            {//Khó xảy ra vì đã chuyển hướng từ phân quyền
+                return NotFound("Chưa đăng nhập");
+            }
+            var find_education = await _educationRepository.GetByIdAsync(id);
+            if(find_education == null || educationUser == null)
+            {
+                return NotFound("Id education không hợp lệ");
+            }
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    if (ModelState.IsValid)
+                    {
+                        if (find_user != null)
+                        {
+                            find_education.gpa = educationUser.gpa;
+                            find_education.start_date = educationUser.start_date;
+                            find_education.end_date = educationUser.end_date;
+                            find_education.universityId = educationUser.universityId;
+                            find_education.MajorId = educationUser.MajorId;
+                            var majors = await _majorRepository.GetAllAsync();
+                            var universities = await _universityRepository.GetAllAsync();
+                            ViewBag.Majors = new SelectList(majors, "Id", "major_name");
+                            ViewBag.Universities = new SelectList(universities, "Id", "university_name");
+                            await _educationRepository.UpdateAsync(find_education);
+                        }
+                    }
+                }
+                catch
+                {
+                    return NotFound("du lieu ko hop le");
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(find_user);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddEducation(Education educationUser)
@@ -169,6 +214,24 @@ namespace portal_job_FN.Areas.User.Controllers
             }
             return View(find_user);
         }
+
+        // GET: Company/Home/Delete/5
+        public async Task<IActionResult> DeleteEducation(int id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var education = await _educationRepository.GetByIdAsync(id);
+            if (education == null)
+            {
+                return NotFound();
+            }
+            await _educationRepository.DeleteAsync(id);
+            return NoContent();
+        }
+
 
         private bool IsImageFile(IFormFile file)
         {
