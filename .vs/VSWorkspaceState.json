@@ -11,6 +11,6 @@
     "\\portal_job_FN\\portal_job_FN\\Views\\Home",
     "\\portal_job_FN\\portal_job_FN\\Views\\Shared"
   ],
-  "SelectedNode": "\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\view_post.cshtml",
+  "SelectedNode": "\\portal_job_FN\\portal_job_FN\\Areas\\Company\\Views\\Home\\ViewListApplyJob.cshtml",
   "PreviewInSolutionExplorer": false
 }
