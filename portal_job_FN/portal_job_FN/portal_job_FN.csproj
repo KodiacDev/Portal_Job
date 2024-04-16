@@ -33,4 +33,8 @@
     <Folder Include="wwwroot\cv\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\modules\.DS_Store" />
+  </ItemGroup>
+
 </Project>

@@ -44,7 +44,12 @@ namespace portal_job_FN.Areas.Company.Controllers
         // GET: Company/Home
         public async Task<IActionResult> Index()
         {
-            return View();
+            var find_company = await _userManager.GetUserAsync(User);
+            if (find_company == null)
+            {
+                return NotFound("Chưa đăng nhập");
+            }
+            return View(find_company);
         }
 
         // GET: Company/view_post
