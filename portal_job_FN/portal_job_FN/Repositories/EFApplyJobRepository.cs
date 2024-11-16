@@ -21,6 +21,33 @@ namespace portal_job_FN.Repositories
 
             return await _context.apply_Jobs.ToListAsync();
         }
+
+
+        public async Task<IEnumerable<ApplyJob>> GetAllApplyByUserIdAsync(string id)
+        {
+            //bao gồm danh mục, nếu không có sẽ ko ra danh mục
+            var applicationDbContext = await _context.apply_Jobs
+                .Include(b => b.post_Job)
+                .Include(b => b.applicationUser)
+                .Where(b => b.applicationUser.Id == id)
+                .ToListAsync();
+
+            return applicationDbContext;
+        }
+
+        public async Task<IEnumerable<ApplyJob>> GetAllApplyByCompanyIdAsync(string id)
+        {
+            //bao gồm danh mục, nếu không có sẽ ko ra danh mục
+            var applicationDbContext = await _context.apply_Jobs
+                .Include(b => b.post_Job)
+                .Include(b => b.applicationUser)
+                 .Where(b => b.post_Job.applicationUser.Id == id)
+                .ToListAsync();
+
+            return applicationDbContext;
+        }
+
+
         public async Task<ApplyJob> GetByIdAsync(int id)
         {
             var applicationDbContext = await _context.apply_Jobs

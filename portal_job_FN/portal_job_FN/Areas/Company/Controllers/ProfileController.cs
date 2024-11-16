@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 namespace portal_job_FN.Areas.Company.Controllers
 {
     [Area("Company")]
+    [Authorize(Roles = SD.Role_Company)]
     public class ProfileController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -49,9 +51,10 @@ namespace portal_job_FN.Areas.Company.Controllers
             // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateProfile(string id, [Bind("company_name, address, introduce_company, position_title, mobile_no, contact_no, Email, website")] ApplicationUser company, IFormFile image_url)
+        public async Task<IActionResult> UpdateProfile(string id, [Bind("company_name, address, introduce_company, position_title, mobile_no, fullname,contact_no, Email, website")] ApplicationUser company, IFormFile image_url)
         {
             var find_company = await _userManager.GetUserAsync(User);
+      
             if (find_company != null && id != find_company.Id)
             {
                 return NotFound();
@@ -79,6 +82,7 @@ namespace portal_job_FN.Areas.Company.Controllers
                             find_company.address = company.address;
                             find_company.position_title = company.position_title;
                             find_company.mobile_no = company.mobile_no;
+                            find_company.fullname = company.fullname;
                             find_company.contact_no = company.contact_no;
                             find_company.Email = company.Email;
                             find_company.is_active = 1;

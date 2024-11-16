@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using portal_job_FN.Data;
@@ -8,6 +9,7 @@ using portal_job_FN.Repositories;
 namespace portal_job_FN.Areas.User.Controllers
 {
     [Area("User")]
+    [Authorize(Roles = SD.Role_User)]
     public class ProfileController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -31,10 +33,10 @@ namespace portal_job_FN.Areas.User.Controllers
         public async Task<IActionResult> Index()
         {
             var find_user = await _userManager.GetUserAsync(User);
-            var educations = await _educationRepository.GetAllAsync();
-            ViewBag.Educations = educations;
             if (find_user != null)
             {
+                var educations = await _educationRepository.GetByIdUserAsync(find_user.Id);
+                ViewBag.Educations = educations;
                 return View(find_user);
             }
             else
@@ -229,7 +231,7 @@ namespace portal_job_FN.Areas.User.Controllers
                 return NotFound();
             }
             await _educationRepository.DeleteAsync(id);
-            return NoContent();
+            return RedirectToAction(nameof(Index));
         }
 
 

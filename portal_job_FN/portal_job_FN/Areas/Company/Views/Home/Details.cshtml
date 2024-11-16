@@ -5,111 +5,70 @@
     Layout = "~/Views/Shared/_Layout_Company.cshtml";
 }
 
-<h1>Details</h1>
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h2 style="margin-bottom:20px; font-family:'Times New Roman'">
+                Tin tuyển dụng chi tiết
+            </h2>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead style="font-weight: bold; font-size: 20px;">
+                        <tr>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Tên công việc</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Hình thức</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Mô tả</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Lương từ</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Địa điểm</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Đăng ngày</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Hạn nộp hồ sơ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-size: 20px;color:black">
+                                <span>@Model.job_name</span>
+                            </td>
+                            <td style="font-size: 20px; color: black;">
+                                <i class="fas fa-briefcase"></i> @Model.employmentType
+                            </td>
+
+                            <td style="font-size: 20px;color:black;font-size: 20px; width:500px; word-wrap: break-word; white-space: normal;"">@Model.job_description</td>
+                            <td style="font-size: 20px;color:black"><i class="far fa-money-bill-alt text-primary me-2"></i>@string.Format("{0} Triệu - {1} Triệu", @Model.salary_min, @Model.salary_max)</td>
+                            <td style="font-size: 20px;color:black">
+                                <div>
+                                    <!-- Icon địa điểm -->
+                                    <i class="fas fa-map-marker-alt" style="color:green"></i>
+                                    <!-- Hiển thị địa điểm -->
+                                    <span>@Model.job_Location?.province_name</span>
+                                </div>
+                            </td>
+                            <td style="font-size: 20px;color:black">
+                                <div>
+                                    <!-- Icon ngày -->
+                                    <i class="far fa-calendar-alt" style="color:green"></i>
+                                    <!-- Hiển thi ngày tạo -->
+                                    <span>@Model.create_at</span>
+                                </div>
+                            </td>
+
+                            <td style="font-size: 20px;color:black">
+                                <i class="far fa-calendar-alt" style="color:green"></i>
+                                 @string.Format("{0:dd/MM/yyyy}", Model.apply_date)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 
 <div>
-    <h4>post_job</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.job_name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.job_name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.job_description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.job_description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.required_skill)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.required_skill)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.benefit)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.benefit)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.employmentType)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.employmentType)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.salary_min)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.salary_min)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.salary_max)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.salary_max)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.detail_location)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.detail_location)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.create_at)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.create_at)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.update_at)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.update_at)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.apply_date)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.apply_date)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.is_active)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.is_active)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.job_LocationId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.job_LocationId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.experienceId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.experienceId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.applicationUserId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.applicationUserId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.majorId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.majorId)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-primary" href="/Company/Home/view_post">Trở về</a>
 </div>

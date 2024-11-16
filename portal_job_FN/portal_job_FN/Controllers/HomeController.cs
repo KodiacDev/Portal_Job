@@ -7,6 +7,7 @@ using portal_job_FN.Models;
 using portal_job_FN.Repositories;
 using portal_job_FN.Session;
 using System.Security.Claims;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace portal_job_FN.Controllers
 {
@@ -36,14 +37,108 @@ namespace portal_job_FN.Controllers
             _apply_job = apply_job;
 
         }
-        // GET: post_job
-        public async Task<IActionResult> Index()
+
+        public async Task<IActionResult> Index(int pageNumber = 1)
         {
-            var post_jobs = _post_job.GetAllAsync();
-            return View(await post_jobs);
+
+            int pageSize = 10;
+            //Lay ds kinh nghiem, dia diem
+            var exps = await _experience.GetAllAsync();
+            var locations = await _locationRepository.GetAllAsync();
+            ViewBag.Locations = new SelectList(locations, "Id", "province_name");
+            ViewBag.Exps = new SelectList(exps, "Id", "experience_name");
+            IQueryable<PostJob> query = _context.post_Jobs
+                .Include(b => b.job_Location)
+                .Include(b => b.major)
+                .Include(b => b.applyJobs)
+                .Include(b => b.experience)
+                .Include(b => b.applicationUser);
+            var paginatedPostJobs = await PaginatedList<PostJob>.CreateAsync(query, pageNumber, pageSize);
+            return View(paginatedPostJobs);
+        }
+        public IActionResult About1()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
+        }
+        [HttpGet]
+        public async Task<IActionResult> SearchProducts(string job_name, string location, string experience,string salary, int pageNumber = 1)
+        {
+            try
+            {
+                var jobs = _context.post_Jobs.AsQueryable();
+
+                if (!string.IsNullOrEmpty(job_name))
+                {
+                    jobs = jobs.Where(p => p.job_name.Contains(job_name));
+                }
+
+                if (!string.IsNullOrEmpty(salary))
+                {
+                    switch (salary)
+                    {
+                        case "Dưới 10 triệu":
+                            jobs = jobs.Where(p => p.salary_min < 10); // Thí dụ: Dưới 10 triệu
+                            break;
+                        case "10 - 15 triệu":
+                            jobs = jobs.Where(p => p.salary_min >= 10 && p.salary_max <= 15);
+                            break;
+                        case "15 - 20 triệu":
+                            jobs = jobs.Where(p => p.salary_min >= 15 && p.salary_max <= 20); 
+                            break;
+                        case "20 - 25 triệu":
+                            jobs = jobs.Where(p => p.salary_min >= 20 && p.salary_max <= 25);
+                            break;
+                        case "25 - 30 triệu":
+                            jobs = jobs.Where(p => p.salary_min >= 25 && p.salary_max <= 30); 
+                            break;
+                        case "30 - 35 triệu":
+                            jobs = jobs.Where(p => p.salary_min >= 30 && p.salary_max <= 35); 
+                            break;
+                        case "35 - 40 triệu":
+                            jobs = jobs.Where(p => p.salary_min >= 35 && p.salary_max <= 40);
+                            break;
+                        case "Trên 50 triệu":
+                            jobs = jobs.Where(p => p.salary_max > 50); 
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                if (!string.IsNullOrEmpty(location))
+                {
+                    jobs = jobs.Where(p => p.job_Location.province_name.Contains(location));
+                }
+
+                if (!string.IsNullOrEmpty(experience))
+                {
+                    jobs = jobs.Where(p => p.experience.experience_name.Contains(experience));
+                }
+
+                int pageSize = 10;
+
+                var paginatedJobs = await PaginatedList<PostJob>.CreateAsync(jobs
+                    .Include(b => b.job_Location)
+                    .Include(b => b.major)
+                    .Include(b => b.applyJobs)
+                    .Include(b => b.experience)
+                    .Include(b => b.applicationUser), pageNumber, pageSize);
+
+                return View(paginatedJobs);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
-        // GET: Company/view_post
+
+
+
         public async Task<IActionResult> view_post()
         {
             var post_jobs = _post_job.GetAllAsync();
@@ -51,12 +146,22 @@ namespace portal_job_FN.Controllers
         }
 
 
-        // GET: Company/Home/Details/5
+
         public async Task<IActionResult> Details(int id)
         {
             if (id == null)
             {
                 return NotFound();
+            }
+            var imagesUrls = _context.post_Jobs_images.Where(p => p.post_Job.Id == id).Select(p => p.post_image_url).ToList();
+            ViewBag.imagesUrls = imagesUrls;
+            if (imagesUrls != null && imagesUrls.Any())
+            {
+                ViewBag.imagesUrls = imagesUrls;
+            }
+            else
+            {
+                ViewBag.imagesUrls = new List<string>(); // Gán một danh sách trống nếu không có ảnh nào
             }
 
             var post_job = await _post_job.GetByIdAsync(id);
@@ -68,71 +173,8 @@ namespace portal_job_FN.Controllers
             return View(post_job);
         }
 
-        // GET: Company/Home/Create
-        public async Task<IActionResult> Create_post_job()
-        {
-            var locations = await _locationRepository.GetAllAsync();
-            var experiences = await _experience.GetAllAsync();
-            var majors = await _major.GetAllAsync();
-            ViewBag.Locations = new SelectList(locations, "Id", "province_name");
-            ViewBag.Experiences = new SelectList(experiences, "Id", "experience_name");
-            ViewBag.Majors = new SelectList(majors, "Id", "major_name");
-            return View();
-        }
-
-        // POST: Company/Home/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,job_name,job_description,required_skill,benefit,employmentType,salary_min,salary_max,detail_location,apply_date,location_id,experience_id,major_id")] PostJob post_job)
-        {
-            if (ModelState.IsValid)
-            {
-                var find_user = await _userManager.GetUserAsync(User);
-                if (find_user == null)
-                {
-                    /*return NotFound();*/
-                    return View("Thiếu Id user");
-                }
-                post_job.applicationUserId = find_user.Id;
-                post_job.create_at = DateTime.Now;
-                post_job.update_at = DateTime.Now;
-                post_job.is_active = 1;
-                await _post_job.AddAsync(post_job);
-                return RedirectToAction(nameof(Index));
-            }
-            return View(post_job);
-        }
-
-        // GET: Company/Home/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            var locations = await _locationRepository.GetAllAsync();
-            var experiences = await _experience.GetAllAsync();
-            var majors = await _major.GetAllAsync();
-            if (id == null)
-            {
-                ViewBag.Locations = new SelectList(locations, "Id", "province_name");
-                ViewBag.Experiences = new SelectList(experiences, "Id", "experience_name");
-                ViewBag.Majors = new SelectList(majors, "Id", "major_name");
-                return NotFound();
-            }
-
-            var post_job = await _context.post_Jobs.FindAsync(id);
-            if (post_job == null)
-            {
-                ViewBag.Locations = new SelectList(locations, "Id", "province_name");
-                ViewBag.Experiences = new SelectList(experiences, "Id", "experience_name");
-                ViewBag.Majors = new SelectList(majors, "Id", "major_name");
-                return NotFound();
-            }
-            ViewBag.Locations = new SelectList(locations, "Id", "province_name");
-            ViewBag.Experiences = new SelectList(experiences, "Id", "experience_name");
-            ViewBag.Majors = new SelectList(majors, "Id", "major_name");
-            return View(post_job);
-        }
-        [HttpGet]
+    
+  /*      [HttpGet]
         public async Task<IActionResult> Apply_job(int Id)
         {
             var post_jobs = await _post_job.GetByIdAsync(Id);
@@ -149,14 +191,14 @@ namespace portal_job_FN.Controllers
             var find_user = await _userManager.GetUserAsync(User);
             if (find_user == null)
             {
-                /*return NotFound();*/
+                *//*return NotFound();*//*
                 return View("Thiếu Id user");
             }
 
             var post = await _post_job.GetByIdAsync(Id);
             if (post == null)
             {
-                /*    return NotFound();*/
+                *//*    return NotFound();*//*
                 return View("Thiếu Id postjob");
             }
 
@@ -164,7 +206,7 @@ namespace portal_job_FN.Controllers
             {
                 if (url_cv != null && IsCVFile(url_cv) && IsFileSizeValid(url_cv))
                 {
-                    // Lưu hình ảnh đại diện
+                    // Lưu hình CV
                     apply_job.url_cv = await SaveCV(url_cv);
                 }
                 else
@@ -199,73 +241,10 @@ namespace portal_job_FN.Controllers
                 return NotFound();
             }
             return View(await detail_apply);
-        }
+        }*/
 
-        // POST: Company/Home/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,job_name,job_description,required_skill,benefit,employmentType,salary_min,salary_max,detail_location,create_at,update_at,apply_date,is_active,location_id,experience_id,application_user,major_id")] PostJob post_job)
-        {
-            if (id != post_job.Id)
-            {
-                return NotFound();
-            }
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    await _post_job.UpdateAsync(post_job);
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!post_jobExists(post_job.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(post_job);
-        }
-
-        // GET: Company/Home/Delete/5
-        public async Task<IActionResult> Delete(int id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var post_job = await _post_job.GetByIdAsync(id);
-            if (post_job == null)
-            {
-                return NotFound();
-            }
-
-            return View(post_job);
-        }
-
-        // POST: Company/Home/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var post_job = await _post_job.GetByIdAsync(id);
-            if (post_job != null)
-            {
-                await _post_job.DeleteAsync(post_job.Id);
-            }
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool IsCVFile(IFormFile file)
+   /*     private bool IsCVFile(IFormFile file)
         {
             // Kiểm tra phần mở rộng của file có phải là pdf hay không
             var allowedExtensions = new[] { ".pdf" };
@@ -292,8 +271,8 @@ namespace portal_job_FN.Controllers
                 Console.WriteLine(e.Message);
                 return null;
             }
-        }
-
+        }*/
+       /* //Ktra trong gio hang co post_job chua
         [HttpGet]
         public IActionResult CheckCartItem()
         {
@@ -310,11 +289,39 @@ namespace portal_job_FN.Controllers
             return file.Length <= maxSize;
         }
 
-
+*/
 
         private bool post_jobExists(int id)
         {
             return _context.post_Jobs.Any(e => e.Id == id);
         }
+
+
+
+        //chuc nang tim kiem
+      /*  [HttpGet]
+        public IActionResult SearchProducts(string query)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(query))
+                    return BadRequest("Search query is required!");
+
+                var products = _context.Products
+                    .Where(p => p.Name.Contains(query) || (p.Description != null && p.Description.Contains(query)))
+                    .ToList();
+
+                return View(products);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }*/
+
+
+
+
+
     }
 }

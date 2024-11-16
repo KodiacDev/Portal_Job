@@ -14,23 +14,23 @@
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead style=" font-weight: bold; font-size: 20px;">
-                        <tr >
-                            <th style=" font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Ứng viên</th>
-                            <th style=" font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Chiến dịch</th>
-                            <th style=" font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Thông tin liên hệ</th>
-                            <th style=" font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Ngày ứng tuyển</th>
-                            <th style=" font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Trạng thái</th>
-                            <th style=" font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Action</th>
+                        <tr>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Ứng viên</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Chiến dịch</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Thông tin liên hệ</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Ngày ứng tuyển</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Trạng thái</th>
+                            <th></th>
                         </tr>
                     </thead>
-                    @foreach (var job in Model)
-                    {
-                        <tbody>
+                    <tbody>
+                        @foreach (var job in Model)
+                        {
                             <tr>
-                                <td style=" font-size: 20px;color:black">
+                                <td style="font-size: 20px;color:black">
                                     @if (!string.IsNullOrEmpty(job.applicationUser?.image_url))
                                     {
-                                        <img src="@job.applicationUser.image_url" alt="Avatar" style="height:70px; width:70px">
+                                        <img src="@job.applicationUser?.image_url" alt="Avatar" style="height:70px; width:70px">
                                     }
                                     else
                                     {
@@ -38,8 +38,8 @@
                                     }
                                     <span>@job.applicationUser?.fullname</span>
                                 </td>
-                                <td style=" font-size: 20px;color:black">@job.post_Job?.job_name</td>
-                                <td style=" font-size: 20px;color:black">
+                                <td style="font-size: 20px;color:black">@job.post_Job?.job_name</td>
+                                <td style="font-size: 20px;color:black">
                                     <div>
                                         <!-- Icon email -->
                                         <i class="mdi mdi-email" style="color:green"></i>
@@ -52,29 +52,29 @@
                                         <!-- Hiển thị số điện thoại -->
                                         <span>@job.applicationUser?.mobile_no</span>
                                     </div>
-                                </td style=" font-size: 20px;color:black">
-                                <td style=" font-size: 20px;color:black">
+                                </td>
+                                <td style="font-size: 20px;color:black">
                                     <!-- Icon lịch -->
                                     <i class="mdi mdi-calendar"></i>
                                     <!-- Hiển thị ngày tạo -->
                                     <span>@job.create_at</span>
-                                </td style=" font-size: 20px;color:black">
-                                <td style=" font-size: 20px">
-                                @if (job.Feedback == null)
-                                {
-                                    <td><label class="badge badge-warning">Đang chờ</label></td>
-                                }
-                                else
-                                {
-                                    <td><label class="badge badge-success">Đã duyệt</label></td>
-                                }
+                                </td>
+                                <td style="font-size: 20px;color:black">
+                                    @if (job.Feedback == null)
+                                    {
+                                        <label class="badge badge-warning">Đang chờ</label>
+                                    }
+                                    else
+                                    {
+                                        <label class="badge badge-success">Đã duyệt</label>
+                                    }
                                 </td>
                                 <td>
-                                    <a class="btn btn-info" href="/Company/Home/DetailsApplyJob/@job.Id" >Chi tiết</a>
+                                    <a class="btn btn-info" href="/Company/Home/DetailsApplyJob/@job.Id">Chi tiết</a>
                                 </td>
                             </tr>
-                        </tbody>
-                    }
+                        }
+                    </tbody>
                 </table>
             </div>
         </div>

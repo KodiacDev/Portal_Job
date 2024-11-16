@@ -6,7 +6,7 @@
 }
 
 <!-- right content -->
-<div id="content">
+<div @* id="content" *@>
     <!-- topbar -->
     <div class="topbar">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -38,351 +38,278 @@
             </div>
         </nav>
     </div>
-    <!-- end topbar -->
-    <!-- dashboard inner -->
-    <div class="midde_cont">
-        <div class="container-fluid">
-            <div class="row column_title">
-                <div class="col-md-12">
-                    <div class="page_title">
-                        <h2>Dashboard</h2>
-                    </div>
-                </div>
+
+    <body1 class="font-montserrat">
+        <!-- Page Loader -->
+ @*        <div class="page-loader-wrapper">
+            <div class="loader">
             </div>
-            <div class="row column1">
-                <div class="col-md-6 col-lg-3">
-                    <div class="full counter_section margin_bottom_30">
-                        <div class="couter_icon">
-                            <div>
-                                <i class="fa fa-user yellow_color"></i>
-                            </div>
-                        </div>
-                        <div class="counter_no">
-                            <div>
-                                <p class="total_no">2500</p>
-                                <p class="head_couter">Welcome</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="full counter_section margin_bottom_30">
-                        <div class="couter_icon">
-                            <div>
-                                <i class="fa fa-clock-o blue1_color"></i>
-                            </div>
-                        </div>
-                        <div class="counter_no">
-                            <div>
-                                <p class="total_no">123.50</p>
-                                <p class="head_couter">Average Time</p>
+        </div> *@
+  
+            <div id="main_content">
+                  
+            <div class="section-body mt-3">
+                <div class="container-fluid">
+                    <div class="row clearfix">
+                        <div class="col-lg-12">
+                            <div class="mb-4">
+                                <h4>Trang chủ</h4>
+@*                                 <small>Measure How Fast You’re Growing Monthly Recurring Revenue. <a href="#">Learn More</a></small> *@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="full counter_section margin_bottom_30">
-                        <div class="couter_icon">
-                            <div>
-                                <i class="fa fa-cloud-download green_color"></i>
+                    <div class="row clearfix row-deck">
+                        <div class="col-xl-2 col-lg-4 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Tin tuyển dụng</h3>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="number mb-0 font-32 counter">31</h5>
+                                    <span class="font-12">Measure How Fast... <a href="#">More</a></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="counter_no">
-                            <div>
-                                <p class="total_no">1,805</p>
-                                <p class="head_couter">Collections</p>
+                        <div class="col-xl-2 col-lg-4 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Ứng viên nộp CV</h3>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="number mb-0 font-32 counter">245</h5>
+                                    <span class="font-12">Measure How Fast... <a href="#">More</a></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="full counter_section margin_bottom_30">
-                        <div class="couter_icon">
-                            <div>
-                                <i class="fa fa-comments-o red_color"></i>
+                        <div class="col-xl-2 col-lg-4 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Lượt xem bài viết</h3>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="number mb-0 font-32 counter">17</h5>
+                                    <span class="font-12">Measure How Fast... <a href="#">More</a></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="counter_no">
-                            <div>
-                                <p class="total_no">54</p>
-                                <p class="head_couter">Comments</p>
+                        <div class="col-xl-2 col-lg-4 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">New Message</h3>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="number mb-0 font-32 counter">12</h5>
+                                    <span class="font-12">Measure How Fast... <a href="#">More</a></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row column1 social_media_section">
-                <div class="col-md-6 col-lg-3">
-                    <div class="full socile_icons fb margin_bottom_30">
-                        <div class="social_icon">
-                            <i class="fa fa-facebook"></i>
-                        </div>
-                        <div class="social_cont">
-                            <ul>
-                                <li>
-                                    <span><strong>35k</strong></span>
-                                    <span>Friends</span>
-                                </li>
-                                <li>
-                                    <span><strong>128</strong></span>
-                                    <span>Feeds</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="full socile_icons tw margin_bottom_30">
-                        <div class="social_icon">
-                            <i class="fa fa-twitter"></i>
-                        </div>
-                        <div class="social_cont">
-                            <ul>
-                                <li>
-                                    <span><strong>584k</strong></span>
-                                    <span>Followers</span>
-                                </li>
-                                <li>
-                                    <span><strong>978</strong></span>
-                                    <span>Tweets</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="full socile_icons linked margin_bottom_30">
-                        <div class="social_icon">
-                            <i class="fa fa-linkedin"></i>
-                        </div>
-                        <div class="social_cont">
-                            <ul>
-                                <li>
-                                    <span><strong>758+</strong></span>
-                                    <span>Contacts</span>
-                                </li>
-                                <li>
-                                    <span><strong>365</strong></span>
-                                    <span>Feeds</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="full socile_icons google_p margin_bottom_30">
-                        <div class="social_icon">
-                            <i class="fa fa-google-plus"></i>
-                        </div>
-                        <div class="social_cont">
-                            <ul>
-                                <li>
-                                    <span><strong>450</strong></span>
-                                    <span>Followers</span>
-                                </li>
-                                <li>
-                                    <span><strong>57</strong></span>
-                                    <span>Circles</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- graph -->
-            <div class="row column2 graph margin_bottom_30">
-                <div class="col-md-l2 col-lg-12">
-                    <div class="white_shd full">
-                        <div class="full graph_head">
-                            <div class="heading1 margin_0">
-                                <h2>Extra Area Chart</h2>
+                        <div class="col-xl-2 col-lg-4 col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Open Requests</h3>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="number mb-0 font-32 counter">19</h5>
+                                    <span class="font-12">Measure How Fast... <a href="#">More</a></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="full graph_revenue">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="content">
-                                        <div class="area_chart">
-                                            <canvas height="120" id="canvas"></canvas>
+
+                    </div>
+                    <div class="row clearfix row-deck">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Thống kê ứng tuyển</h3>
+                                    <div class="card-options">
+                                        <button class="btn btn-sm btn-outline-secondary mr-1" id="one_month">1M</button>
+                                        <button class="btn btn-sm btn-outline-secondary mr-1" id="six_months">6M</button>
+                                        <button class="btn btn-sm btn-outline-secondary mr-1" id="one_year" class="active">1Y</button>
+                                        <button class="btn btn-sm btn-outline-secondary mr-1" id="ytd">YTD</button>
+                                        <button class="btn btn-sm btn-outline-secondary" id="all">ALL</button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div id="apex-timeline-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Current Ticket Statusa</h3>
+                                    <div class="card-options">
+                                        <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                                        <a href="#" class="card-options-fullscreen" data-toggle="card-fullscreen"><i class="fe fe-maximize"></i></a>
+                                        <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-sm-flex justify-content-between">
+                                        <div class="font-12">as of 10th to 17th of Jun 2019</div>
+                                        <div class="selectgroup w250">
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="intensity" value="Day" class="selectgroup-input" checked="">
+                                                <span class="selectgroup-button">1D</span>
+                                            </label>
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="intensity" value="Week" class="selectgroup-input">
+                                                <span class="selectgroup-button">1W</span>
+                                            </label>
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="intensity" value="Month" class="selectgroup-input">
+                                                <span class="selectgroup-button">1M</span>
+                                            </label>
+                                            <label class="selectgroup-item">
+                                                <input type="radio" name="intensity" value="Year" class="selectgroup-input">
+                                                <span class="selectgroup-button">1Y</span>
+                                            </label>
                                         </div>
                                     </div>
+                                    <div id="chart-combination" style="height: 205px"></div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                        <div class="col-6 col-xl-3 col-md-6">
+                                            <h5>05</h5>
+                                            <div class="clearfix">
+                                                <div class="float-left"><strong>35%</strong></div>
+                                                <div class="float-right"><small class="text-muted">Yesterday</small></div>
+                                            </div>
+                                            <div class="progress progress-xs">
+                                                <div class="progress-bar bg-gray" role="progressbar" style="width: 35%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <span class="text-uppercase font-10">New Tickets</span>
+                                        </div>
+                                        <div class="col-6 col-xl-3 col-md-6">
+                                            <h5>18</h5>
+                                            <div class="clearfix">
+                                                <div class="float-left"><strong>61%</strong></div>
+                                                <div class="float-right"><small class="text-muted">Yesterday</small></div>
+                                            </div>
+                                            <div class="progress progress-xs">
+                                                <div class="progress-bar bg-gray" role="progressbar" style="width: 61%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <span class="text-uppercase font-10">Open Tickets</span>
+                                        </div>
+                                        <div class="col-6 col-xl-3 col-md-6">
+                                            <h5>06</h5>
+                                            <div class="clearfix">
+                                                <div class="float-left"><strong>100%</strong></div>
+                                                <div class="float-right"><small class="text-muted">Yesterday</small></div>
+                                            </div>
+                                            <div class="progress progress-xs">
+                                                <div class="progress-bar bg-gray" role="progressbar" style="width: 100%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <span class="text-uppercase font-10">Solved Tickets</span>
+                                        </div>
+                                        <div class="col-6 col-xl-3 col-md-6">
+                                            <h5>11</h5>
+                                            <div class="clearfix">
+                                                <div class="float-left"><strong>87%</strong></div>
+                                                <div class="float-right"><small class="text-muted">Yesterday</small></div>
+                                            </div>
+                                            <div class="progress progress-xs">
+                                                <div class="progress-bar bg-gray" role="progressbar" style="width: 87%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <span class="text-uppercase font-10">Unresolved</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Project Statistics</h3>
+                                    <div class="card-options">
+                                        <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                                        <a href="#" class="card-options-fullscreen" data-toggle="card-fullscreen"><i class="fe fe-maximize"></i></a>
+                                        <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row text-center">
+                                        <div class="col-4 border-right pb-4 pt-4">
+                                            <label class="mb-0 font-13">Total Project</label>
+                                            <h4 class="font-30 font-weight-bold text-col-blue counter">42</h4>
+                                        </div>
+                                        <div class="col-4 border-right pb-4 pt-4">
+                                            <label class="mb-0 font-13">On Going</label>
+                                            <h4 class="font-30 font-weight-bold text-col-blue counter">23</h4>
+                                        </div>
+                                        <div class="col-4 pb-4 pt-4">
+                                            <label class="mb-0 font-13">Pending</label>
+                                            <h4 class="font-30 font-weight-bold text-col-blue counter">8</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-striped table-vcenter mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="clearfix">
+                                                        <div class="float-left"><strong>35%</strong></div>
+                                                        <div class="float-right"><small class="text-muted">Design Team</small></div>
+                                                    </div>
+                                                    <div class="progress progress-xs">
+                                                        <div class="progress-bar bg-azure" role="progressbar" style="width: 35%" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="clearfix">
+                                                        <div class="float-left"><strong>25%</strong></div>
+                                                        <div class="float-right"><small class="text-muted">Developer Team</small></div>
+                                                    </div>
+                                                    <div class="progress progress-xs">
+                                                        <div class="progress-bar bg-green" role="progressbar" style="width: 25%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="clearfix">
+                                                        <div class="float-left"><strong>15%</strong></div>
+                                                        <div class="float-right"><small class="text-muted">Marketing</small></div>
+                                                    </div>
+                                                    <div class="progress progress-xs">
+                                                        <div class="progress-bar bg-orange" role="progressbar" style="width: 15%" aria-valuenow="36" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="clearfix">
+                                                        <div class="float-left"><strong>20%</strong></div>
+                                                        <div class="float-right"><small class="text-muted">Management</small></div>
+                                                    </div>
+                                                    <div class="progress progress-xs">
+                                                        <div class="progress-bar bg-indigo" role="progressbar" style="width: 20%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="clearfix">
+                                                        <div class="float-left"><strong>11%</strong></div>
+                                                        <div class="float-right"><small class="text-muted">Other</small></div>
+                                                    </div>
+                                                    <div class="progress progress-xs">
+                                                        <div class="progress-bar bg-pink" role="progressbar" style="width: 11%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- end graph -->
-            <div class="row column3">
-                <!-- testimonial -->
-                <div class="col-md-6">
-                    <div class="dark_bg full margin_bottom_30">
-                        <div class="full graph_head">
-                            <div class="heading1 margin_0">
-                                <h2>Testimonial</h2>
-                            </div>
-                        </div>
-                        <div class="full graph_revenue">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="content testimonial">
-                                        <div id="testimonial_slider" class="carousel slide" data-ride="carousel">
-                                            <!-- Wrapper for carousel items -->
-                                            <div class="carousel-inner">
-                                                <div class="item carousel-item active">
-                                                    <div class="img-box"><img src="~/img/layout_img/user_img.jpg" alt=""></div>
-                                                    <p class="testimonial">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae..</p>
-                                                    <p class="overview"><b>Michael Stuart</b>Seo Founder</p>
-                                                </div>
-                                                <div class="item carousel-item">
-                                                    <div class="img-box"><img src="~/img/layout_img/user_img.jpg" alt=""></div>
-                                                    <p class="testimonial">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae..</p>
-                                                    <p class="overview"><b>Michael Stuart</b>Seo Founder</p>
-                                                </div>
-                                                <div class="item carousel-item">
-                                                    <div class="img-box"><img src="~/img/layout_img/user_img.jpg" alt=""></div>
-                                                    <p class="testimonial">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae..</p>
-                                                    <p class="overview"><b>Michael Stuart</b>Seo Founder</p>
-                                                </div>
-                                            </div>
-                                            <!-- Carousel controls -->
-                                            <a class="carousel-control left carousel-control-prev" href="#testimonial_slider" data-slide="prev">
-                                                <i class="fa fa-angle-left"></i>
-                                            </a>
-                                            <a class="carousel-control right carousel-control-next" href="#testimonial_slider" data-slide="next">
-                                                <i class="fa fa-angle-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end testimonial -->
-                <!-- progress bar -->
-                <div class="col-md-6">
-                    <div class="white_shd full margin_bottom_30">
-                        <div class="full graph_head">
-                            <div class="heading1 margin_0">
-                                <h2>Progress Bar</h2>
-                            </div>
-                        </div>
-                        <div class="full progress_bar_inner">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="progress_bar">
-                                        <!-- Skill Bars -->
-                                        <span class="skill" style="width:73%;">Facebook <span class="info_valume">73%</span></span>
-                                        <div class="progress skill-bar ">
-                                            <div class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width: 73%;">
-                                            </div>
-                                        </div>
-                                        <span class="skill" style="width:62%;">Twitter <span class="info_valume">62%</span></span>
-                                        <div class="progress skill-bar">
-                                            <div class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" style="width: 62%;">
-                                            </div>
-                                        </div>
-                                        <span class="skill" style="width:54%;">Instagram <span class="info_valume">54%</span></span>
-                                        <div class="progress skill-bar">
-                                            <div class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100" style="width: 54%;">
-                                            </div>
-                                        </div>
-                                        <span class="skill" style="width:82%;">Google plus <span class="info_valume">82%</span></span>
-                                        <div class="progress skill-bar">
-                                            <div class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" style="width: 82%;">
-                                            </div>
-                                        </div>
-                                        <span class="skill" style="width:48%;">Other <span class="info_valume">48%</span></span>
-                                        <div class="progress skill-bar">
-                                            <div class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100" style="width: 48%;">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end progress bar -->
-            </div>
-            <div class="row column4 graph">
-                <div class="col-md-6 margin_bottom_30">
-                    <div class="dash_blog">
-                        <div class="dash_blog_inner">
-                            <div class="dash_head">
-                                <h3><span><i class="fa fa-calendar"></i> 6 July 2018</span><span class="plus_green_bt"><a href="#">+</a></span></h3>
-                            </div>
-                            <div class="list_cont">
-                                <p>Today Tasks for Ronney Jack</p>
-                            </div>
-                            <div class="task_list_main">
-                                <ul class="task_list">
-                                    <li><a href="#">Meeting about plan for Admin Template 2018</a><br><strong>10:00 AM</strong></li>
-                                    <li><a href="#">Create new task for Dashboard</a><br><strong>10:00 AM</strong></li>
-                                    <li><a href="#">Meeting about plan for Admin Template 2018</a><br><strong>11:00 AM</strong></li>
-                                    <li><a href="#">Create new task for Dashboard</a><br><strong>10:00 AM</strong></li>
-                                    <li><a href="#">Meeting about plan for Admin Template 2018</a><br><strong>02:00 PM</strong></li>
-                                </ul>
-                            </div>
-                            <div class="read_more">
-                                <div class="center"><a class="main_bt read_bt" href="#">Read More</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="dash_blog">
-                        <div class="dash_blog_inner">
-                            <div class="dash_head">
-                                <h3><span><i class="fa fa-comments-o"></i> Updates</span><span class="plus_green_bt"><a href="#">+</a></span></h3>
-                            </div>
-                            <div class="list_cont">
-                                <p>User confirmation</p>
-                            </div>
-                            <div class="msg_list_main">
-                                <ul class="msg_list">
-                                    <li>
-                                        <span><img src="~/img/layout_img/msg2.png" class="img-responsive" alt="#" /></span>
-                                        <span>
-                                            <span class="name_user">Herman Beck</span>
-                                            <span class="msg_user">Sed ut perspiciatis unde omnis.</span>
-                                            <span class="time_ago">12 min ago</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span><img src="~/img/layout_img/msg3.png" class="img-responsive" alt="#" /></span>
-                                        <span>
-                                            <span class="name_user">John Smith</span>
-                                            <span class="msg_user">On the other hand, we denounce.</span>
-                                            <span class="time_ago">12 min ago</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span><img src="~/img/layout_img/msg2.png" class="img-responsive" alt="#" /></span>
-                                        <span>
-                                            <span class="name_user">John Smith</span>
-                                            <span class="msg_user">Sed ut perspiciatis unde omnis.</span>
-                                            <span class="time_ago">12 min ago</span>
-                                        </span>
-                                    </li>
-                                    <li>
-                                        <span><img src="~/img/layout_img/msg3.png" class="img-responsive" alt="#" /></span>
-                                        <span>
-                                            <span class="name_user">John Smith</span>
-                                            <span class="msg_user">On the other hand, we denounce.</span>
-                                            <span class="time_ago">12 min ago</span>
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="read_more">
-                                <div class="center"><a class="main_bt read_bt" href="#">Read More</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- footer -->
+            </body1>
+            <!-- footer -->
 <!-- End of Main Content -->

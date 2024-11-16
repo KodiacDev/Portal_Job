@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\portal_job_FN.csproj": {}
+    "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\portal_job_FN.csproj": {}
   },
   "projects": {
-    "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\portal_job_FN.csproj": {
+    "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\portal_job_FN.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\portal_job_FN.csproj",
+        "projectUniqueName": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\portal_job_FN.csproj",
         "projectName": "portal_job_FN",
-        "projectPath": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\portal_job_FN.csproj",
+        "projectPath": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\portal_job_FN.csproj",
         "packagesPath": "C:\\Users\\a\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a\\Desktop\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\obj\\",
+        "outputPath": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\a\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -78,6 +78,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.4, )"
             }
           },
           "imports": [

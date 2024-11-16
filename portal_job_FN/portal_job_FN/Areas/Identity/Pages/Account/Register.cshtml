@@ -6,7 +6,8 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<div class="row">
+<div class="row justify-content-center">
+    <!-- Sử dụng justify-content-center để căn giữa khối div -->
     <div class="col-md-4">
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
             <h2>Tạo tài khoản mới</h2>
@@ -27,15 +28,30 @@
                 <label asp-for="Input.ConfirmPassword">Confirm Password</label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            <div class="form-floating mb-3">
-                <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-control">
-                    <option disabled selected>-select Role-</option>
-                </select>
-            </div>
+            <style>
+                /* Hiển thị các tùy chọn được chọn một cách chính xác */
+                select option:checked {
+                    display: block;
+                }
 
+                /* Đảm bảo rằng các tùy chọn không được chọn vẫn được hiển thị */
+                select option {
+                    display: block;
+                }
+            </style>
+            <div class="form-group">
+                <label asp-for="Input.Role"  class="control-label" style="font-weight: bold;">
+                </label>
+                <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-control">
+                    <option value="">-- Chọn Role --</option>
+                </select>
+                <span asp-validation-for="Input.Role" class="text-danger"></span>
+            </div>
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Đăng ký</button>
         </form>
     </div>
+</div>
+
 @*     <div class="col-md-6 col-md-offset-2">
         <section>
             <h3>Use another service to register.</h3>

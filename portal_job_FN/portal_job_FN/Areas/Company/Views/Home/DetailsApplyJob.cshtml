@@ -5,28 +5,6 @@
     Layout = "~/Views/Shared/_Layout_Company.cshtml";
 }
 
-<h1>DetailsApplyJob</h1>
-
-<div>
-    <h4>ApplyJob</h4>
-    <hr />
-    <dl class="row">
-        <div class="row">
-            <div class="col-sm-12">
-                        @Html.DisplayNameFor(model => model.url_cv)
-                    </dt>
-                    <dd>
-                        @Html.DisplayFor(model => model.url_cv)
-                    </dd>
-                    <button class="btn btn-primary" id="openPdfButton">Mở PDF</button>
-            </div>
-            <div id="pdfContainer" class="col-sm-12" style="display: none;">
-                <button id="closePdfButton" class="close-button">X</button>
-                <iframe id="pdfFrame" style="width: 100%; height: calc(100vh - 60px);"></iframe>
-            </div>
-        </div>
-
-
         <style>
             .close-button {
                 position: absolute;
@@ -58,79 +36,76 @@
                 height: calc(100vh - 60px); /* Chiều cao của iframe sẽ chiếm toàn bộ không gian trừ đi kích thước của nút "Đóng" */
             }
 
+    .labels {
+        font-weight: bold;
+        }
+
         </style>
 
 
-            <script>
+<div class="container-fluid bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                <img class="rounded-circle mt-5" width="150px" src="@Model.applicationUser?.image_url">
+                <span style="font-family:'Times New Roman'" class="font-weight-bold"><h4>@Model.FullName</h4></span>
+                <span style="font-family:'Times New Roman'" class="labels text-black-50">@Model.Email</span>
+                <span> </span>
+            </div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 style="font-family:'Times New Roman'" class="text-right">Thông tin ứng viên</h3>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="labels" style="font-family:'Times New Roman';font-size:20px">Tên ứng viên</label>
+                        <div class="form-control" style="font-family:'Times New Roman';font-size:18px">@Model.FullName</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels" style="font-family:'Times New Roman';font-size:20px">Email ứng viên</label>
+                        <div class="form-control" style="font-family:'Times New Roman';font-size:18px">@Model.Email</div>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels" style="font-family:'Times New Roman';font-size:20px">Thư giới thiệu</label>
+                        <textarea class="form-control" style="font-family:'Times New Roman';height: 200px;font-size:18px">@Model.cover_letter</textarea>
+                    </div>
+                    <br>
+                    <div>
+                        <button class="btn btn-info" id="openPdfButton">Xem CV ứng viên</button>
+                    </div>
+                    <div id="pdfContainer" class="col-sm-12" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;">
+                        <button id="closePdfButton" class="close-button">X</button>
+                        <iframe id="pdfFrame" style="width: 100%; height: 100%; border: none;"></iframe>
+                    </div>
 
-            document.getElementById('openPdfButton').addEventListener('click', function () {
-                document.getElementById('pdfContainer').style.display = 'block';
-                document.getElementById('pdfFrame').src = '@Model.url_cv';
-            });
-
-            document.getElementById('closePdfButton').addEventListener('click', function () {
-                document.getElementById('pdfContainer').style.display = 'none';
-                document.getElementById('pdfFrame').src = '';
-            });
-            </script>
-
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.cover_letter)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.cover_letter)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Feedback)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Feedback)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.create_at)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.create_at)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.update_at)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.update_at)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.application_userId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.application_userId)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.post_Job)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.post_Job.Id)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.applicationUser)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.applicationUser.Id)
-        </dd>
-    </dl>
+                    <div class="col-md-12">
+                        <form asp-area="Company" asp-controller="Home" asp-action="UpdateFeedback" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="@Model.Id" />
+                            <label class="labels" style="font-family:'Times New Roman';font-size:20px">Phản hồi nhà tuyển dụng</label>
+                            <textarea name="feedback" class="form-control" style="font-family:'Times New Roman';height: 200px;font-size:18px">@Model.Feedback</textarea>
+                            <button type="submit" class="btn btn-primary">Lưu Feedback</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+
+
+<script>
+    
+    document.getElementById('openPdfButton').addEventListener('click', function () {
+        document.getElementById('pdfContainer').style.display = 'block';
+        document.getElementById('pdfFrame').src = '@Model.url_cv';
+    });
+
+    document.getElementById('closePdfButton').addEventListener('click', function () {
+        document.getElementById('pdfContainer').style.display = 'none';
+        document.getElementById('pdfFrame').src = '';
+    });
+</script>

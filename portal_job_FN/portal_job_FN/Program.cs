@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using portal_job_FN.Data;
@@ -29,6 +30,7 @@ builder.Services.AddScoped<IPostJobRepository, EFPostJobRepository>();
 builder.Services.AddScoped<IApplyJobRepository, EFApply_job>();
 builder.Services.AddScoped<IUniversity, EFUniversityRepository>();
 builder.Services.AddScoped<IEducationRepository, EFEducationRepository>();
+builder.Services.AddScoped<IUserRepository, EFUserRepository>();
 
 builder.Services.ConfigureApplicationCookie(options => {
     options.LoginPath = $"/Identity/Account/Login";
@@ -39,6 +41,14 @@ builder.Services.ConfigureApplicationCookie(options => {
 
 builder.Services.AddControllers();
 builder.Services.AddRazorPages();
+
+
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 104857600; // Set the max file size (100 MB in this case)
+});
+
+
 
 //Cau hình session
 builder.Services.AddDistributedMemoryCache();

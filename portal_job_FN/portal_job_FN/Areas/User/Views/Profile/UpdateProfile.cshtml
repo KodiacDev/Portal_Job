@@ -85,32 +85,10 @@
     </div>
 </form>
 
-
-<script>
-    document.querySelectorAll('input[type="file"]').forEach(input => {
-        input.addEventListener('change', function (event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const img = document.getElementById("previewImage")
-                    img.src = e.target.result
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-    });
-</script>
-
-
-
-
-
-
-
-
 <div>
-    <a asp-area="User" asp-controller="Profile" asp-action="Index">Back to Profile</a>
+    <a class="btn btn-primary" href="/User/Profile/Index">
+        Trở về
+        </a>
 </div>
 
 

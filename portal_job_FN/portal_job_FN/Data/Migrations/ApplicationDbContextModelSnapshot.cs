@@ -305,11 +305,23 @@ namespace portal_job_FN.Migrations
                     b.Property<string>("application_userId")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("companyName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("contact_noCompany")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("cover_letter")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("create_at")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("emailCompany")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("imageCompany")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("post_JobId")
                         .HasColumnType("int");
@@ -606,7 +618,7 @@ namespace portal_job_FN.Migrations
                         .HasForeignKey("applicationUserId");
 
                     b.HasOne("portal_job_FN.Models.PostJob", "post_Job")
-                        .WithMany()
+                        .WithMany("applyJobs")
                         .HasForeignKey("post_JobId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -716,6 +728,8 @@ namespace portal_job_FN.Migrations
 
             modelBuilder.Entity("portal_job_FN.Models.PostJob", b =>
                 {
+                    b.Navigation("applyJobs");
+
                     b.Navigation("post_Job_Images");
                 });
 

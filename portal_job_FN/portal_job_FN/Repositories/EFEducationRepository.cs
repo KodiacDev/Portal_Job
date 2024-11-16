@@ -32,6 +32,21 @@ namespace portal_job_FN.Repositories
             return await _context.educations.FindAsync(id);
         }
 
+
+        public async Task<IEnumerable<Education>> GetByIdUserAsync(string id)
+        {
+            var educations = await _context.educations
+                .Include(b => b.Major)
+                .Include(b => b.university)
+                .Include(b => b.applicationUser)
+                .Where(b => b.applicationUser.Id == id)
+                .ToListAsync();
+
+            return educations;
+        }
+
+
+
         public async Task AddAsync(Education education)
         {
             _context.educations.Add(education);

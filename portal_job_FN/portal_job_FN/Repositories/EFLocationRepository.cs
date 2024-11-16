@@ -11,9 +11,14 @@ namespace portal_job_FN.Repositories
         {
             _context = context;
         }
+
         public async Task<IEnumerable<JobLocation>> GetAllAsync()
         {
-            return await _context.job_location.ToListAsync();
+            return await _context.job_location
+                                 .OrderBy(j => j.province_name) // Sắp xếp theo tên tỉnh
+                                 .AsNoTracking()
+                                 .ToListAsync();
         }
+
     }
 }

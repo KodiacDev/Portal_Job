@@ -6,6 +6,8 @@ namespace portal_job_FN.Repositories
     {
         Task<IEnumerable<ApplyJob>> GetAllAsync();
         Task<ApplyJob> GetByIdAsync(int id);
+        Task<IEnumerable<ApplyJob>> GetAllApplyByUserIdAsync(string id);
+        Task<IEnumerable<ApplyJob>> GetAllApplyByCompanyIdAsync(string id);
         Task AddAsync(ApplyJob apply_Job);
         Task UpdateAsync(ApplyJob apply_Job);
         Task DeleteAsync(int id);

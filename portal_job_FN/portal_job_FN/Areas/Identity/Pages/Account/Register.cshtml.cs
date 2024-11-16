@@ -102,6 +102,8 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+            public int is_active { get; set; }
+            public DateTime create_at { get ; set; }
             public string Role { get; set; }
             public IEnumerable<SelectListItem> RoleList { get; set; }
 
@@ -136,8 +138,10 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
+           
                 //Kích hoạt active cho user
                 user.is_active = 1;
+                user.create_at = DateTime.Now;
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);

@@ -2,6 +2,9 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
+
+
+
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
@@ -40,8 +43,6 @@
                     else if (User.Identity.IsAuthenticated && User.IsInRole("Company"))
                     {
                         <ul class="dropdown-menu" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Trang quản lý</a></li>
-                            <li><a class="dropdown-item" asp-area="Admin" asp-controller="Profile" asp-action="" title="Profile">Profile</a></li>
                             <li class="dropdown-item">
                                 <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                                     <button type="submit" class="btn btn-warning">Đăng xuất</button>
@@ -53,8 +54,6 @@
                     else
                     {
                         <ul class="dropdown-menu" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Trang quản lý</a></li>
-                            <li><a class="dropdown-item" asp-area="Company" asp-controller="Profile" asp-action="" title="Profile">Profile</a></li>
                             <li class="dropdown-item">
                                 <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
                                     <button type="submit" class="btn btn-warning">Đăng xuất</button>
@@ -76,6 +75,9 @@ else
     <li class="nav-item">
         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Đăng ký</a>
     </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/RegisterCompany">Đăng ký nhà tuyển dụng</a>
+        </li>
     <li class="nav-item">
         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Đăng nhập</a>
     </li>

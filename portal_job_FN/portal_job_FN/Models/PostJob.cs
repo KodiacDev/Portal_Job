@@ -20,10 +20,12 @@
         //Tìm ai đăng bài
         public string? applicationUserId { get; set; }
         public int? majorId {  get; set; }
+     
         public Major? major { get; set; }
         public ApplicationUser? applicationUser {  get; set; }
         public Experience? experience { get; set; }
         public JobLocation? job_Location { get; set; }
+        public List<ApplyJob>? applyJobs { get; set; }
         public List<PostJobImage>? post_Job_Images { get; set; }
     }
 }

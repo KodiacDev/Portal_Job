@@ -5,6 +5,7 @@ namespace portal_job_FN.Repositories
     public interface IEducationRepository
     {
         Task<IEnumerable<Education>> GetAllAsync();
+        Task<IEnumerable<Education>> GetByIdUserAsync(string id);
         Task<Education> GetByIdAsync(int id);
         Task AddAsync(Education education);
         Task UpdateAsync(Education education);

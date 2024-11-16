@@ -8,6 +8,7 @@ using portal_job_FN.Session;
 namespace portal_job_FN.Areas.User.Controllers
 {
     [Area("User")]
+    [Authorize(Roles = SD.Role_User)]
     public class JobCartController : Controller
     {
         private readonly IPostJobRepository _postJobRepository;
@@ -53,7 +54,7 @@ namespace portal_job_FN.Areas.User.Controllers
             return NoContent();
         }
         [HttpGet]
-        public IActionResult RemoveFromCart(int Id)
+        public IActionResult RemoveFromJobCart(int Id)
         {
             var cart = HttpContext.Session.GetObjectFromJson<JobCart>("Cart");
             if (cart != null)
@@ -61,7 +62,7 @@ namespace portal_job_FN.Areas.User.Controllers
                 cart.RemoveItem(Id);
                 HttpContext.Session.SetObjectAsJson("Cart", cart);
             }
-            return RedirectToAction("Index");
+            return NoContent();
         }
 
     }

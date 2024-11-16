@@ -1,0 +1,38 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace portal_job_FN.Migrations
+{
+    /// <inheritdoc />
+    public partial class huha : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AddColumn<string>(
+                name: "contact_noCompany",
+                table: "apply_Jobs",
+                type: "nvarchar(max)",
+                nullable: true);
+
+            migrationBuilder.AddColumn<string>(
+                name: "emailCompany",
+                table: "apply_Jobs",
+                type: "nvarchar(max)",
+                nullable: true);
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "contact_noCompany",
+                table: "apply_Jobs");
+
+            migrationBuilder.DropColumn(
+                name: "emailCompany",
+                table: "apply_Jobs");
+        }
+    }
+}

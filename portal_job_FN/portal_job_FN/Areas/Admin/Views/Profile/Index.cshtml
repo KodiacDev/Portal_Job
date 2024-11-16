@@ -1,0 +1,45 @@
+﻿@model portal_job_FN.Models.ApplicationUser
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                @if (Model != null && Model.image_url != null)
+                {
+                    <img class="rounded-circle mt-5" width="150px" src="@Model.image_url">
+                }
+                <span style="font-family:'Times New Roman'" class="font-weight-bold"><h4>@Model.fullname</h4></span>
+                <span class="text-black-50">@Model.Email</span>
+            </div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 style="font-family:'Times New Roman'" class="text-right">Thông tin Admin</h3>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="labels" style="font-family:'Times New Roman';font-size:20px">Họ tên</label>
+                        <div class="form-control" style="font-family:'Times New Roman';font-size:18px">@Model.fullname</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels" style="font-family:'Times New Roman';font-size:20px">Email</label>
+                        <div class="form-control" style="font-family:'Times New Roman';font-size:18px">@Model.Email</div>
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels" style="font-family:'Times New Roman';font-size:20px">Số điện thoại</label>
+                        <div class="form-control" style="font-family:'Times New Roman';font-size:18px">@Model.mobile_no</div>
+                    </div>
+                </div>
+                <div class="btn btn-primary mt-5 text-center" style="color:white">
+                    <a asp-action="UpdateProfile" style="font-family:'Times New Roman';font-size:20px; color: white" asp-route-id="@Model.Id">Chỉnh sửa thông tin</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

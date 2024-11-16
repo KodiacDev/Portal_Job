@@ -7,12 +7,11 @@
 <!-- Header End -->
 <div class="container-xxl py-5 bg-dark page-header mb-5">
     <div class="container my-5 pt-5 pb-4">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">Job Detail</h1>
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Job Details</h1>
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb text-uppercase">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                <li class="breadcrumb-item text-white active" aria-current="page">Job Detail</li>
+                <li class="breadcrumb-item"><a href="/Home">Home</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Job Details</li>
             </ol>
         </nav>
     </div>
@@ -33,43 +32,75 @@
                         <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>@string.Format("{0} Triệu - {1} Triệu", @Model.salary_min, @Model.salary_max)</span>
                     </div>
                 </div>
-
-                <div class="mb-5">
+                <style>
+                     p {
+                         /* Áp dụng các thuộc tính của thẻ <p> */
+                         font-size:15px;
+                         /* Thêm các thuộc tính khác nếu cần */
+                     }
+                </style>
+                <div class="mb-5" id="conditions">
                     <h4 class="mb-3">Mô tả công việc</h4>
-                    <p>@Model.job_description</p>
+                    <p style="font-size:20px">@Model.job_description</p>
+
                     <h4 class="mb-3">Yêu cầu ứng viên</h4>
-                    <p>@Model.required_skill</p>
-                    </ul>
+                    <p style="font-size:20px">@Model.required_skill</p>
                     <h4 class="mb-3">Quyền lợi</h4>
-                    <p>@Model.benefit</p>
+                    <p style="font-size:20px">@Model.benefit</p>
+
                     <h4 class="mb-3">Địa chỉ làm việc</h4>
-                    <p>@Model.detail_location</p>
+                    <p style="font-size:20px">@Model.detail_location</p>
+
+               @*  Style carosel image job *@
+           
                 </div>
+                @{
+                    var imageUrls = ViewBag.imagesUrls as List<PostJobImage>;
+                }
+                @if (ViewBag.imagesUrls != null && ViewBag.imagesUrls.Count > 0)
+                {
+                    <h4 class="mb-3">Hình ảnh công ty</h4>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        @for (int i = 0; i < ViewBag.imagesUrls.Count; i++)
+                        {
+                            <li data-target="#myCarousel" data-slide-to="@i" class="@((i == 0) ? "active" : "")"></li>
+                        }
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        @for (int i = 0; i < ViewBag.imagesUrls.Count; i++)
+                        {
+                            <div class="item @(i == 0 ? "active" : "")">
+                                <img src="@ViewBag.imagesUrls[i]" alt="Slide @(i + 1)">
+                            </div>
+                        }
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+                }
+                else
+                {
+                    <div></div>
+                }
+
+
 
                 <div class="">
                     <h4 class="mb-4">Ứng tuyển ngay</h4>
-@*                     <form>
-                        <div class="row g-3">
-                            <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control" placeholder="Your Name">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control" placeholder="Your Email">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control" placeholder="Portfolio Website">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="file" class="form-control bg-white">
-                            </div>
-                            <div class="col-12">
-                                <textarea class="form-control" rows="5" placeholder="Coverletter"></textarea>
-                            </div>
-                          
-                        </div>
-                    </form> *@
                     <div class="col-12">
-                        <a class="btn btn-primary w-100" asp-action="Apply_job" asp-route-id="@Model.Id">Apply Now</a>
+                        <a class="btn btn-primary" href="/User/Home/Apply_job/@Model.Id">Apply Now</a>
                     </div>
                 </div>
             </div>
@@ -77,20 +108,45 @@
             <div class="col-lg-4">
                 <div class="bg-light rounded p-5 mb-4 wow slideInUp" data-wow-delay="0.1s">
                     <h4 class="mb-4">Tóm tắt công việc</h4>
-                    <p><i class="fa fa-angle-right text-primary me-2"></i>Đăng ngày: @Model.create_at</p>
-                    <p><i class="fa fa-angle-right text-primary me-2"></i>Vị trí: @Model.job_name</p>
-                    <p><i class="fa fa-angle-right text-primary me-2"></i>Kinh nghiệm: @Model.experience?.experience_name</p>
-                    <p><i class="fa fa-angle-right text-primary me-2"></i>Hình thức làm việc: @Model.employmentType</p>
-                    <p><i class="fa fa-angle-right text-primary me-2"></i>Mức lương từ: @string.Format("{0} Triệu - {1} Triệu", @Model.salary_min, @Model.salary_max)</p>
-                    <p><i class="fa fa-angle-right text-primary me-2"></i>Địa điểm: @Model.job_Location?.province_name</p>
-                    <p class="m-0"><i class="fa fa-angle-right text-primary me-2"></i>Hạn nộp hồ sơ: @string.Format("{0:dd/MM/yyyy}", @Model.apply_date)</p>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Đăng ngày: @string.Format("{0:dd/MM/yyyy}", @Model.create_at)</p>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Vị trí: @Model.job_name</p>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Kinh nghiệm: @Model.experience?.experience_name</p>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Hình thức làm việc: @Model.employmentType</p>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Mức lương từ: @string.Format("{0} Triệu - {1} Triệu", @Model.salary_min, @Model.salary_max)</p>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Địa điểm: @Model.job_Location?.province_name</p>
+                    <p style="font-size:20px" class="m-0"><i class="fa fa-angle-right text-primary me-2"></i>Hạn nộp hồ sơ: @string.Format("{0:dd/MM/yyyy}", @Model.apply_date)</p>
                 </div>
                 <div class="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
                     <h4 class="mb-4">Giới thiệu về công ty</h4>
-                    <p class="m-0">@Model.applicationUser?.introduce_company</p>
+                    <p style="font-size:20px" class="m-0">@Model.applicationUser?.introduce_company</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!-- Job Detail End -->
+<script>
+    $(document).ready(function () {
+        // Kích hoạt carousel
+        $('#myCarousel').carousel();
+    });
+
+</script>
+
+<script>
+    // Lấy phần tử div chứa các điều kiện
+    var conditionsDiv = document.getElementById("conditions");
+
+    // Lấy nội dung của div
+    var conditionsText = conditionsDiv.innerHTML;
+
+    // Tách nội dung thành các điều kiện dựa trên dấu +
+    var conditionsArray = conditionsText.split("+");
+
+    // Tạo một biến để lưu trữ nội dung mới với các điều kiện được xuống dòng
+    var newConditionsText = conditionsArray.join("<br>+");
+
+    // Gán nội dung mới cho div
+    conditionsDiv.innerHTML = newConditionsText;
+</script>

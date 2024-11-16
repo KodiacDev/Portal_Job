@@ -13,7 +13,11 @@ namespace portal_job_FN.Repositories
         }
         public async Task<IEnumerable<Experience>> GetAllAsync()
         {
-            return await _context.experience.ToListAsync();
+            return await _context.experience
+                      .OrderBy(e => e.experience_name) // Hoặc một trường khác
+                      .Take(100)
+                      .ToListAsync();
+
         }
     }
 }

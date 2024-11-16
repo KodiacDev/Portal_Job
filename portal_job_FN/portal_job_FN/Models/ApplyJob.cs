@@ -8,6 +8,10 @@
         public string? Feedback { get; set; }
         public string? Email {  get; set; }
         public string? FullName {  get; set; }
+        public string? imageCompany {  get; set; }
+        public string? companyName {  get; set; }
+        public string? emailCompany {  get; set; }
+        public string? contact_noCompany {  get; set; }
         public DateTime create_at { get; set; }
         public DateTime update_at { get; set; }
         public int post_JobId { get; set; }

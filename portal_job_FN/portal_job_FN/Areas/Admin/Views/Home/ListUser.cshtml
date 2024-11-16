@@ -1,0 +1,70 @@
+﻿@model IEnumerable<portal_job_FN.Models.ApplicationUser>
+@{
+    ViewData["Title"] = "ViewPost";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h2 style="margin-bottom: 20px; font-family: 'Times New Roman'">
+                Quản lý người dùng
+            </h2>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead style="font-weight: bold; font-size: 20px;">
+                        <tr>
+                            <th style="font-weight: bold; font-size: 30px; color: black; font-family: 'Times New Roman'">Tên người dùng</th>
+                            <th style="font-weight: bold; font-size: 30px; color: black; font-family: 'Times New Roman'">Email</th>
+                            <th style="font-weight: bold; font-size: 30px; color: black; font-family: 'Times New Roman'">SDT</th>
+                            <th style="font-weight: bold; font-size: 30px; color: black; font-family: 'Times New Roman'">Date of birth</th>
+                            <th style="font-weight: bold; font-size: 30px; color: black; font-family: 'Times New Roman'">Ngày đăng ký</th>
+                            <th style="font-weight: bold; font-size: 30px; color: black; font-family: 'Times New Roman'">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <img src="@user.image_url" alt="User Avatar" style="width: 50px; height: 50px; border-radius: 50%;">
+                                    <span style="font-size: 20px; color: black; font-family: 'Times New Roman'; margin-left: 10px;">@user.fullname</span>
+                                </td>
+                                <td style="font-size: 20px; color: black; font-family: 'Times New Roman'; vertical-align: middle;">
+                                    <span>@user.Email</span>
+                                </td>
+                                <td style="font-size: 20px; color: black; font-family: 'Times New Roman'; vertical-align: middle;">
+                                    <span>@user.mobile_no</span>
+                                </td>
+                                <td style="font-size: 20px; color: black; font-family: 'Times New Roman'; vertical-align: middle;">
+                                    <span>@user.date_of_birth</span>
+                                </td>
+                                <td style="font-size: 20px; color: black; font-family: 'Times New Roman'; vertical-align: middle;">
+                                    <div>
+                                        <!-- Icon khu vực -->
+                                        <i class="mdi mdi-calendar" style="color: green;"></i>
+                                        <!-- Hiển thị khu vực -->
+                                        <span>@user.create_at</span>
+                                    </div>
+                                </td>
+                                <td style=" font-size: 20px;color:black">
+                                    @if (user.is_active == 1)
+                                    {
+                                        <a class="btn btn-danger" href="/Admin/Home/deleteSoft/@user.Id">
+                                            <i class="mdi mdi-lock-open"></i> Khóa
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-primary" href="/Admin/Home/activeSoft/@user.Id">   <i class="mdi mdi-lock"></i> Mở  </a>
+                                    }
+                                    <a class="btn btn-info" href="/Admin/Home/DetailsUser/@user.Id">Chi tiết</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
