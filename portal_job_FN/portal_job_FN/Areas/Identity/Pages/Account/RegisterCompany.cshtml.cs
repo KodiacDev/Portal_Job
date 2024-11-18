@@ -20,35 +20,34 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using portal_job_FN.Models;
-using static Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal.ExternalLoginModel;
 
 namespace portal_job_FN.Areas.Identity.Pages.Account
 {
     public class RegisterModelCompany : PageModel
     {
-        private readonly SignInManager<ApplicationUser> _signInManagerCompany;
-        private readonly UserManager<ApplicationUser> _userManagerCompany;
-        private readonly IUserStore<ApplicationUser> _userStoreCompany;
-        private readonly IUserEmailStore<ApplicationUser> _emailStoreCompany;
-        private readonly ILogger<RegisterModel> _loggerCompany;
-        private readonly IEmailSender _emailSenderCompany;
-        private readonly RoleManager<IdentityRole> _roleManagerCompany;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IUserStore<ApplicationUser> _userStore;
+        private readonly IUserEmailStore<ApplicationUser> _emailStore;
+        private readonly ILogger<RegisterModel> _logger;
+        private readonly IEmailSender _emailSender;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
         public RegisterModelCompany(
-            UserManager<ApplicationUser> userManagerCompany,
-            IUserStore<ApplicationUser> userStoreCompany,
-            SignInManager<ApplicationUser> signInManagerCompany,
-            ILogger<RegisterModel> loggerCompany,
-            IEmailSender emailSenderCompany,
-            RoleManager<IdentityRole> roleManagerCompany)
+            UserManager<ApplicationUser> userManager,
+            IUserStore<ApplicationUser> userStore,
+            SignInManager<ApplicationUser> signInManager,
+            ILogger<RegisterModel> logger,
+            IEmailSender emailSender,
+            RoleManager<IdentityRole> roleManager)
         {
-            _userManagerCompany = userManagerCompany;
-            _userStoreCompany = userStoreCompany;
-            _emailStoreCompany = GetEmailStoreCompany();
-            _signInManagerCompany = signInManagerCompany;
-            _loggerCompany = loggerCompany;
-            _emailSenderCompany = emailSenderCompany;
-            _roleManagerCompany = roleManagerCompany;
+            _userManager = userManager;
+            _userStore = userStore;
+            _emailStore = GetEmailStore();
+            _signInManager = signInManager;
+            _logger = logger;
+            _emailSender = emailSender;
+            _roleManager = roleManager;
         }
 
         /// <summary>
@@ -56,25 +55,25 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
         [BindProperty]
-        public InputModelCompany InputCompany { get; set; }
+        public InputModel Input { get; set; }
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
-        public string ReturnUrlCompany { get; set; }
+        public string ReturnUrl { get; set; }
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
-        public IList<AuthenticationScheme> ExternalLoginsCompany { get; set; }
+        public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
         /// <summary>
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
-        public class InputModelCompany
+        public class InputModel
         {
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -84,9 +83,6 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
             [EmailAddress]
             [Display(Name = "Email")]
             public string Email { get; set; }
-
-
-
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -108,62 +104,62 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
             public int is_active { get; set; }
             public DateTime create_at { get ; set; }
-            public string Role { get; set; }
-            public IEnumerable<SelectListItem> RoleList { get; set; }
+/*            public string Role { get; set; }
+            public IEnumerable<SelectListItem> RoleList { get; set; }*/
 
         }
 
 
-        public async Task OnGetAsyncCompany(string returnUrl = null)
+        public async Task OnGetAsync(string returnUrl = null)
         {
-            if (!_roleManagerCompany.RoleExistsAsync(SD.Role_User).GetAwaiter().GetResult())
+            if (!_roleManager.RoleExistsAsync(SD.Role_User).GetAwaiter().GetResult())
             {
-                _roleManagerCompany.CreateAsync(new IdentityRole(SD.Role_User)).GetAwaiter().GetResult();
-                _roleManagerCompany.CreateAsync(new IdentityRole(SD.Role_Admin)).GetAwaiter().GetResult();
-                _roleManagerCompany.CreateAsync(new IdentityRole(SD.Role_Company)).GetAwaiter().GetResult();
+                _roleManager.CreateAsync(new IdentityRole(SD.Role_User)).GetAwaiter().GetResult();
+                _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin)).GetAwaiter().GetResult();
+                _roleManager.CreateAsync(new IdentityRole(SD.Role_Company)).GetAwaiter().GetResult();
             }
-            InputCompany = new()
-            {
-                RoleList = _roleManagerCompany.Roles.Select(x => x.Name).Select(i => new SelectListItem
+            Input = new();
+/*            {
+                RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
                 {
                     Text = i,
                     Value = i
                 })
-            };
+            };*/
 
-            ReturnUrlCompany = returnUrl;
-            ExternalLoginsCompany = (await _signInManagerCompany.GetExternalAuthenticationSchemesAsync()).ToList();
+            ReturnUrl = returnUrl;
+            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
-        public async Task<IActionResult> OnPostAsyncCompany(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl ??= Url.Content("~/");
-            ExternalLoginsCompany = (await _signInManagerCompany.GetExternalAuthenticationSchemesAsync()).ToList();
+            returnUrl ??= Url.Content("~/Company/Home/Index");
+            ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = CreateCompany();
-           
+                var user = CreateUser();
+                
                 //Kích hoạt active cho user
                 user.is_active = 1;
                 user.create_at = DateTime.Now;
-                await _userStoreCompany.SetUserNameAsync(user, InputCompany.Email, CancellationToken.None);
-                await _emailStoreCompany.SetEmailAsync(user, InputCompany.Email, CancellationToken.None);
-                var result = await _userManagerCompany.CreateAsync(user, InputCompany.Password);
+                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
-                    _loggerCompany.LogInformation("User created a new account with password.");
-                    if (!string.IsNullOrEmpty(InputCompany.Role))
-                    {
-                        await _userManagerCompany.AddToRoleAsync(user, InputCompany.Role);
-                    }
-                    else
-                    {
-                        await _userManagerCompany.AddToRoleAsync(user, SD.Role_User);
-                    }
-
-                    var userId = await _userManagerCompany.GetUserIdAsync(user);
-                    var code = await _userManagerCompany.GenerateEmailConfirmationTokenAsync(user);
+                    _logger.LogInformation("User created a new account with password.");
+                    /*  if (!string.IsNullOrEmpty(Input.Role))
+                      {
+                          await _userManager.AddToRoleAsync(user, Input.Role);
+                      }
+                      else
+                      {
+                          await _userManager.AddToRoleAsync(user, SD.Role_User);
+                      }*/
+                    await _userManager.AddToRoleAsync(user, SD.Role_Company);
+                    var userId = await _userManager.GetUserIdAsync(user);
+                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     var callbackUrl = Url.Page(
                         "/Account/ConfirmEmail",
@@ -171,16 +167,16 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
-                    await _emailSenderCompany.SendEmailAsync(InputCompany.Email, "Confirm your email",
+                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
-                    if (_userManagerCompany.Options.SignIn.RequireConfirmedAccount)
+                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
-                        return RedirectToPage("RegisterConfirmation", new { email = InputCompany.Email, returnUrl = returnUrl });
+                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
                     }
                     else
                     {
-                        await _signInManagerCompany.SignInAsync(user, isPersistent: false);
+                        await _signInManager.SignInAsync(user, isPersistent: false);
                         return LocalRedirect(returnUrl);
                     }
                 }
@@ -194,7 +190,7 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private ApplicationUser CreateCompany()
+        private ApplicationUser CreateUser()
         {
             try
             {
@@ -208,13 +204,13 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
             }
         }
 
-        private IUserEmailStore<ApplicationUser> GetEmailStoreCompany()
+        private IUserEmailStore<ApplicationUser> GetEmailStore()
         {
-            if (!_userManagerCompany.SupportsUserEmail)
+            if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<ApplicationUser>)_userStoreCompany;
+            return (IUserEmailStore<ApplicationUser>)_userStore;
         }
     }
 }

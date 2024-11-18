@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using portal_job_FN.Areas.Identity.Pages.Account;
 using portal_job_FN.Data;
 using portal_job_FN.Models;
 using portal_job_FN.Repositories;
@@ -38,7 +39,17 @@ builder.Services.ConfigureApplicationCookie(options => {
     options.LogoutPath = $"/Identity/Account/AccessDenied";
 });
 
-
+/*builder.Services.AddRazorPages()
+    .AddRazorPagesOptions(options =>
+    {
+        options.Conventions.AddPageApplicationModelConvention(
+            "/Account/RegisterCompany",
+            model =>
+            {
+                model.ModelType = (System.Reflection.TypeInfo?)typeof(RegisterModelCompany);
+            });
+    });
+*/
 builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 

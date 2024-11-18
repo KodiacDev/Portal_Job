@@ -93,8 +93,9 @@ namespace portal_job_FN.Areas.Company.Controllers
                         }
                     }
                 }
-                catch
+                catch(Exception ex)
                 {
+                    Console.WriteLine(ex.ToString());
                     return NotFound();
                 }
                 return RedirectToAction(nameof(Index));

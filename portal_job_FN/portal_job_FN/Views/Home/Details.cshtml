@@ -4,19 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<!-- Header End -->
-<div class="container-xxl py-5 bg-dark page-header mb-5">
-    <div class="container my-5 pt-5 pb-4">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">Job Details</h1>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb text-uppercase">
-                <li class="breadcrumb-item"><a href="/Home">Home</a></li>
-                <li class="breadcrumb-item text-white active" aria-current="page">Job Details</li>
-            </ol>
-        </nav>
-    </div>
-</div>
-<!-- Header End -->
+
 <!-- Job Detail Start -->
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
@@ -116,11 +104,65 @@
                     <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Địa điểm: @Model.job_Location?.province_name</p>
                     <p style="font-size:20px" class="m-0"><i class="fa fa-angle-right text-primary me-2"></i>Hạn nộp hồ sơ: @string.Format("{0:dd/MM/yyyy}", @Model.apply_date)</p>
                 </div>
-                <div class="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
+@*                 <div class="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
                     <h4 class="mb-4">Giới thiệu về công ty</h4>
                     <p style="font-size:20px" class="m-0">@Model.applicationUser?.introduce_company</p>
-                </div>
+                </div> *@
+                @{
+                    var RelatedJobs = ViewBag.listRelatedJobs as List<PostJob>;
+                }
+
+                @if (RelatedJobs != null && RelatedJobs.Any())
+                {
+                    <div class="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
+                        <h4 class="mb-4 text-center">VIỆC LÀM LIÊN QUAN</h4>
+
+                        @for (int i = 0; i < RelatedJobs.Count; i++)
+                        {
+                            var job = RelatedJobs[i];
+                            <!-- Lấy từng công việc trong danh sách -->
+
+                            <div class="related-jobs">
+                                <!-- Mẫu công việc liên quan -->
+                                <div class="job-item p-4 mb-4 bg-white rounded shadow-sm">
+                                    <div class="d-flex align-items-center">
+                                        <!-- Logo công ty -->
+                                        <img class="flex-shrink-0 img-fluid border rounded me-3" src="@job.applicationUser?.image_url" alt="Company Logo" style="width: 60px; height: 60px;">
+
+                                        <!-- Thông tin công việc -->
+                                        <div class="text-start">
+                                            <!-- Job Name dưới dạng liên kết -->
+                                            <h6 class="mb-1 text-primary">
+                                                <a asp-action="Details" asp-route-id="@job.Id" class="text-primary text-decoration-none">
+                                                    @job.job_name
+                                                </a>
+                                            </h6>
+                                            <span class="d-block text-muted small">
+                                                <i class="fa fa-building text-secondary me-1"></i>@job.applicationUser?.company_name
+                                            </span>
+                                            <span class="d-block small">
+                                                <i class="fa fa-map-marker-alt text-secondary me-1"></i>@job.job_Location?.province_name
+                                            </span>
+                                            <span class="d-block small">
+                                                <i class="fa fa-money-bill-alt text-secondary me-1"></i>
+                                                @job.salary_min - @job.salary_max triệu
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-center">Không tìm thấy việc làm liên quan.</p>
+                }
+
+                
             </div>
+
         </div>
     </div>
 </div>

@@ -169,7 +169,9 @@ namespace portal_job_FN.Controllers
             {
                 return NotFound();
             }
-
+            var jobName = post_job.job_name;
+            var listRelatedJobs = await _post_job.GetAllRelatedJobsById(jobName, id);
+            ViewBag.listRelatedJobs = listRelatedJobs;
             return View(post_job);
         }
 

@@ -104,8 +104,8 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
             public string ConfirmPassword { get; set; }
             public int is_active { get; set; }
             public DateTime create_at { get ; set; }
-            public string Role { get; set; }
-            public IEnumerable<SelectListItem> RoleList { get; set; }
+/*            public string Role { get; set; }
+            public IEnumerable<SelectListItem> RoleList { get; set; }*/
 
         }
 
@@ -118,14 +118,14 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
                 _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin)).GetAwaiter().GetResult();
                 _roleManager.CreateAsync(new IdentityRole(SD.Role_Company)).GetAwaiter().GetResult();
             }
-            Input = new()
-            {
+            Input = new();
+/*            {
                 RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
                 {
                     Text = i,
                     Value = i
                 })
-            };
+            };*/
 
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -138,7 +138,7 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
-           
+                
                 //Kích hoạt active cho user
                 user.is_active = 1;
                 user.create_at = DateTime.Now;
@@ -149,15 +149,15 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
-                    if (!string.IsNullOrEmpty(Input.Role))
-                    {
-                        await _userManager.AddToRoleAsync(user, Input.Role);
-                    }
-                    else
-                    {
-                        await _userManager.AddToRoleAsync(user, SD.Role_User);
-                    }
-
+                    /*  if (!string.IsNullOrEmpty(Input.Role))
+                      {
+                          await _userManager.AddToRoleAsync(user, Input.Role);
+                      }
+                      else
+                      {
+                          await _userManager.AddToRoleAsync(user, SD.Role_User);
+                      }*/
+                    await _userManager.AddToRoleAsync(user, SD.Role_User);
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));

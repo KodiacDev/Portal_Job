@@ -122,6 +122,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/a/Desktop/Đồ án chuyên ngành/PT_FN - FN/PT_FN - FN/portal_job_FN/portal_job_FN/Areas/Identity/Pages/Account/LoginCompany.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbkNvbXBhbnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/a/Desktop/Đồ án chuyên ngành/PT_FN - FN/PT_FN - FN/portal_job_FN/portal_job_FN/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

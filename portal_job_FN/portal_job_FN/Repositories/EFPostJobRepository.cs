@@ -40,6 +40,24 @@ namespace portal_job_FN.Repositories
             return applicationDbContext;
         }
 
+        public async Task<IEnumerable<PostJob>> GetAllRelatedJobsById(string jobName, int excludeJobId)
+        {
+            var applicationDbContext = await _context.post_Jobs
+                .Include(b => b.job_Location)
+                .Include(b => b.major)
+                .Include(b => b.applyJobs)
+                .Include(b => b.experience)
+                .Include(b => b.applicationUser)
+                .Where(b => (string.IsNullOrEmpty(jobName) || b.job_name.Contains(jobName)) // Kiểm tra nếu jobName null hoặc rỗng
+                            && b.Id != excludeJobId) // Loại bỏ công việc hiện tại theo ID kiểu int
+                .OrderByDescending(b => b.create_at) // Sắp xếp theo ngày đăng giảm dần
+                .Take(5) // Lấy tối đa 5 công việc
+                .ToListAsync();
+
+            return applicationDbContext;
+        }
+
+
 
         public async Task<PostJob> GetByIdAsync(int id)
         {
