@@ -37,7 +37,7 @@ namespace portal_job_FN.Controllers
             _apply_job = apply_job;
 
         }
-
+        
         public async Task<IActionResult> Index(int pageNumber = 1)
         {
 
@@ -52,8 +52,9 @@ namespace portal_job_FN.Controllers
                 .Include(b => b.major)
                 .Include(b => b.applyJobs)
                 .Include(b => b.experience)
-                .Include(b => b.applicationUser);
-            var paginatedPostJobs = await PaginatedList<PostJob>.CreateAsync(query, pageNumber, pageSize);
+                .Include(b => b.applicationUser)
+                .OrderByDescending(b => b.create_at); // Sắp xếp theo ngày đăng giảm dần
+			var paginatedPostJobs = await PaginatedList<PostJob>.CreateAsync(query, pageNumber, pageSize);
             return View(paginatedPostJobs);
         }
         public IActionResult About1()
@@ -65,7 +66,7 @@ namespace portal_job_FN.Controllers
             return View();
         }
         [HttpGet]
-        public async Task<IActionResult> SearchProducts(string job_name, string location, string experience,string salary, int pageNumber = 1)
+        public async Task<IActionResult> SearchJobs(string job_name, string location, string experience,string salary, int pageNumber = 1)
         {
             try
             {
@@ -127,7 +128,9 @@ namespace portal_job_FN.Controllers
                     .Include(b => b.applyJobs)
                     .Include(b => b.experience)
                     .Include(b => b.applicationUser), pageNumber, pageSize);
-
+                ViewBag.Count = jobs.Count();
+                ViewBag.JobName = job_name;
+                ViewBag.Location = location;
                 return View(paginatedJobs);
             }
             catch (Exception ex)
@@ -169,8 +172,8 @@ namespace portal_job_FN.Controllers
             {
                 return NotFound();
             }
-            var jobName = post_job.job_name;
-            var listRelatedJobs = await _post_job.GetAllRelatedJobsById(jobName, id);
+            var jobMajor = post_job.major?.major_name;
+            var listRelatedJobs = await _post_job.GetAllRelatedJobsById(jobMajor, id);
             ViewBag.listRelatedJobs = listRelatedJobs;
             return View(post_job);
         }

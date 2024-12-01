@@ -5,8 +5,8 @@ namespace portal_job_FN.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        //Gộp User, Admin, Company(Nhà tuyển dụng vào 1 object duy nhất ApplicationUser)
-        //User
+        //Gộp Người tìm việc, Admin, Company(Nhà tuyển dụng vào 1 object duy nhất ApplicationUser)
+        //Người tìm việc
         //public string? email { get; set; }
         public string? mobile_no { get; set; }
         public string? city { get; set; }
@@ -48,6 +48,9 @@ namespace portal_job_FN.Models
         //public int? is_active { get; set; }
         public int location_id { get; set; }
         //public List<apply_job>? apply_Jobs { get; set; }
+
+        //Số lần đăng bài viết
+        public int PostCount { get; set; }
         public List<PostJob>? post_Jobs { get; set; }
         public List<UserImage>? company_Images { get; set; }
     }

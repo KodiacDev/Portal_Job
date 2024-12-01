@@ -23,6 +23,7 @@ using portal_job_FN.Models;
 
 namespace portal_job_FN.Areas.Identity.Pages.Account
 {
+    //Đổi tên Register thành  RegisterModelCompany
     public class RegisterModelCompany : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;

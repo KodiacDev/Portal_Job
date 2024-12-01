@@ -1,0 +1,81 @@
+﻿<style >
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+bodyCheckout {
+    background-color: #eee;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300
+}
+
+.cart {
+    height: 130vh
+}
+
+.progresses {
+    display: flex;
+    align-items: center
+}
+
+.line {
+    width: 76px;
+    height: 6px;
+    background: #63d19e
+}
+
+.steps {
+    display: flex;
+    background-color: #63d19e;
+    color: #fff;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%
+}
+
+.check1 {
+    display: flex;
+    background-color: #63d19e;
+    color: #fff;
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 10px
+}
+
+.invoice-link {
+    font-size: 18px
+}
+
+.order-button {
+    height: 50px
+}
+
+.background-muted {
+    background-color: #fafafc
+}
+
+</style >

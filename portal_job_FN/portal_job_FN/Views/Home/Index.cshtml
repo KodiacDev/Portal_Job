@@ -1,5 +1,8 @@
 ﻿@model PaginatedList<portal_job_FN.Models.PostJob>
-
+@{
+    ViewData["Title"] = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.0.0-beta.4/libs/oversea/index.js"></script>
 <script>
     new CozeWebSDK.WebChatClient({
@@ -36,7 +39,7 @@
 
     <div class="container-fluid bg-dark mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
         <div class="container">
-            <form action="@Url.Action("SearchProducts", "Home")" method="get">
+        <form action="@Url.Action("SearchJobs", "Home")" target="_blank" method="get">
                 <div class="row g-2 align-items-end">
                     <div class="col-md-3" style="padding-right: 10px;">
                         <div class="row g-2">
@@ -98,7 +101,7 @@
                     </div>
 
                     <div class="col-md-auto">
-                        <button type="submit" class="btn btn-dark border-0">Tìm kiếm</button>
+                    <button type="submit" class="btn btn-dark border-0">Tìm kiếm</button>
                     </div>
                 </div>
             </form>
@@ -122,14 +125,14 @@
                                     <div class="job-item p-4 mb-4">
                                         <div class="row g-4">
                                             <div class="col-8 d-flex align-items-center">
-                                                <a asp-action="Details" asp-route-id="@job.Id">
+                                                <a target="_blank" href="/Home/Details/@job.Id">
                                                     <!-- Thêm thẻ <a> với href tới trang chi tiết -->
                                                     <div class="image-container" style=" width: 80px;height: 80px;overflow: hidden;">
                                                         <img class="flex-shrink-0 img-fluid border rounded" src="@job.applicationUser?.image_url" alt="">
                                                     </div>
                                                 </a>
                                                 <div class="text-start ps-4">
-                                                    <a asp-action="Details" asp-route-id="@job.Id">
+                                                    <a target="_blank" href="/Home/Details/@job.Id">
                                                         <!-- Thêm thẻ <a> với href tới trang chi tiết -->
                                                         <h5 class="mb-3 text-dark">@job.job_name</h5>
                                                     </a>
@@ -167,7 +170,7 @@
 
 
                                                     @*    <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a> *@
-                                                    <a class="btn btn-primary" href="/User/Home/Apply_job/@job.Id">Apply Now</a>
+                                                <a class="btn btn-primary" target="_blank" href="/User/Home/Apply_job/@job.Id">Apply Now</a>
                                                 </div>
                                                 <small class="text-truncate">
                                                     <i class="far fa-calendar-alt text-primary me-2"></i>

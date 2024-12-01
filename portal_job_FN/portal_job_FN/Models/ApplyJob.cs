@@ -15,8 +15,9 @@
         public DateTime create_at { get; set; }
         public DateTime update_at { get; set; }
         public int post_JobId { get; set; }
+        //Id của company
         public string? application_userId { get; set; }
-        //Company để truy xuất lấy id company
+        //Id của người tìm việc
         public string? applicationUserId {  get; set; }
         public PostJob? post_Job { get; set; }
         public ApplicationUser? applicationUser { get; set; }

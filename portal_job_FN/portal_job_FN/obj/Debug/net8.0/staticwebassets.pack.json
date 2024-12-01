@@ -4205,8 +4205,16 @@
       "PackagePath": "staticwebassets\\css\\calendar.min.css"
     },
     {
+      "Id": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\css\\checkout\\style.css",
+      "PackagePath": "staticwebassets\\css\\checkout\\style.css"
+    },
+    {
       "Id": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\css\\color_2.css",
       "PackagePath": "staticwebassets\\css\\color_2.css"
+    },
+    {
+      "Id": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\css\\credit\\style.css",
+      "PackagePath": "staticwebassets\\css\\credit\\style.css"
     },
     {
       "Id": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\css\\custom.css",
@@ -4393,6 +4401,10 @@
       "PackagePath": "staticwebassets\\fonts\\glyphicons-halflings-regular.woff2"
     },
     {
+      "Id": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\icon\\briefcase.png",
+      "PackagePath": "staticwebassets\\icon\\briefcase.png"
+    },
+    {
       "Id": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\img\\04909b4d-118b-414b-b899-fdc9ee05b8cd.jpg",
       "PackagePath": "staticwebassets\\img\\04909b4d-118b-414b-b899-fdc9ee05b8cd.jpg"
     },
@@ -4479,6 +4491,10 @@
     {
       "Id": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\img\\999c3298-4162-4b0b-82c6-b23860414048.png",
       "PackagePath": "staticwebassets\\img\\999c3298-4162-4b0b-82c6-b23860414048.png"
+    },
+    {
+      "Id": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\img\\a2d91a96-fd15-4e57-bad5-32306a1aa42b.jpg",
+      "PackagePath": "staticwebassets\\img\\a2d91a96-fd15-4e57-bad5-32306a1aa42b.jpg"
     },
     {
       "Id": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\img\\a4d4d292-fade-4004-8626-1822d36a03cb.jpg",

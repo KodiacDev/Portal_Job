@@ -19,6 +19,8 @@ namespace portal_job_FN.Data
         public DbSet<PostJob> post_Jobs { get; set; }
         public DbSet<PostJobImage> post_Jobs_images { get; set; }
         public DbSet<University> universities { get; set; }
+        //Luu bảng vnpay
+        public DbSet<VnpayModel> vnpays { get; set; }
 
     }
 }

@@ -200,6 +200,9 @@ namespace portal_job_FN.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<int>("PostCount")
+                        .HasColumnType("int");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -553,6 +556,48 @@ namespace portal_job_FN.Migrations
                     b.ToTable("company_image");
                 });
 
+            modelBuilder.Entity("portal_job_FN.Models.VnpayModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double?>("Amount")
+                        .HasColumnType("float");
+
+                    b.Property<string>("OrderDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrderId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentMethod")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("PostCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TransactionId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("applicationUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("create_at")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("applicationUserId");
+
+                    b.ToTable("vnpays");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -691,6 +736,15 @@ namespace portal_job_FN.Migrations
                 {
                     b.HasOne("portal_job_FN.Models.ApplicationUser", "applicationUser")
                         .WithMany("company_Images")
+                        .HasForeignKey("applicationUserId");
+
+                    b.Navigation("applicationUser");
+                });
+
+            modelBuilder.Entity("portal_job_FN.Models.VnpayModel", b =>
+                {
+                    b.HasOne("portal_job_FN.Models.ApplicationUser", "applicationUser")
+                        .WithMany()
                         .HasForeignKey("applicationUserId");
 
                     b.Navigation("applicationUser");

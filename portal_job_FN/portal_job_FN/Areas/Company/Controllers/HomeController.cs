@@ -26,12 +26,14 @@ namespace portal_job_FN.Areas.Company.Controllers
         private readonly ApplicationDbContext _context;
         private readonly IPostJobRepository _post_job;
         private readonly IApplyJobRepository _apply_job;
+        private readonly IVnPayRepository _vpnPayRepository;
 
         public HomeController(ApplicationDbContext context,
             ILocationRepository locationRepository,
             IExperienceRepository experience,
             IMajorRepository major,
             IPostJobRepository post_job,
+            IVnPayRepository vpnPayRepository,
             UserManager<ApplicationUser> userManager,
             IApplyJobRepository apply_job)
         {
@@ -42,6 +44,7 @@ namespace portal_job_FN.Areas.Company.Controllers
             _post_job = post_job;
             _userManager = userManager;
             _apply_job = apply_job;
+            _vpnPayRepository = vpnPayRepository;
         }
 
         private bool IsImageFile(IFormFile file)
@@ -101,6 +104,16 @@ namespace portal_job_FN.Areas.Company.Controllers
         public async Task<IActionResult> Index()
         {
             var find_company = await _userManager.GetUserAsync(User);
+            //Tổng tiền nạp 
+            ViewBag.TotalPayment = await _vpnPayRepository.TotalMoneyByCompanyId(find_company.Id);
+            //Tổng ứng viên nôp cv
+            ViewBag.CountAllJobSeekerByIdCompany = await _apply_job.CountAllJobSeekerByIdCompany(find_company.Id);
+            //Tổng ứng viên nộp cv chưa được duyệt
+            ViewBag.CountAllunapprovedByIdCompany = await _apply_job.CountAllunapprovedByIdCompany(find_company.Id);
+            //Số lượt đăng bài còn lại
+            ViewBag.CountPost = find_company.PostCount;
+            //Tổng số lượng bài đã đăng
+            ViewBag.CountPosted = await _post_job.CountAllPostByIdCompany(find_company.Id);
             if (find_company == null)
             {
                 return NotFound("Chưa đăng nhập");
@@ -124,7 +137,7 @@ namespace portal_job_FN.Areas.Company.Controllers
             var find_user = await _userManager.GetUserAsync(User);
             if (find_user != null)
             {
-
+                ViewBag.User = find_user;
                 var post_jobs = await _post_job.GetAllByCompanyIdAsync(find_user.Id);
                 return View(post_jobs);
             }
@@ -142,7 +155,6 @@ namespace portal_job_FN.Areas.Company.Controllers
             {
 
                 var list_apply = await _apply_job.GetAllApplyByCompanyIdAsync(find_user.Id);
-                /*            var infoCompany = await _post_job.GetByIdAsync(list_apply.)*/
                 return View(list_apply);
             }
             else
@@ -155,8 +167,14 @@ namespace portal_job_FN.Areas.Company.Controllers
      
         public async Task<IActionResult> DetailsApplyJob(int id)
         {
+            var find_user = await _userManager.GetUserAsync(User);
             var applyJob = await _apply_job.GetByIdAsync(id);
-            return View(applyJob);
+            //Check nếu không phải là nhà tuyển dụng của ứng viên đó thì không xem được
+            if (find_user.Id != applyJob.application_userId)
+            {
+                return Forbid();
+            }
+                return View(applyJob);
         }
 
         // GET: Company/Home/Details/5
@@ -166,8 +184,14 @@ namespace portal_job_FN.Areas.Company.Controllers
             {
                 return NotFound();
             }
+            var find_user = await _userManager.GetUserAsync(User);
 
+       
             var post_job = await _post_job.GetByIdAsync(id);
+            if (find_user.Id != post_job.applicationUserId)
+            {
+                return Forbid();
+            }
             if (post_job == null)
             {
                 return NotFound();
@@ -180,6 +204,11 @@ namespace portal_job_FN.Areas.Company.Controllers
       
         public async Task<IActionResult> CreatePostJob()
         {
+            var find_company = await _userManager.GetUserAsync(User);
+            if(find_company.PostCount <= 0)
+            {
+                return BadRequest("Hettien");
+            }
             var locations = await _locationRepository.GetAllAsync();
             var experiences = await _experience.GetAllAsync();
             var majors = await _major.GetAllAsync();
@@ -203,6 +232,10 @@ namespace portal_job_FN.Areas.Company.Controllers
                 if (find_company != null)
                 {
                     post_job.applicationUserId = find_company.Id;
+                }
+                if(find_company.PostCount <= 0)
+                {
+                return BadRequest("Hettien");
                 }
                 if (post_Job_Images != null)
                 {
@@ -240,6 +273,8 @@ namespace portal_job_FN.Areas.Company.Controllers
                 post_job.job_description = post_job.job_description?.Replace("\r\n", "\n");
                 post_job.benefit = post_job.benefit?.Replace("\r\n", "\n");
                 post_job.is_active = 1;
+                find_company.PostCount = find_company.PostCount - 1;
+                await _userManager.UpdateAsync(find_company);
                 await _post_job.AddAsync(post_job);
                 return RedirectToAction(nameof(view_post));
      /*       }

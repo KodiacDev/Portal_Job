@@ -5,6 +5,7 @@ using portal_job_FN.Areas.Identity.Pages.Account;
 using portal_job_FN.Data;
 using portal_job_FN.Models;
 using portal_job_FN.Repositories;
+using portal_job_FN.Services.Vnpay;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +33,9 @@ builder.Services.AddScoped<IApplyJobRepository, EFApply_job>();
 builder.Services.AddScoped<IUniversity, EFUniversityRepository>();
 builder.Services.AddScoped<IEducationRepository, EFEducationRepository>();
 builder.Services.AddScoped<IUserRepository, EFUserRepository>();
+builder.Services.AddScoped<IVnPayRepository, EFVnPayRepository>();
+//Vnpay
+builder.Services.AddScoped<IVnPayService, VnPayService>();
 
 builder.Services.ConfigureApplicationCookie(options => {
     options.LoginPath = $"/Identity/Account/Login";
@@ -39,17 +43,7 @@ builder.Services.ConfigureApplicationCookie(options => {
     options.LogoutPath = $"/Identity/Account/AccessDenied";
 });
 
-/*builder.Services.AddRazorPages()
-    .AddRazorPagesOptions(options =>
-    {
-        options.Conventions.AddPageApplicationModelConvention(
-            "/Account/RegisterCompany",
-            model =>
-            {
-                model.ModelType = (System.Reflection.TypeInfo?)typeof(RegisterModelCompany);
-            });
-    });
-*/
+
 builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 

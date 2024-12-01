@@ -1,0 +1,92 @@
+﻿@model portal_job_FN.Models.ApplicationUser
+@{
+    ViewData["Title"] = "Order";
+    Layout = "~/Views/Shared/_Layout_Company.cshtml";
+}
+<style>
+
+</style>
+<div class="card-container">
+    <!-- Basic Card -->
+
+    <div class="card-basic1 card-item">
+        <form method="POST" asp-action="CreatePaymentUrlVnpay" asp-controller="Payment">
+        <input type="hidden" name="Name" value="@Model.company_name" />
+        <input type="hidden" name="Amount" value="49000" />
+            <input type="hidden" name="OrderDescription" value="thanh toán gói 45k cho 5 bài tuyển dụng" />
+            <input type="hidden" name="OrderType" value="other" />
+
+
+
+        <div class="card-header1 header-basic1">
+
+            <h1>Basic</h1>
+        </div>
+        <div class="card-body1">
+            <p>
+                <h2>49,000 VND / 5 bài tuyển dụng</h2>
+            </p>
+            <div class="card-element-hidden-basic1">
+                <ul class="card-element-container1">
+                    <li class="card-element1">Doanh nghiệp nhỏ</li>
+                    <li class="card-element1">Hiệu quả cao</li>
+                    <li class="card-element1">5 bài chỉ với 49,000 VND</li>
+                </ul>
+                <button type="submit"  class="btn1 btn-basic1">Order now</button>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <!-- Standard Card -->
+    <div class="card-standard1 card-item">
+         <form method="POST" asp-action="CreatePaymentUrlVnpay" asp-controller="Payment">
+        <input type="hidden" name="Name" value="@Model.company_name" />
+        <input type="hidden" name="Amount" value="99000" />
+            <input type="hidden" name="OrderDescription" value="thanh toán gói 99k cho 15 tuyển dụng" />
+            <input type="hidden" name="OrderType" value="other" />
+        <div class="card-header1 header-standard1">
+            <h1>Standard</h1>
+        </div>
+        <div class="card-body1">
+            <p>
+                <h2>99,000 VND / 15 bài tuyển dụng</h2>
+            </p>
+            <div class="card-element-hidden-standard1">
+                <ul class="card-element-container1">
+                    <li class="card-element1">Doanh nghiệp vừa.</li>
+                    <li class="card-element1">Tiết kiệm tới 34%</li>
+                    <li class="card-element1">15 bài tối ưu nhất: chỉ 99,000 VND!</li>
+                </ul>
+                <button class="btn1 btn-standard1">Order now</button>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <!-- Premium Card -->
+    <div class="card-premium1 card-item">
+         <form method="POST" asp-action="CreatePaymentUrlVnpay" asp-controller="Payment">
+        <input type="hidden" name="Name" value="@Model.company_name" />
+        <input type="hidden" name="Amount" value="199000" />
+            <input type="hidden" name="OrderDescription" value="thanh toán gói 199k cho 35 bài tuyển dụng" />
+            <input type="hidden" name="OrderType" value="other" />
+        <div class="card-header1 header-premium1">
+            <h1>Premium</h1>
+        </div>
+        <div class="card-body1">
+            <p>
+                <h2>199,000 VND / 35 bài tuyển dụng</h2>
+            </p>
+            <div class="card-element-hidden-premium1">
+                <ul class="card-element-container1">
+                    <li class="card-element1">Doanh nghiệp lớn.</li>
+                    <li class="card-element1">Tiết kiệm tới 42%</li>
+                    <li class="card-element1">35 bài tối ưu nhất: chỉ 199,000 VND!</li>
+                </ul>
+                <button class="btn1 btn-premium1">Order now</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>

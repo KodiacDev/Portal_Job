@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0ZVGbrDwK96V68ZsLj2dQkpUBqz7Cd92wU+CL2FQPoI=",
+  "Hash": "rXyMAdFZDzJUSBXTr38wmSojY6m/l+ZFyg0nAGGfnfg=",
   "Source": "portal_job_FN",
   "BasePath": "_content/portal_job_FN",
   "Mode": "Default",
@@ -21145,6 +21145,25 @@
       "OriginalItemSpec": "wwwroot\\css\\calendar.min.css"
     },
     {
+      "Identity": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\css\\checkout\\style.css",
+      "SourceId": "portal_job_FN",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\",
+      "BasePath": "_content/portal_job_FN",
+      "RelativePath": "css/checkout/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\checkout\\style.css"
+    },
+    {
       "Identity": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\css\\color_2.css",
       "SourceId": "portal_job_FN",
       "SourceType": "Discovered",
@@ -21162,6 +21181,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\color_2.css"
+    },
+    {
+      "Identity": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\css\\credit\\style.css",
+      "SourceId": "portal_job_FN",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\",
+      "BasePath": "_content/portal_job_FN",
+      "RelativePath": "css/credit/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\credit\\style.css"
     },
     {
       "Identity": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\css\\custom.css",
@@ -22038,6 +22076,25 @@
       "OriginalItemSpec": "wwwroot\\fonts\\glyphicons-halflings-regular.woff2"
     },
     {
+      "Identity": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\icon\\briefcase.png",
+      "SourceId": "portal_job_FN",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\",
+      "BasePath": "_content/portal_job_FN",
+      "RelativePath": "icon/briefcase.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\icon\\briefcase.png"
+    },
+    {
       "Identity": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\img\\04909b4d-118b-414b-b899-fdc9ee05b8cd.jpg",
       "SourceId": "portal_job_FN",
       "SourceType": "Discovered",
@@ -22454,6 +22511,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\999c3298-4162-4b0b-82c6-b23860414048.png"
+    },
+    {
+      "Identity": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\img\\a2d91a96-fd15-4e57-bad5-32306a1aa42b.jpg",
+      "SourceId": "portal_job_FN",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\",
+      "BasePath": "_content/portal_job_FN",
+      "RelativePath": "img/a2d91a96-fd15-4e57-bad5-32306a1aa42b.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\a2d91a96-fd15-4e57-bad5-32306a1aa42b.jpg"
     },
     {
       "Identity": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\wwwroot\\img\\a4d4d292-fade-4004-8626-1822d36a03cb.jpg",
