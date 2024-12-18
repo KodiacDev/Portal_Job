@@ -1,0 +1,82 @@
+﻿@model IEnumerable<portal_job_FN.Models.ApplyJob>
+
+@{
+    ViewData["Title"] = "ViewListApplyJob";
+    Layout = "~/Views/Shared/_Layout_Company.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h2 style="margin-bottom:20px; font-family:'Times New Roman'">
+                Danh sách ứng tuyển
+            </h2>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead style=" font-weight: bold; font-size: 20px;">
+                        <tr>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Ứng viên</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Chiến dịch</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Thông tin liên hệ</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Ngày ứng tuyển</th>
+                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Trạng thái</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var job in Model)
+                        {
+                            <tr>
+                                <td style="font-size: 20px;color:black">
+                                    @if (!string.IsNullOrEmpty(job.applicationUser?.image_url))
+                                    {
+                                        <img src="@job.applicationUser?.image_url" alt="Avatar" style="height:70px; width:70px">
+                                    }
+                                    else
+                                    {
+                                        <img src="~/img/hih.png" alt="Avatar">
+                                    }
+                                    <span>@job.applicationUser?.fullname</span>
+                                </td>
+                                <td style="font-size: 20px;color:black">@job.post_Job?.job_name</td>
+                                <td style="font-size: 20px;color:black">
+                                    <div>
+                                        <!-- Icon email -->
+                                        <i class="mdi mdi-email" style="color:green"></i>
+                                        <!-- Hiển thị email -->
+                                        <span>@job.applicationUser?.Email</span>
+                                    </div>
+                                    <div>
+                                        <!-- Icon số điện thoại -->
+                                        <i class="mdi mdi-phone" style="color:green"></i>
+                                        <!-- Hiển thị số điện thoại -->
+                                        <span>@job.applicationUser?.mobile_no</span>
+                                    </div>
+                                </td>
+                                <td style="font-size: 20px;color:black">
+                                    <!-- Icon lịch -->
+                                    <i class="mdi mdi-calendar"></i>
+                                    <!-- Hiển thị ngày tạo -->
+                                    <span>@job.create_at</span>
+                                </td>
+                                <td style="font-size: 20px;color:black">
+                                    @if (job.Feedback == null)
+                                    {
+                                        <label class="badge badge-warning">Đang chờ</label>
+                                    }
+                                    else
+                                    {
+                                        <label class="badge badge-success">Đã duyệt</label>
+                                    }
+                                </td>
+                                <td>
+                                    <a class="btn btn-info" href="/Company/Home/DetailsApplyJob/@job.Id">Chi tiết</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

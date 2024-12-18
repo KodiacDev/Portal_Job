@@ -1,0 +1,122 @@
+﻿@model portal_job_FN.Models.ApplyJob
+
+@{
+    ViewData["Title"] = "Details_apply";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@* sử dụng viewBag lay avatar*@
+@{
+    var infoUser = ViewBag.InfoUser as portal_job_FN.Models.ApplicationUser;
+}
+        <style>
+            .close-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background-color: transparent;
+                border: none;
+                color: red;
+                font-size: 50px;
+                cursor: pointer;
+            }
+
+                .close-button:hover {
+                    color: darkred;
+                }
+
+            #pdfContainer {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: white; /* Đảm bảo nền của iframe không che phủ các phần tử khác */
+                z-index: 9999; /* Đảm bảo iframe hiển thị trên các phần tử khác */
+            }
+
+            #pdfFrame {
+                width: 100%;
+                height: calc(100vh - 60px); /* Chiều cao của iframe sẽ chiếm toàn bộ không gian trừ đi kích thước của nút "Đóng" */
+            }
+
+    .labels {
+        font-weight: bold;
+        }
+
+        </style>
+
+<div class="container-fluid bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                @if (Model != null && infoUser != null && Model.FullName != null && infoUser.image_url != null && Model.Email != null)
+                {
+                    <img class="rounded-circle mt-5" width="150px" src="@infoUser.image_url">
+                    <span style="font-family: 'Times New Roman'" class="font-weight-bold"><h4>@Model.FullName</h4></span>
+                    <span style="font-family: 'Times New Roman'" class="labels text-black-50">@Model.Email</span>
+                }
+                else
+                {
+                    <img class="rounded-circle mt-5" width="150px" src="~/img/hih.png">
+                }
+                <span> </span>
+            </div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h3 style="font-family: 'Times New Roman'" class="text-right">Thông tin ứng viên</h3>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <label class="labels" style="font-family: 'Times New Roman'; font-size: 20px;">Tên ứng viên</label>
+                        @if (Model != null && Model.FullName != null)
+                        {
+                            <div class="form-control" style="font-family: 'Times New Roman'; font-size: 18px;">@Model.FullName</div>
+                        }
+                        else
+                        {
+                            <div class="form-control" style="font-family: 'Times New Roman'; font-size: 18px;">N/A</div>
+                        }
+                    </div>
+                    <div class="col-md-6">
+                        <label class="labels" style="font-family: 'Times New Roman'; font-size: 20px;">Email ứng viên</label>
+                        @if (Model != null && Model.Email != null)
+                        {
+                            <div class="form-control" style="font-family: 'Times New Roman'; font-size: 18px;">@infoUser.Email</div>
+                        }
+                        else
+                        {
+                            <div class="form-control" style="font-family: 'Times New Roman'; font-size: 18px;">N/A</div>
+                        }
+                    </div>
+                    <div class="col-md-12">
+                        <label class="labels" style="font-family: 'Times New Roman'; font-size: 20px;">Thư giới thiệu</label>
+                        @if (Model != null && Model.cover_letter != null)
+                        {
+                            <textarea class="form-control" style="font-family: 'Times New Roman'; height: 200px; font-size: 18px;">@Model.cover_letter</textarea>
+                        }
+                        else
+                        {
+                            <div class="form-control" style="font-family: 'Times New Roman'; font-size: 18px;">N/A</div>
+                        }
+                    </div>
+                    <br>
+
+                    <div class="col-md-12">
+                        <label class="labels" style="font-family: 'Times New Roman'; font-size: 20px;">Phản hồi từ nhà tuyển dụng</label>
+                        @if (Model != null && Model.Feedback != null)
+                        {
+                            <textarea name="feedback" class="form-control" style="font-family: 'Times New Roman'; height: 200px; font-size: 18px;">@Model.Feedback</textarea>
+                        }
+                        else
+                        {
+                            <div class="form-control" style="font-family: 'Times New Roman'; font-size: 18px;">Chưa có phản hồi</div>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

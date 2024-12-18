@@ -1,0 +1,73 @@
+﻿@model portal_job_FN.Models.ApplicationUser
+@{
+    ViewData["Title"] = "UpdateProfile";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container-fluid  bg-white mt-5 mb-5">
+    <div class="row">
+        <form asp-action="UpdateProfile" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h3 style="font-family:'Times New Roman'" class="text-right">Thông tin Admin</h3>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label asp-for="fullname" style="font-family:'Times New Roman';font-size:20px"
+                                   class="control-label">Họ tên</label>
+                            <input asp-for="fullname" style="font-family:'Times New Roman';font-size:18px" class="form-control" />
+                            <span asp-validation-for="fullname" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-12">
+                            <label asp-for="Email" style="font-family:'Times New Roman';font-size:20px"
+                                   class="control-label">Email</label>
+                            <input asp-for="Email" style="font-family:'Times New Roman';font-size:18px" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="mobile_no" style="font-family:'Times New Roman';font-size:20px" class="control-label">Số điện thoại</label>
+                            <input asp-for="mobile_no" style="font-family:'Times New Roman';font-size:18px" class="form-control" />
+                            <span asp-validation-for="mobile_no" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="@Model.image_url">Ảnh đại diện</label>
+                            <input type="file" asp-for="@Model.image_url" class="form-control" id="imageInput" accept="image/*" />
+                            <img src="@Model.image_url" alt="Logo công ty" style="max-width:200px;" id="previewImage" />
+                            <span asp-validation-for="@Model.image_url" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="mt-5 text-center">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+        </form>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<div>
+    <a class="btn btn-primary" href="/Admin/Profile/Index/">Trở về</a>
+</div>
+
+
+
+<script>
+    document.querySelectorAll('input[type="file"]').forEach(input => {
+        input.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById("previewImage")
+                    img.src = e.target.result
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+</script>
+
+

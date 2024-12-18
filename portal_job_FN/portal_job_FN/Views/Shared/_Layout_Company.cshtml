@@ -1,0 +1,253 @@
+﻿@using Microsoft.AspNetCore.Identity
+@* @{
+    var company = ViewBag.Company as ApplicationUser;
+    string imageUrl = company?.image_url ?? "~/img/hih.png";
+    string companyName = company?.company_name ?? "Unknown Company";
+} *@
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    var currentUser = await UserManager.GetUserAsync(User);
+    if (currentUser != null)
+    {
+        string imageUrl = currentUser?.image_url ?? "~/img/hih.png";
+        string companyName = currentUser?.company_name ?? "Unknown Company";
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="~/icon/briefcase.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Nhúng các font từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700" rel="stylesheet">
+
+@*     link cho phần table*@
+    <link rel="stylesheet" href="~/assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/css/vendor.bundle.base.css">
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="~/assets/images/favicon.png" />
+
+    <!-- Nhúng các tệp CSS từ các nguồn khác nhau -->
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/flaticon.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <!-- site icon -->
+    <link rel="icon" href="~/img/favicon.png" type="image/png" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <!-- site css -->
+    <link rel="stylesheet" href="~/css/styleadmin.css" />
+    <!-- responsive css -->
+    <link rel="stylesheet" href="~/css/responsive.css" />
+    <!-- color css -->
+    <link rel="stylesheet" href="~/css/colors.css" />
+    <!-- select bootstrap -->
+    <link rel="stylesheet" href="~/css/bootstrap-select.css" />
+    <!-- scrollbar css -->
+    <link rel="stylesheet" href="~/css/perfect-scrollbar.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="~/css/custom.css" />
+    <link rel="stylesheet" href="~/js/semantic.min.css" />
+    <!-- fancy box js -->
+    <link rel="stylesheet" href="~/css/admin/jquery.fancybox.css" />
+    
+  @*   link dan toi chart  *@
+    <!-- Bootstrap Core and vandor -->
+    <link rel="stylesheet" href="~/assets/plugins/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Plugins css -->
+    <link rel="stylesheet" href="~/assets/plugins/charts-c3/c3.min.css" />
+
+    <!-- Core css -->
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+    <link rel="stylesheet" href="~/assets/css/theme1.css" />
+    @*   css credit *@
+    <link rel="stylesheet" href="~/css/credit/style.css" />
+@*     css cho checkout *@
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/css/checkout/style.css" rel="stylesheet">
+
+
+</head>
+
+<body class="dashboard dashboard_1">
+
+    <div class="full_container">
+        <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <div class="sidebar_blog_1">
+                    <div class="sidebar-header">
+                        <div class="logo_section">
+                            <a href="index.html"><img class="logo_icon img-responsive" src="~/img/logo/logo_icon.png" alt="#" /></a>
+                        </div>
+                    </div>
+                    <div class="sidebar_user_info">
+                        <div class="icon_setting"></div>
+                        <div class="user_profle_side">
+                            <div class="user_img"><img class="img-responsive" src="@currentUser?.image_url" alt="#" /></div>
+                            <div class="user_info">
+                                <h6>@currentUser?.company_name</h6>
+                                <p><span class="online_animation"></span> Online</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar_blog_2">
+                    <h4>Tuyển dụng</h4>
+                    <ul class="list-unstyled components">
+                        <li>
+                            <a asp-area="Company" asp-controller="Home" asp-action="Index"><i class="fa fa-dashboard yellow_color"></i> <span>Trang chủ</span></a>
+                        </li>
+                        <li>
+                            <a asp-area="Company" asp-controller="Profile" asp-action="Index"><i class="fas fa-building purple_color2"></i> <span>Profile công ty</span></a>
+                        </li>
+
+                        <li>
+                            <a asp-area="Company" asp-controller="Home" asp-action="view_post"><i class="fa fa-table purple_color2"></i> <span>Chiến dịch tuyển dụng</span></a>
+                         </li>
+                        <li>
+                            <a asp-area="Company" asp-controller="Payment" asp-action="Purchase">
+                                <i class="fa fa-credit-card purple_color2"></i>
+                                <span>Nạp tiền</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="Company" asp-controller="Payment" asp-action="ListHistoryPayment">
+                                <i class="fa fa-history purple_color2"></i>
+                                <span>Lịch sử nạp</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a asp-area="Company" asp-controller="Home" asp-action="ViewListApplyJob"><i class="fa fa-briefcase blue1_color"></i> <span>Quản lý cv</span></a>
+                        </li>
+                 
+                        <li>
+                            <a href="/Home">
+                                <i class="fas fa-search"></i> Trang tìm việc
+                            </a>
+
+                        </li>
+                        <li>
+                            <form class="btn btn-warning" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                                <button type="submit" class="btn btn-warning">Đăng xuất</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+                <!-- topbar -->
+                <div class="topbar">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="full">
+                            <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                            <div class="logo_section">
+                                <a href="index.html"><img class="img-responsive" src="~/img/logo/logo.png" alt="#" /></a>
+                            </div>
+                            <div class="right_topbar">
+                                <div class="icon_info">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-bell-o"></i><span class="badge">2</span></a></li>
+                                        <li><a href="#"><i class="fa fa-question-circle"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-envelope-o"></i><span class="badge">3</span></a></li>
+                                    </ul>
+                                    <ul class="user_profile_dd">
+                                        <li>
+                                            <a class="dropdown-toggle" data-toggle="dropdown"><img class="img-responsive rounded-circle" src="~/img/layout_img/user_img.jpg" alt="#" /><span class="name_user">John David</span></a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="profile.html">My Profile</a>
+                                                <a class="dropdown-item" href="settings.html">Settings</a>
+                                                <a class="dropdown-item" href="help.html">Help</a>
+                                                <a class="dropdown-item" href="#"><span>Log Out</span> <i class="fa fa-sign-out"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+
+
+                        @RenderBody()
+
+
+
+                <!-- Footer Start -->
+                <!-- footer -->
+                <div class="container-fluid">
+                    <div class="footer">
+                        <p>
+                            Copyright © 2018 Designed by html.design. All rights reserved.<br><br>
+                            Distributed By: <a href="https://themewagon.com/">Khoa Long</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- end dashboard inner -->
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
+<!-- jQuery -->
+<script src="~/js/jquery.min.js"></script>
+<script src="~/js/popper.min.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<!-- wow animation -->
+<script src="~/js/animate.js"></script>
+<!-- select country -->
+<script src="~/js/bootstrap-select.js"></script>
+<!-- owl carousel -->
+<script src="~/js/owl.carousel.js"></script>
+<!-- chart js -->
+<script src="~/js/Chart.min.js"></script>
+<script src="~/js/Chart.bundle.min.js"></script>
+<script src="~/js/utils.js"></script>
+<script src="~/js/analyser.js"></script>
+<!-- nice scrollbar -->
+<script src="~/js/perfect-scrollbar.min.js"></script>
+<script>
+    var ps = new PerfectScrollbar('#sidebar');
+</script>
+<!-- custom js -->
+<script src="~/js/custom.js"></script>
+<script src="~/js/chart_custom_style1.js"></script>
+
+@* chart *@
+<script src="~/assets/bundles/lib.vendor.bundle.js"></script>
+
+<script src="~/assets/bundles/apexcharts.bundle.js"></script>
+<script src="~/assets/bundles/counterup.bundle.js"></script>
+<script src="~/assets/bundles/knobjs.bundle.js"></script>
+<script src="~/assets/bundles/c3.bundle.js"></script>
+
+<script src="~/assets/js/core.js"></script>
+<script src="~/assets/js/page/project-index.js"></script>

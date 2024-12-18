@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+
+/** {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  background: #f5f6f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  line-height: 1.8;
+  font-family: "Open Sans", sans-serif;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}*/
+/* Container to arrange cards horizontally */
+.card-container {
+    display: flex;
+    justify-content: space-around; /* Space between cards */
+    align-items: flex-start; /* Align cards at the top */
+    flex-wrap: wrap; /* Wrap cards to the next line if they don't fit */
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px; /* Optional spacing between cards */
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Individual card styling */
+.card-item {
+    flex: 1 1 calc(30% - 20px); /* Responsive: 3 cards per row, with spacing */
+    max-width: 30%; /* Ensure cards are equal size */
+    background-color: #f9f9f9; /* Example background color */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+    .card-item:hover {
+        transform: scale(1.05); /* Add a hover effect */
+    }
+
+/* Card headers styling */
+.card-header1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Buttons inside cards */
+.btn1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    .btn1:hover {
+        background-color: #0056b3;
+    }
+
+.card-basic1,
+.card-standard1,
+.card-premium1 {
+  margin: 0 2rem 1rem 0;
+  padding: 0 0 0.5rem 0;
+  width: 15rem;
+  background: #fff;
+  color: #444;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(51, 51, 51, 0.2);
+  overflow: hidden;
+  transition: all 0.1ms ease-in-out;
+}
+.card-basic1:hover,
+.card-standard1:hover,
+.card-premium1:hover {
+  transform: scale(1.02);
+}
+.card-header1 {
+  height: 5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+}
+.header-basic1,
+.btn-basic1 {
+  background: linear-gradient(135deg, rgb(0, 119, 238), #06c766);
+}
+.header-standard1,
+.btn-standard1 {
+  background: linear-gradient(135deg, #b202c9, #cf087c);
+}
+.header-premium1,
+.btn-premium1 {
+  background: linear-gradient(135deg, #eea300, #ee5700);
+}
+.card-body1 {
+  padding: 0.5rem 0;
+}
+.card-body1 h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.card-element-container1 {
+  color: #444;
+  list-style: none;
+}
+.btn1 {
+  margin: 0.5rem 0;
+  padding: 0.7rem 1rem;
+  outline: none;
+  border-radius: 1rem;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1ms ease-in-out;
+}
+.btn1:hover {
+  transform: scale(0.95);
+}
+.btn1:active {
+  transform: scale(1);
+}
+.card-element-hidden1 {
+  display: none;
+}

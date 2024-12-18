@@ -1,0 +1,118 @@
+﻿@model portal_job_FN.Models.PostJob
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout_Company.cshtml";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>post_job</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.job_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.job_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.job_description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.job_description)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.required_skill)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.required_skill)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.benefit)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.benefit)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.employmentType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.employmentType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.salary_min)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.salary_min)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.salary_max)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.salary_max)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.detail_location)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.detail_location)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.create_at)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.create_at)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.update_at)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.update_at)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.apply_date)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.apply_date)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.is_active)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.is_active)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.job_LocationId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.job_LocationId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.experienceId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.experienceId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.applicationUserId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.applicationUserId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.majorId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.majorId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

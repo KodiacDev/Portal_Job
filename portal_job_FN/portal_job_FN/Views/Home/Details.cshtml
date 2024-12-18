@@ -1,0 +1,194 @@
+﻿@model portal_job_FN.Models.PostJob
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- Job Detail Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="row gy-5 gx-4">
+            <div class="col-lg-8">
+                <div class="d-flex align-items-center mb-5">
+                    <img class="flex-shrink-0 img-fluid border rounded" src="@Model.applicationUser?.image_url" alt="" style="width: 80px; height: 80px;">
+                    <div class="text-start ps-4">
+                        <h3 class="mb-3">@Model.job_name</h3>
+                        <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>@Model.job_Location?.province_name</span>
+                        <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>@Model.employmentType</span>
+                        <span class="text-truncate me-3"><i class="fas fa-briefcase text-primary me-2"></i>@Model.experience?.experience_name</span>
+                        <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>@string.Format("{0} Triệu - {1} Triệu", @Model.salary_min, @Model.salary_max)</span>
+                    </div>
+                </div>
+                <style>
+                     p {
+                         /* Áp dụng các thuộc tính của thẻ <p> */
+                         font-size:15px;
+                         /* Thêm các thuộc tính khác nếu cần */
+                     }
+                </style>
+                <div class="mb-5" id="conditions">
+                    <h4 class="mb-3">Mô tả công việc</h4>
+                    <p style="font-size:20px">@Model.job_description</p>
+
+                    <h4 class="mb-3">Yêu cầu ứng viên</h4>
+                    <p style="font-size:20px">@Model.required_skill</p>
+                    <h4 class="mb-3">Quyền lợi</h4>
+                    <p style="font-size:20px">@Model.benefit</p>
+
+                    <h4 class="mb-3">Địa chỉ làm việc</h4>
+                    <p style="font-size:20px">@Model.detail_location</p>
+
+               @*  Style carosel image job *@
+           
+                </div>
+                @{
+                    var imageUrls = ViewBag.imagesUrls as List<PostJobImage>;
+                }
+                @if (ViewBag.imagesUrls != null && ViewBag.imagesUrls.Count > 0)
+                {
+                    <h4 class="mb-3">Hình ảnh công ty</h4>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        @for (int i = 0; i < ViewBag.imagesUrls.Count; i++)
+                        {
+                            <li data-target="#myCarousel" data-slide-to="@i" class="@((i == 0) ? "active" : "")"></li>
+                        }
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        @for (int i = 0; i < ViewBag.imagesUrls.Count; i++)
+                        {
+                            <div class="item @(i == 0 ? "active" : "")">
+                                <img src="@ViewBag.imagesUrls[i]" alt="Slide @(i + 1)">
+                            </div>
+                        }
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+                }
+                else
+                {
+                    <div></div>
+                }
+
+
+
+                <div class="">
+                    <h4 class="mb-4">Ứng tuyển ngay</h4>
+                    <div class="col-12">
+                        <a class="btn btn-primary" href="/User/Home/Apply_job/@Model.Id">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="bg-light rounded p-5 mb-4 wow slideInUp" data-wow-delay="0.1s">
+                    <h4 class="mb-4">Tóm tắt công việc</h4>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Đăng ngày: @string.Format("{0:dd/MM/yyyy}", @Model.create_at)</p>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Vị trí: @Model.job_name</p>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Kinh nghiệm: @Model.experience?.experience_name</p>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Hình thức làm việc: @Model.employmentType</p>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Mức lương từ: @string.Format("{0} Triệu - {1} Triệu", @Model.salary_min, @Model.salary_max)</p>
+                    <p style="font-size:20px"><i class="fa fa-angle-right text-primary me-2"></i>Địa điểm: @Model.job_Location?.province_name</p>
+                    <p style="font-size:20px" class="m-0"><i class="fa fa-angle-right text-primary me-2"></i>Hạn nộp hồ sơ: @string.Format("{0:dd/MM/yyyy}", @Model.apply_date)</p>
+                </div>
+@*                 <div class="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
+                    <h4 class="mb-4">Giới thiệu về công ty</h4>
+                    <p style="font-size:20px" class="m-0">@Model.applicationUser?.introduce_company</p>
+                </div> *@
+                @{
+                    var RelatedJobs = ViewBag.listRelatedJobs as List<PostJob>;
+                }
+
+                @if (RelatedJobs != null && RelatedJobs.Any())
+                {
+                    <div class="bg-light rounded p-5 wow slideInUp" data-wow-delay="0.1s">
+                        <h4 class="mb-4 text-center">VIỆC LÀM LIÊN QUAN</h4>
+
+                        @for (int i = 0; i < RelatedJobs.Count; i++)
+                        {
+                            var job = RelatedJobs[i];
+                            <!-- Lấy từng công việc trong danh sách -->
+
+                            <div class="related-jobs">
+                                <!-- Mẫu công việc liên quan -->
+                                <div class="job-item p-4 mb-4 bg-white rounded shadow-sm">
+                                    <div class="d-flex align-items-center">
+                                        <!-- Logo công ty -->
+                                        <img class="flex-shrink-0 img-fluid border rounded me-3" src="@job.applicationUser?.image_url" alt="Company Logo" style="width: 60px; height: 60px;">
+
+                                        <!-- Thông tin công việc -->
+                                        <div class="text-start">
+                                            <!-- Job Name dưới dạng liên kết -->
+                                            <h6 class="mb-1 text-primary">
+                                                <a asp-action="Details" asp-route-id="@job.Id" class="text-primary text-decoration-none">
+                                                    @job.job_name
+                                                </a>
+                                            </h6>
+                                            <span class="d-block text-muted small">
+                                                <i class="fa fa-building text-secondary me-1"></i>@job.applicationUser?.company_name
+                                            </span>
+                                            <span class="d-block small">
+                                                <i class="fa fa-map-marker-alt text-secondary me-1"></i>@job.job_Location?.province_name
+                                            </span>
+                                            <span class="d-block small">
+                                                <i class="fa fa-money-bill-alt text-secondary me-1"></i>
+                                                @job.salary_min - @job.salary_max triệu
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="text-center">Không tìm thấy việc làm liên quan.</p>
+                }
+
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Job Detail End -->
+<script>
+    $(document).ready(function () {
+        // Kích hoạt carousel
+        $('#myCarousel').carousel();
+    });
+
+</script>
+
+<script>
+    // Lấy phần tử div chứa các điều kiện
+    var conditionsDiv = document.getElementById("conditions");
+
+    // Lấy nội dung của div
+    var conditionsText = conditionsDiv.innerHTML;
+
+    // Tách nội dung thành các điều kiện dựa trên dấu +
+    var conditionsArray = conditionsText.split("+");
+
+    // Tạo một biến để lưu trữ nội dung mới với các điều kiện được xuống dòng
+    var newConditionsText = conditionsArray.join("<br>+");
+
+    // Gán nội dung mới cho div
+    conditionsDiv.innerHTML = newConditionsText;
+</script>

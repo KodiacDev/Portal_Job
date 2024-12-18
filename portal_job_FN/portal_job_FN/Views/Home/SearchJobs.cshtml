@@ -1,0 +1,163 @@
+﻿@model PaginatedList<portal_job_FN.Models.PostJob>
+@{
+    ViewData["Title"] = "Tìm kiếm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.0.0-beta.4/libs/oversea/index.js"></script>
+<script>
+    new CozeWebSDK.WebChatClient({
+        config: {
+            bot_id: '7437790291677593618',
+        },
+        componentProps: {
+            title: 'Coze',
+        },
+    });
+</script>
+
+<style>
+    .container.bg-white {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+</style>
+<!-- Header End -->
+<div class="container-xxl py-5 bg-dark page-header mb-5">
+    <div class="container my-5 pt-5 pb-4">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">Job List</h1>
+    </div>
+</div>
+<!-- Header End -->
+    <!-- Jobs Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+        <h1 class="mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            @ViewBag.Count Việc làm
+            @if (ViewBag.JobName != null)
+            {
+                @($" \"{ViewBag.JobName}\"")
+            }
+            @if (ViewBag.Location != null)
+            {
+                @($" tại \"{ViewBag.Location}\"")
+            }
+        </h1>
+
+            <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
+                <div class="tab-content">
+                    <div id="tab-1" class="tab-pane fade show p-0 active">
+                        @foreach (var job in Model)
+                        {
+                            <div class="job-item p-4 mb-4">
+                                <div class="row g-4">
+                                    <div class="col-sm-12 col-md-8 d-flex align-items-center">
+                                        <img class="flex-shrink-0 img-fluid border rounded" src="@job.applicationUser?.image_url" alt="" style="width: 80px; height: 80px;">
+                                        <div class="text-start ps-4">
+                                            <a asp-action="Details" asp-route-id="@job.Id">
+                                                <!-- Thêm thẻ <a> với href tới trang chi tiết -->
+                                                <h5 class="mb-3 text-dark">@job.job_name</h5>
+                                            </a>
+                                            <span class="text-truncate me-3">
+                                                <i class="fa fa-map-marker-alt text-primary me-2"></i>
+                                                @(job.job_Location != null ? job.job_Location.province_name : "Không")
+                                            </span>
+                                            <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>@job.employmentType</span>
+                                            <span class="text-truncate me-0">
+                                                <i class="far fa-money-bill-alt text-primary me-2"></i>
+                                                @string.Format("{0} Triệu - {1} Triệu", job.salary_min, job.salary_max)
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
+                                        <div class="d-flex mb-3">
+                                            <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a>
+                                            <a class="btn btn-primary" href="/User/Home/Apply_job/@job.Id">Apply Now</a>
+                                        </div>
+                                        <small class="text-truncate">
+                                            <i class="far fa-calendar-alt text-primary me-2"></i>    <i class="far fa-calendar-alt text-primary me-2"></i>
+                                            Date Line: @string.Format("{0:dd/MM/yyyy}", job.apply_date)
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <!-- Nút phân trang -->
+                    <div class="col-12">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-center">
+                                @if (Model.TotalPages > 1)
+                                {
+                                    @if (Model.PageIndex != 1)
+                                    {
+                                        <li class="page-item">
+                                            <a class="page-link" href="@Url.Action("Index", new { pageNumber = 1 })">&laquo;</a>
+                                        </li>
+                                    }
+
+                                    @for (int i = 1; i <= Model.TotalPages; i++)
+                                    {
+                                        <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                                            <a class="page-link" href="@Url.Action("Index", new { pageNumber = i })">@i</a>
+                                        </li>
+                                    }
+
+                                    @if (Model.PageIndex != Model.TotalPages)
+                                    {
+                                        <li class="page-item">
+                                            <a class="page-link" href="@Url.Action("Index", new { pageNumber = Model.TotalPages })">&raquo;</a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Jobs End -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Gọi endpoint để kiểm tra công việc trong giỏ hàng
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/User/JobCart/CheckCartItem", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    var cartItemIds = response.map(String); // Chuyển đổi các phần tử trong mảng thành chuỗi
+                    cartItemIds.forEach(function (jobId) {
+                        var heartIcon = document.getElementById("heartIcon_" + jobId);
+                        heartIcon.classList.add("active");
+                    });
+                }
+            }
+        };
+        xhr.send();
+    });
+
+    function addToCart(jobId) {
+        var heartIcon = document.getElementById("heartIcon_" + jobId);
+        heartIcon.classList.toggle("active");
+
+        // Gọi endpoint để kiểm tra công việc trong giỏ hàng
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "/User/JobCart/CheckCartItem", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    var cartItemIds = response.map(String); // Chuyển đổi các phần tử trong mảng thành chuỗi
+                    if (cartItemIds.includes(jobId.toString())) {
+                        heartIcon.classList.add("active");
+                    }
+                }
+            }
+        };
+        xhr.send();
+    }
+</script>
