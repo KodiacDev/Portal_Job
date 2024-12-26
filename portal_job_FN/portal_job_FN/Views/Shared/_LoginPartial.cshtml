@@ -72,18 +72,60 @@
 }
 else
 {
-    <li class="nav-item">
-        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Đăng ký</a>
-    </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/RegisterCompany">Đăng ký nhà tuyển dụng</a>
-        </li>
+    <li class="nav-item">  
+         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Đăng ký</a> 
+    </li> 
+
     <li class="nav-item">
         <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Đăng nhập</a>
     </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/LoginCompany">Đăng nhập nhà tuyển dụng</a>
-        </li>
 
+    <li class="nav-item">
+        <div class="dropdown">
+            <style>
+                .employer-nav {
+                    display: block;
+                    padding: 10px 15px;
+                    background-color: #000;
+                    color: #fff;
+                    border-radius: 5px;
+                    margin-right: 10px;
+                    text-align: center;
+                    width: 100%;
+                }
+
+                    .employer-nav:hover {
+                        background-color: #333;
+                        color: #fff;
+                    }
+
+                .navbar-nav .dropdown-menu {
+                    min-width: 100%;
+                }
+
+                    .navbar-nav .dropdown-menu a {
+                        color: #333;
+                        padding: 10px 15px;
+                    }
+
+                        .navbar-nav .dropdown-menu a:hover {
+                            background-color: #f0f0f0;
+                        }
+            </style>
+
+            <a class="nav-link employer-nav text-white bg-dark" href="#" role="button" id="employerDropdown" data-bs-toggle="dropdown" aria-expanded="true">
+                Dành cho nhà tuyển dụng
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="employerDropdown">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/RegisterCompany">Đăng ký nhà tuyển dụng</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/LoginCompany">Đăng nhập nhà tuyển dụng</a>
+                </li>
+            </ul>
+        </div>
+    </li>
 }
 </ul>
