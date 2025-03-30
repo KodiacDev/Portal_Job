@@ -1,0 +1,1 @@
+The Job Portal Website is a web application designed to connect job seekers with employers. It allows users to search for jobs, apply for positions, and manage their profiles, while employers can post job listings, review applications, and manage recruitment processes efficiently.
