@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tEL96xADebWcuYA+lY4U0m2gjKV2qnfpswkcUJOKqhUDouDC/cPyfwx3vUlGlIDTsd1YQ+ogE7FV+oWalCDQ0A==",
+  "dgSpecHash": "jnwkMsSrRJ0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\a\\Desktop\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\portal_job_FN.csproj",
+  "projectFilePath": "D:\\CNTT-HUTECH\\Đồ án chuyên ngành\\PT_FN - FN\\PT_FN - FN\\portal_job_FN\\portal_job_FN\\portal_job_FN.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\a\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\a\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

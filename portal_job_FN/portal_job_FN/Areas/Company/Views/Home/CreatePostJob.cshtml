@@ -11,52 +11,52 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="job_name" class="control-label"><i class="fas fa-user"></i> Tên công việc</label>
-                <input asp-for="job_name" class="form-control" required />
+                <input asp-for="job_name" class="form-control" required maxlength="150" />
                 <span asp-validation-for="job_name" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="job_description" class="control-label"><i class="fas fa-file-alt"></i> Mô tả công việc</label>
-                <textarea asp-for="job_description" class="form-control" rows="5" required></textarea>
+                <textarea asp-for="job_description" class="form-control" rows="5" required maxlength="1500"></textarea>
                 <span asp-validation-for="job_description" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="required_skill" class="control-label"><i class="fas fa-check"></i> Yêu cầu công việc</label>
-                <textarea asp-for="required_skill" class="form-control" rows="5" required></textarea>
+                <textarea asp-for="required_skill" class="form-control" rows="5" required maxlength="1500"></textarea>
                 <span asp-validation-for="required_skill" class="text-danger"></span>
             </div>
 
-
             <div class="form-group">
                 <label asp-for="benefit" class="control-label"><i class="fas fa-gift"></i> Phúc lợi</label>
-                <textarea asp-for="benefit" class="form-control" rows="5" required></textarea>
+                <textarea asp-for="benefit" class="form-control" rows="5" required maxlength="1500"></textarea>
                 <span asp-validation-for="benefit" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="employmentType" class="control-label"><i class="fas fa-briefcase"></i> Loại công việc</label>
-                <select asp-for="employmentType" class="form-control">
+                <select asp-for="employmentType" class="form-control" >
                     <option value="Full-Time">Full-Time</option>
                     <option value="Part-Time">Part-Time</option>
                 </select>
                 <span asp-validation-for="employmentType" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <div class="row">
                     <div class="col">
                         <label asp-for="salary_min" class="control-label"><i class="fas fa-money-bill"></i> Lương từ</label>
                         <div class="input-group">
-                            <input asp-for="salary_min" class="form-control" type="number" required />
+                            <input asp-for="salary_min" class="form-control" type="number" required id="salary_min" min="0" />
                             <div class="input-group-append">
                                 <span class="input-group-text">triệu đồng</span>
                             </div>
                         </div>
                         <span asp-validation-for="salary_min" class="text-danger"></span>
                     </div>
+
                     <div class="col">
                         <label asp-for="salary_max" class="control-label"><i class="fas fa-money-bill"></i> Đến</label>
                         <div class="input-group">
-                            <input asp-for="salary_max" class="form-control" type="number" required />
+                            <input asp-for="salary_max" class="form-control" type="number" required id="salary_max" min="0" />
                             <div class="input-group-append">
                                 <span class="input-group-text">triệu đồng</span>
                             </div>
@@ -66,11 +66,58 @@
                 </div>
             </div>
 
+            <script>
+                function validateSalary() {
+                    var salaryMin = parseFloat(document.getElementById('salary_min').value) || 0;
+                    var salaryMax = parseFloat(document.getElementById('salary_max').value) || 0;
+
+                    if (salaryMin < 0) {
+                        alert("Mức lương 'Từ' không được nhỏ hơn 0.");
+                        document.getElementById('salary_min').setCustomValidity("Mức lương 'Từ' không được nhỏ hơn 0.");
+                    } else {
+                        document.getElementById('salary_min').setCustomValidity('');
+                    }
+
+                    if (salaryMax < 0) {
+                        alert("Mức lương 'Đến' không được nhỏ hơn 0.");
+                        document.getElementById('salary_max').setCustomValidity("Mức lương 'Đến' không được nhỏ hơn 0.");
+                    } else if (salaryMin >= salaryMax && salaryMax !== 0) {
+                        alert("Mức lương 'Từ' phải nhỏ hơn mức lương 'Đến'.");
+                        document.getElementById('salary_max').setCustomValidity("Mức lương 'Từ' phải nhỏ hơn mức lương 'Đến'.");
+                    } else {
+                        document.getElementById('salary_max').setCustomValidity('');
+                    }
+                }
+
+                document.getElementById('salary_min').addEventListener('blur', validateSalary);
+                document.getElementById('salary_max').addEventListener('blur', validateSalary);
+            </script>
+
+
+
             <div class="form-group">
                 <label asp-for="apply_date" class="control-label"><i class="fas fa-calendar"></i> Hạn nộp hồ sơ</label>
-                <input asp-for="apply_date" class="form-control datepicker" asp-format="{0:dd/MM/yy}" required />
+                <input asp-for="apply_date" class="form-control datepicker" asp-format="{0:dd/MM/yy}" required id="apply_date" />
                 <span asp-validation-for="apply_date" class="text-danger"></span>
             </div>
+
+            <script>
+                document.getElementById('apply_date').addEventListener('change', function() {
+                    var applyDate = new Date(document.getElementById('apply_date').value);
+                    var currentDate = new Date();
+
+                    // Điều chỉnh định dạng ngày cho chính xác
+                    currentDate.setHours(0, 0, 0, 0); // Đặt giờ, phút, giây, mili giây về 0
+
+                    if (applyDate <= currentDate) {
+                        alert("Hạn nộp hồ sơ phải lớn hơn ngày hiện tại.");
+                        document.getElementById('apply_date').setCustomValidity("Hạn nộp hồ sơ phải lớn hơn ngày hiện tại.");
+                    } else {
+                        document.getElementById('apply_date').setCustomValidity('');
+                    }
+                });
+            </script>
+
 
             <div class="form-group">
                 <label asp-for="job_LocationId" class="control-label" style="font-weight: bold;">
@@ -134,6 +181,7 @@
         });
     });
 </script>
+
 <script>
     document.querySelectorAll('input[type="file"]').forEach(input => {
         input.addEventListener('change', function (event) {

@@ -3,17 +3,19 @@
     ViewData["Title"] = "Trang chủ";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.0.0-beta.4/libs/oversea/index.js"></script>
+
+<script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.1.0-beta.0/libs/oversea/index.js"></script>
 <script>
     new CozeWebSDK.WebChatClient({
         config: {
-            bot_id: '7437790291677593618',
+            bot_id: '7451915943477297168',
         },
         componentProps: {
             title: 'Coze',
         },
     });
 </script>
+
 
 <style>
     .container.bg-white {
@@ -114,8 +116,6 @@
         <div class="container">
             <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Việc làm phù hợp với bạn</h1>
             <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
-
-
                 <div class="tab-content">
                     <div id="tab-1" class="tab-pane fade show p-0 active">
                         <div class="row">
@@ -145,27 +145,6 @@
                                                 </div>
                                             </div>
                                             <div class="col-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <style>
-                                                        .text-success {
-                                                            color: darkgreen;
-                                                        }
-
-                                                        .heart-icon {
-                                                            color: #198754; /* Màu mặc định cho trái tim */
-                                                        }
-
-                                                            .heart-icon.active {
-                                                                color: red; /* Màu đỏ khi trái tim được kích hoạt */
-                                                            }
-                                                    </style>
-
-                                                    <form id="cartForm" asp-area="User" asp-controller="JobCart" asp-action="AddToCart" method="post">
-                                                        <input type="hidden" name="Id" value="@job.Id" />
-                                                        <button type="submit" class="btn btn-light btn-square me-3" onclick="addToCart('@job.Id')">
-                                                            <i id="heartIcon_@job.Id" class="heart-icon fas fa-heart "></i>
-                                                        </button>
-                                                    </form>
 
 
 
@@ -174,18 +153,12 @@
                                                 </div>
                                                 <small class="text-truncate">
                                                     <i class="far fa-calendar-alt text-primary me-2"></i>
-                                                    Date Line: @string.Format("{0:dd/MM/yyyy}", job.apply_date)
+                                                    Hạn nộp: @string.Format("{0:dd/MM/yyyy}", job.apply_date)
                                                 </small>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                             }
-                        <div style="display: flex; justify-content: flex-end;">
-                            <a class="btn btn-primary py-3 px-5" href="">
-                                Xem thêm <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
                             <!-- Nút phân trang -->
                             <div class="col-12">
                                 <nav aria-label="Page navigation">
@@ -225,122 +198,7 @@
             </div>
         </div>
     </div>
-    <!-- Jobs Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Việc làm nổi bật</h1>
-            <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.3s">
-
-                <div class="tab-content">
-                    <div id="tab-1" class="tab-pane fade show p-0 active">
-                        <div class="row">
-                            @foreach (var job in Model)
-                            {
-                                <div class="col-12 col-md-6">
-                                    <div class="job-item p-4 mb-4">
-                                        <div class="row g-4">
-                                            <div class="col-8 d-flex align-items-center">
-                                                <a asp-action="Details" asp-route-id="@job.Id">
-                                                    <!-- Thêm thẻ <a> với href tới trang chi tiết -->
-                                                    <div class="image-container" style=" width: 80px;height: 80px;overflow: hidden;">
-                                                        <img class="flex-shrink-0 img-fluid border rounded" src="@job.applicationUser?.image_url" alt="">
-                                                    </div>
-                                                </a>
-                                                <div class="text-start ps-4">
-                                                    <a asp-action="Details" asp-route-id="@job.Id">
-                                                        <!-- Thêm thẻ <a> với href tới trang chi tiết -->
-                                                        <h5 class="mb-3 text-dark">@job.job_name</h5>
-                                                    </a>
-                                                    <span class="text-truncate me-3">
-                                                        <i class="fa fa-map-marker-alt text-primary me-2"></i>
-                                                        @(job.job_Location != null ? job.job_Location.province_name : "Không")
-                                                    </span>
-                                                    <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>@job.employmentType</span>
-                                                    <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>@string.Format("{0} Triệu - {1} Triệu", job.salary_min, job.salary_max)</span>
-                                                </div>
-                                            </div>
-                                            <div class="col-4 d-flex flex-column align-items-start align-items-md-end justify-content-center">
-                                                <div class="d-flex mb-3">
-                                                    <style>
-                                                        .text-success {
-                                                            color:darkgreen;
-                                                        }
-                                                        .heart-icon {
-                                                            color: #198754; /* Màu mặc định cho trái tim */
-                                                        }
-
-                                                            .heart-icon.active {
-                                                                color: red; /* Màu đỏ khi trái tim được kích hoạt */
-                                                            }
-                                                    </style>
-
-                                                    <form id="cartForm" asp-area="User" asp-controller="JobCart" asp-action="AddToCart" method="post">
-                                                        <input type="hidden" name="Id" value="@job.Id" />
-                                                        <button type="submit" class="btn btn-light btn-square me-3" onclick="addToCart('@job.Id')">
-                                                            <i id="heartIcon_@job.Id" class="heart-icon fas fa-heart "></i>
-                                                        </button>
-                                                    </form>
-
-                                   
-                                               
-                                                 @*    <a class="btn btn-light btn-square me-3" href=""><i class="far fa-heart text-primary"></i></a> *@
-                                                    <a class="btn btn-primary" href="/User/Home/Apply_job/@job.Id">Apply Now</a>
-                                                </div>
-                                                <small class="text-truncate">
-                                                    <i class="far fa-calendar-alt text-primary me-2"></i>
-                                                    Date Line: @string.Format("{0:dd/MM/yyyy}", job.apply_date)
-                                                </small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                       
-                            }
-                        <div style="display: flex; justify-content: flex-end;">
-                            <a class="btn btn-primary py-3 px-5" href="">
-                                Xem thêm <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                            <!-- Nút phân trang -->
-                            <div class="col-12">
-                                <nav aria-label="Page navigation">
-                                    <ul class="pagination justify-content-center">
-                                        @if (Model.TotalPages > 1)
-                                        {
-                                            @if (Model.PageIndex != 1)
-                                            {
-                                                <li class="page-item">
-                                                    <a class="page-link" href="@Url.Action("Index", new { pageNumber = 1 })">&laquo;</a>
-                                                </li>
-                                            }
-
-                                            @for (int i = 1; i <= Model.TotalPages; i++)
-                                            {
-                                                <li class="page-item @(i == Model.PageIndex ? "active" : "")">
-                                                    <a class="page-link" href="@Url.Action("Index", new { pageNumber = i })">@i</a>
-                                                </li>
-                                            }
-
-                                            @if (Model.PageIndex != Model.TotalPages)
-                                            {
-                                                <li class="page-item">
-                                                    <a class="page-link" href="@Url.Action("Index", new { pageNumber = Model.TotalPages })">&raquo;</a>
-                                                </li>
-                                            }
-                                        }
-                                    </ul>
-                                </nav>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-                </div>
-            </div>
-        </div>
-        <!-- Jobs End -->
+  
     <!-- Category Start -->
   @*   <div class="container-fluid py-5">
         <div class="container">
@@ -427,7 +285,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="mb-4">Tìm kiếm công việc dễ dàng tại MasterJob</h1>
+                    <h1 class="mb-4">Tìm kiếm công việc dễ dàng tại KingJob</h1>
                     <p>Sử dụng MasterJob hoàn toàn miễn phí cho người tìm việc. Bạn không cần trả phí để truy cập vào các công việc và thông tin liên quan. Điều này giúp bạn tiết kiệm tiền bạc trong quá trình tìm kiếm việc làm.</p>
                     <p><i class="fa fa-check text-primary me-3"></i>Miễn phí</p>
                     <p><i class="fa fa-check text-primary me-3"></i>Nhanh chóng</p>
@@ -491,44 +349,3 @@
             </div>
         </div>
         <!-- Testimonial End -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Gọi endpoint để kiểm tra công việc trong giỏ hàng
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", "/User/JobCart/CheckCartItem", true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        var response = JSON.parse(xhr.responseText);
-                        var cartItemIds = response.map(String); // Chuyển đổi các phần tử trong mảng thành chuỗi
-                        cartItemIds.forEach(function (jobId) {
-                            var heartIcon = document.getElementById("heartIcon_" + jobId);
-                            heartIcon.classList.add("active");
-                        });
-                    }
-                }
-            };
-            xhr.send();
-        });
-
-        function addToCart(jobId) {
-            var heartIcon = document.getElementById("heartIcon_" + jobId);
-            heartIcon.classList.toggle("active");
-
-            // Gọi endpoint để kiểm tra công việc trong giỏ hàng
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", "/User/JobCart/CheckCartItem", true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        var response = JSON.parse(xhr.responseText);
-                        var cartItemIds = response.map(String); // Chuyển đổi các phần tử trong mảng thành chuỗi
-                        if (cartItemIds.includes(jobId.toString())) {
-                            heartIcon.classList.add("active");
-                        }
-                    }
-                }
-            };
-            xhr.send();
-        }
-    </script>

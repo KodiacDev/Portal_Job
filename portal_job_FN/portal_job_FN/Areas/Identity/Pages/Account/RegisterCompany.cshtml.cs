@@ -143,6 +143,7 @@ namespace portal_job_FN.Areas.Identity.Pages.Account
                 //Kích hoạt active cho user
                 user.is_active = 1;
                 user.create_at = DateTime.Now;
+                user.PostCount += 3;
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);

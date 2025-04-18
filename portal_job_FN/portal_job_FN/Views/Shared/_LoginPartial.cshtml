@@ -30,7 +30,6 @@
                     {
                         <ul class="dropdown-menu" aria-labelledby="userDropdown">
                             <li><a class="dropdown-item" asp-area="User" asp-controller="Profile" asp-action="Index" title="Profile"><i class="fas fa-user"></i> Profile</a></li>
-                            <li><a class="dropdown-item" asp-area="User" asp-controller="JobCart" asp-action="Index"><i class="fas fa-bookmark"></i> Công việc đã lưu</a></li>
                             <li><a class="dropdown-item" asp-area="User" asp-controller="Home" asp-action="ListApply"><i class="fas fa-check-circle"></i> Công việc đã ứng tuyển</a></li>
                             <li class="dropdown-item">
                                 <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">

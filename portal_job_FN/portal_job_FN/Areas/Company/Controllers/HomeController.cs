@@ -185,13 +185,29 @@ namespace portal_job_FN.Areas.Company.Controllers
                 return NotFound();
             }
             var find_user = await _userManager.GetUserAsync(User);
-
-       
-            var post_job = await _post_job.GetByIdAsync(id);
-            if (find_user.Id != post_job.applicationUserId)
+            var locations = await _locationRepository.GetAllAsync();
+            var experiences = await _experience.GetAllAsync();
+            var majors = await _major.GetAllAsync();
+            if (id == null)
             {
-                return Forbid();
+                ViewBag.Locations = new SelectList(locations, "Id", "province_name");
+                ViewBag.Experiences = new SelectList(experiences, "Id", "experience_name");
+                ViewBag.Majors = new SelectList(majors, "Id", "major_name");
+                return NotFound();
             }
+
+            var post_job = await _context.post_Jobs.FindAsync(id);
+            if (post_job == null)
+            {
+                ViewBag.Locations = new SelectList(locations, "Id", "province_name");
+                ViewBag.Experiences = new SelectList(experiences, "Id", "experience_name");
+                ViewBag.Majors = new SelectList(majors, "Id", "major_name");
+                return NotFound();
+            }
+
+            ViewBag.Locations = new SelectList(locations, "Id", "province_name");
+            ViewBag.Experiences = new SelectList(experiences, "Id", "experience_name");
+            ViewBag.Majors = new SelectList(majors, "Id", "major_name");
             if (post_job == null)
             {
                 return NotFound();

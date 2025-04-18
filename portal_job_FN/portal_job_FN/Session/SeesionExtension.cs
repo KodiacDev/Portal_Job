@@ -2,7 +2,7 @@
 
 namespace portal_job_FN.Session
 {
-    public static class SeesionExtension
+    public static class SeesionExtension //fix chuc nang luu bai tuyen dung
     {
         public static void SetObjectAsJson(this ISession session, string key, object value)
         {

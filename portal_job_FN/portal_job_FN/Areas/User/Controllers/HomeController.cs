@@ -44,9 +44,18 @@ namespace portal_job_FN.Areas.User.Controllers
             {
                 return NotFound();
             }
+
+            // Kiểm tra nếu hạn nộp CV đã qua
+            if (post_jobs.create_at.HasValue && post_jobs.apply_date.Value < DateTime.Now)
+            {
+                // Hiển thị thông báo hoặc redirect đến một trang khác
+                return NotFound("Hạn nộp CV đã qua. Bạn không thể nộp CV nữa.");
+            }
+
             ViewBag.post_jobs = post_jobs;
             return View();
         }
+
         [HttpGet]
         public async Task<IActionResult> ListApply()
         {

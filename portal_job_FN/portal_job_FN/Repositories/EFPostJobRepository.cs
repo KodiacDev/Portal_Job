@@ -26,27 +26,143 @@ namespace portal_job_FN.Repositories
 
 			return applicationDbContext;
 		}
+        public async Task<int> GetTotalPostsCountAsync()
+        {
+            var count = await _context.post_Jobs
+                .CountAsync(); // Đếm tổng số bài đăng trong cơ sở dữ liệu
+
+            return count;
+        }
+        public async Task<int> GetPostsCountInOneMonthAsync()
+        {
+            var oneMonthAgo = DateTime.Now.AddMonths(-1);
+
+            var count = await _context.post_Jobs
+                .Where(b => b.create_at >= oneMonthAgo) // Lọc các bài đăng trong 1 tháng qua
+                .CountAsync(); // Đếm số bài đăng trong 1 tháng
+
+            return count;
+        }
+        public async Task<int> GetPostsCountInSixMonthsAsync()
+        {
+            var sixMonthsAgo = DateTime.Now.AddMonths(-6);
+
+            var count = await _context.post_Jobs
+                .Where(b => b.create_at >= sixMonthsAgo) // Lọc các bài đăng trong 6 tháng qua
+                .CountAsync(); // Đếm số bài đăng trong 6 tháng
+
+            return count;
+        }
+        public async Task<int> GetPostsCountInOneYearAsync()
+        {
+            var oneYearAgo = DateTime.Now.AddYears(-1);
+
+            var count = await _context.post_Jobs
+                .Where(b => b.create_at >= oneYearAgo) // Lọc các bài đăng trong 1 năm qua
+                .CountAsync(); // Đếm số bài đăng trong 1 năm
+
+            return count;
+        }
+        public async Task<int> GetPostsCountYearToDateAsync()
+        {
+            var startOfYear = new DateTime(DateTime.Now.Year, 1, 1);
+
+            var count = await _context.post_Jobs
+                .Where(b => b.create_at >= startOfYear) // Lọc các bài đăng từ đầu năm đến nay
+                .CountAsync(); // Đếm số bài đăng từ đầu năm đến nay
+
+            return count;
+        }
+
+        //Company
+        public async Task<object> GetPostsCountByMonthAsync()
+        {
+            var currentYear = DateTime.Now.Year;
+            var postCounts = new List<int>();
+            var monthLabels = new List<string>();
+
+            // Lặp qua 12 tháng trong năm
+            for (int month = 1; month <= 12; month++)
+            {
+                var firstDayOfMonth = new DateTime(currentYear, month, 1);
+                var lastDayOfMonth = firstDayOfMonth.AddMonths(1).AddDays(-1); // Ngày cuối cùng của tháng
+
+                // Lọc các bài đăng trong tháng
+                var count = await _context.post_Jobs
+                    .Where(b => b.create_at >= firstDayOfMonth && b.create_at <= lastDayOfMonth)
+                    .CountAsync();
+
+                postCounts.Add(count); // Thêm số bài đăng vào danh sách
+
+                // Thêm nhãn tháng vào danh sách
+                monthLabels.Add(firstDayOfMonth.ToString("MMMM"));
+            }
+
+            // Tạo dữ liệu trả về
+            var data = new
+            {
+                categories = monthLabels, // Các nhãn tháng
+                series = new[]
+                {
+            new
+            {
+                name = "Ứng tuyển",
+                data = postCounts
+            }
+        }
+            };
+
+            return data;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public async Task<IEnumerable<PostJobDto>> GetAllJobAPIAsync()
         {
-            // Bao gồm các liên kết cần thiết và sắp xếp theo ngày đăng giảm dần
+            // Nạp dữ liệu từ post_Jobs và liên kết với bảng images
             var applicationDbContext = await _context.post_Jobs
                 .Include(b => b.experience) // Liên kết với experience
                 .Include(b => b.applicationUser) // Liên kết với applicationUser (company_name)
+                .Include(b => b.post_Job_Images) // Liên kết với bảng images (giả sử tên property là Images)
                 .OrderByDescending(b => b.create_at) // Sắp xếp theo ngày đăng giảm dần
                 .ToListAsync();
 
             // Ánh xạ từ PostJob sang PostJobDto
             var postJobDtos = applicationDbContext.Select(postJob => new PostJobDto
             {
+                Id = postJob.Id,
                 Title = postJob.job_name,
                 experience = postJob.experience?.experience_name, // Giả sử experience có thuộc tính Name
                 company_name = postJob.applicationUser?.company_name, // Giả sử applicationUser có thuộc tính CompanyName
-                max_salary = postJob.salary_max?.ToString() // Nếu MaxSalary là số, chuyển thành chuỗi
+                max_salary = postJob.salary_max?.ToString(), // Nếu MaxSalary là số, chuyển thành chuỗi
+                created_at = postJob.create_at,
+                companyId = postJob.applicationUserId,
+                required_skill = postJob.required_skill,
+                detail_location = postJob.detail_location,
+                employmentType = postJob.employmentType,
+                Description = postJob.job_description,
+                benefit = postJob.benefit,
+                image_Url = postJob.applicationUser.image_url,
+                urlImages = postJob.post_Job_Images?.Select(img => img.post_image_url).ToList() // Trả về danh sách URL ảnh của bài viết
             });
 
             return postJobDtos;
         }
+
 
 
 

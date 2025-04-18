@@ -2,73 +2,143 @@
 
 @{
     ViewData["Title"] = "Details";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    Layout = "~/Views/Shared/_Layout_Company.cshtml";
 }
 
-<div class="col-lg-12 grid-margin stretch-card">
-    <div class="card">
-        <div class="card-body">
-            <h2 style="margin-bottom:20px; font-family:'Times New Roman'">
-                Tin tuyển dụng chi tiết
-            </h2>
-            <div class="table-responsive">
-                <table class="table table-hover">
-                    <thead style="font-weight: bold; font-size: 20px;">
-                        <tr>
-                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Tên công việc</th>
-                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Hình thức</th>
-                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Mô tả</th>
-                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Lương từ</th>
-                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Địa điểm</th>
-                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Đăng ngày</th>
-                            <th style="font-weight: bold; font-size: 30px;color:black; font-family:'Times New Roman'">Hạn nộp hồ sơ</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td style="font-size: 20px;color:black">
-                                <span>@Model.job_name</span>
-                            </td>
-                            <td style="font-size: 20px; color: black;">
-                                <i class="fas fa-briefcase"></i> @Model.employmentType
-                            </td>
+<h1>Chi tiết bài tuyển dụng</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label asp-for="job_name" class="control-label"><i class="fas fa-user"></i> Tên công việc</label>
+            <input asp-for="job_name" class="form-control" required />
+            <span asp-validation-for="job_name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="job_description" class="control-label"><i class="fas fa-file-alt"></i> Mô tả công việc</label>
+            <textarea asp-for="job_description" class="form-control" rows="5" required></textarea>
+            <span asp-validation-for="job_description" class="text-danger"></span>
+        </div>
 
-                            <td style="font-size: 20px;color:black;font-size: 20px; width:500px; word-wrap: break-word; white-space: normal;"">@Model.job_description</td>
-                            <td style="font-size: 20px;color:black"><i class="far fa-money-bill-alt text-primary me-2"></i>@string.Format("{0} Triệu - {1} Triệu", @Model.salary_min, @Model.salary_max)</td>
-                            <td style="font-size: 20px;color:black">
-                                <div>
-                                    <!-- Icon địa điểm -->
-                                    <i class="fas fa-map-marker-alt" style="color:green"></i>
-                                    <!-- Hiển thị địa điểm -->
-                                    <span>@Model.job_Location?.province_name</span>
-                                </div>
-                            </td>
-                            <td style="font-size: 20px;color:black">
-                                <div>
-                                    <!-- Icon ngày -->
-                                    <i class="far fa-calendar-alt" style="color:green"></i>
-                                    <!-- Hiển thi ngày tạo -->
-                                    <span>@Model.create_at</span>
-                                </div>
-                            </td>
+        <div class="form-group">
+            <label asp-for="required_skill" class="control-label"><i class="fas fa-check"></i> Yêu cầu công việc</label>
+            <textarea asp-for="required_skill" class="form-control" rows="5" required></textarea>
+            <span asp-validation-for="required_skill" class="text-danger"></span>
+        </div>
 
-                            <td style="font-size: 20px;color:black">
-                                <i class="far fa-calendar-alt" style="color:green"></i>
-                                 @string.Format("{0:dd/MM/yyyy}", Model.apply_date)
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+
+        <div class="form-group">
+            <label asp-for="benefit" class="control-label"><i class="fas fa-gift"></i> Phúc lợi</label>
+            <textarea asp-for="benefit" class="form-control" rows="5" required></textarea>
+            <span asp-validation-for="benefit" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="employmentType" class="control-label"><i class="fas fa-briefcase"></i> Loại công việc</label>
+            <select asp-for="employmentType" class="form-control">
+                <option value="Full-Time">Full-Time</option>
+                <option value="Part-Time">Part-Time</option>
+            </select>
+            <span asp-validation-for="employmentType" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col">
+                    <label asp-for="salary_min" class="control-label"><i class="fas fa-money-bill"></i> Lương từ</label>
+                    <div class="input-group">
+                        <input asp-for="salary_min" class="form-control" type="number" required />
+                        <div class="input-group-append">
+                            <span class="input-group-text">triệu đồng</span>
+                        </div>
+                    </div>
+                    <span asp-validation-for="salary_min" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <label asp-for="salary_max" class="control-label"><i class="fas fa-money-bill"></i> Đến</label>
+                    <div class="input-group">
+                        <input asp-for="salary_max" class="form-control" type="number" required />
+                        <div class="input-group-append">
+                            <span class="input-group-text">triệu đồng</span>
+                        </div>
+                    </div>
+                    <span asp-validation-for="salary_max" class="text-danger"></span>
+                </div>
             </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="apply_date" class="control-label"><i class="fas fa-calendar"></i> Hạn nộp hồ sơ</label>
+            <input asp-for="apply_date" class="form-control datepicker" asp-format="{0:dd/MM/yy}" required />
+            <span asp-validation-for="apply_date" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="job_LocationId" class="control-label" style="font-weight: bold;">
+                <i class="fas fa-map-marker-alt"></i> <!-- Icon "Map Marker" của Font Awesome -->
+                Địa điểm công ty
+            </label>
+            <select asp-for="job_LocationId" asp-items="ViewBag.locations" class="form-control">
+                <option value="">-- Chọn tỉnh - Thành phố --</option>
+            </select>
+            <span asp-validation-for="job_LocationId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="experienceId" class="control-label" style="font-weight: bold;">
+                <i class="fas fa-user-tie"></i> <!-- Icon "User Tie" của Font Awesome -->
+                Kinh nghiệm ứng viên
+            </label>
+            <select asp-for="experienceId" asp-items="ViewBag.experiences" class="form-control">
+                <option value="">-- Chọn Kinh nghiệm --</option>
+            </select>
+            <span asp-validation-for="experienceId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="majorId" class="control-label" style="font-weight: bold;">
+                <i class="fas fa-graduation-cap"></i> <!-- Icon "Graduation Cap" của Font Awesome -->
+                Chuyên ngành
+            </label>
+            <select asp-for="majorId" asp-items="ViewBag.majors" class="form-control">
+                <option value="">-- Chọn chuyên ngành --</option>
+            </select>
+            <span asp-validation-for="majorId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="detail_location" class="control-label"><i class="fas fa-map-marker-alt"></i> Địa điểm cụ thể</label>
+            <input asp-for="detail_location" class="form-control" required />
+            <span asp-validation-for="detail_location" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="post_Job_Images">Ảnh công ty</label>
+            <input type="file" asp-for="post_Job_Images" class="form-control" id="imageInput" accept="image/*" multiple />
+            <img src="post_Job_Images" alt="Logo công ty" style="max-width:200px;" id="previewImage" />
+            <span asp-validation-for="post_Job_Images" class="text-danger"></span>
         </div>
     </div>
 </div>
 
-
-
-
-
-
 <div>
-    <a class="btn btn-primary" href="/Admin/Home/view_post">Trở về</a>
+    <a class="btn btn-info" href="/Admin/Home/view_post">Trở về</a>
 </div>
+
+<script>
+    document.querySelectorAll('input[type="file"]').forEach(input => {
+        input.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById("previewImage")
+                    img.src = e.target.result
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+</script>
+
+

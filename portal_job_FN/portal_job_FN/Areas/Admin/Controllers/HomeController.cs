@@ -28,6 +28,7 @@ namespace portal_job_FN.Areas.Admin.Controllers
         private readonly IApplyJobRepository _apply_job;
         private readonly IUserRepository _userRepository;
         private readonly IEducationRepository _educationRepository;
+        private readonly IVnPayRepository _vpnPayRepository;
 
         public HomeController(ApplicationDbContext context,
             ILocationRepository locationRepository,
@@ -35,6 +36,7 @@ namespace portal_job_FN.Areas.Admin.Controllers
             IMajorRepository major,
             IPostJobRepository post_job,
             UserManager<ApplicationUser> userManager,
+            IVnPayRepository vpnPayRepository,
             IApplyJobRepository apply_job,
             IUserRepository userRepository,
             IEducationRepository educationRepository)
@@ -48,12 +50,21 @@ namespace portal_job_FN.Areas.Admin.Controllers
             _apply_job = apply_job;
             _userRepository = userRepository;
             _educationRepository = educationRepository;
+            _vpnPayRepository = vpnPayRepository;
         }
 
         // GET: Company/Home
         public async Task<IActionResult> Index()
         {
             var find_admin = await _userManager.GetUserAsync(User);
+            //Tổng tiền nạp 
+            ViewBag.TotalPayment = await _vpnPayRepository.TotalMoneyByAdmin();
+            //Tổng ứng viên nôp cv
+            ViewBag.CountAllJobSeekerByIdCompany = await _apply_job.CountAllJobSeekerByIdAdmin();
+            //Tổng ứng viên nộp cv chưa được duyệt
+            ViewBag.CountAllunapprovedByIdCompany = await _apply_job.CountAllunapprovedByIdAdmin();
+            //Tổng số lượng bài đã đăng
+            ViewBag.CountPosted = await _post_job.CountAllPostByAdmin();
             if (find_admin == null)
             {
                 return NotFound("Chưa đăng nhập");
@@ -78,7 +89,21 @@ namespace portal_job_FN.Areas.Admin.Controllers
             return View(await post_jobs);
         }
 
-
+        [HttpGet]
+        public async Task<IActionResult> ListHistoryPayment()
+        {
+            var find_company = await _userManager.GetUserAsync(User);
+            ViewBag.user = find_company;
+            var listHistoryPay = await _vpnPayRepository.GetAllHistoryPayByAdmin();
+            if (find_company != null && listHistoryPay != null)
+            {
+                return View(listHistoryPay);
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
 
         // GET: Company/Home/Details/5
         public async Task<IActionResult> Details(int id)
@@ -88,7 +113,34 @@ namespace portal_job_FN.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var post_job = await _post_job.GetByIdAsync(id);
+            var find_user = await _userManager.GetUserAsync(User);
+            var locations = await _locationRepository.GetAllAsync();
+            var experiences = await _experience.GetAllAsync();
+            var majors = await _major.GetAllAsync();
+            if (id == null)
+            {
+                ViewBag.Locations = new SelectList(locations, "Id", "province_name");
+                ViewBag.Experiences = new SelectList(experiences, "Id", "experience_name");
+                ViewBag.Majors = new SelectList(majors, "Id", "major_name");
+                return NotFound();
+            }
+
+            var post_job = await _context.post_Jobs.FindAsync(id);
+            if (post_job == null)
+            {
+                ViewBag.Locations = new SelectList(locations, "Id", "province_name");
+                ViewBag.Experiences = new SelectList(experiences, "Id", "experience_name");
+                ViewBag.Majors = new SelectList(majors, "Id", "major_name");
+                return NotFound();
+            }
+
+            ViewBag.Locations = new SelectList(locations, "Id", "province_name");
+            ViewBag.Experiences = new SelectList(experiences, "Id", "experience_name");
+            ViewBag.Majors = new SelectList(majors, "Id", "major_name");
+            if (post_job == null)
+            {
+                return NotFound();
+            }
             if (post_job == null)
             {
                 return NotFound();
