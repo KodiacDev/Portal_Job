@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 .vs/
 =======
-
-.codegpt
+.gitignore
+portal_job_FN.sln
+.codegpt.vs/
 >>>>>>> db87591 (rm .vs)
