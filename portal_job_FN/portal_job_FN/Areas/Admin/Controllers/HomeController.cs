@@ -54,6 +54,7 @@ namespace portal_job_FN.Areas.Admin.Controllers
         }
 
         // GET: Company/Home
+        //Da fix 
         public async Task<IActionResult> Index()
         {
             var find_admin = await _userManager.GetUserAsync(User);
