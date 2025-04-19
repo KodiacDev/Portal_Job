@@ -1,11 +1,14 @@
-using Microsoft.AspNetCore.Http.Features;
+﻿using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authentication.Google;
+
 using Microsoft.EntityFrameworkCore;
 using portal_job_FN.Areas.Identity.Pages.Account;
 using portal_job_FN.Data;
 using portal_job_FN.Models;
 using portal_job_FN.Repositories;
 using portal_job_FN.Services.Vnpay;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,7 +58,7 @@ builder.Services.Configure<FormOptions>(options =>
 
 
 
-//Cau h�nh session
+//Cau hình session
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
@@ -63,6 +66,16 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+
+// Cấu hình Google authentication
+builder.Services.AddAuthentication()
+    .AddGoogle(options =>
+    {
+        var gconfig = builder.Configuration.GetSection("Authentication:Google");
+        options.ClientId = gconfig["ClientId"];
+        options.ClientSecret = gconfig["ClientSecret"];
+        options.CallbackPath = "/signin-google"; // hoặc "/dang-nhap-tu-google" tùy bạn định nghĩa
+    });
 
 
 var app = builder.Build();
