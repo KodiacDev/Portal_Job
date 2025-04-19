@@ -51,8 +51,6 @@ Tôi xây dựng dự án này với mục tiêu mô phỏng một website tuy�
 
 ---
 
-## 🖼️ Một số hình ảnh minh hoạ
-
 ### 👨‍💼 Giao diện Ứng Viên
 - Danh sách công việc
 - Chi tiết việc làm
